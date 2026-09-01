@@ -3,6 +3,7 @@
 import argparse
 import json
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -141,6 +142,24 @@ def _member_rows(engine, adapter: Path, run_id: str, rows: list[dict],
     return member_rows, {"retries": retry_count, "fallbacks": fallback_count}
 
 
+def csv_safe_spans(spans: list[str]) -> list[str]:
+    """Keep the longest ';'/newline-free fragment of each span.
+
+    Both characters are structurally illegal in the organizer evidence field, so
+    a span containing one aborts the whole run at write time. Development
+    predictions never produced one (0 of 10,781 spans), and every fragment of a
+    verbatim substring is itself a verbatim substring, so this only ever fires
+    as insurance against losing a full inference run.
+    """
+    out: list[str] = []
+    for span in spans:
+        fragments = [part.strip() for part in re.split(r"[;\n]", span) if part.strip()]
+        safe = max(fragments, key=len) if fragments else span
+        if safe not in out:
+            out.append(safe)
+    return out
+
+
 def run(args) -> dict:
     model = args.model or os.environ.get("GEMMA_MODEL", "")
     if not model:
@@ -174,7 +193,7 @@ def run(args) -> dict:
             if record.get("p_true") else [])
     predictions = {
         record["row_id"]: {"risk": record["risk"],
-                           "spans": list(record["spans"]),
+                           "spans": csv_safe_spans(record["spans"]),
                            "factors": list(record["factors"])}
         for record in merged
     }

@@ -128,7 +128,7 @@ def scorer_matchable_slice(gold_text: str, nc: NormCache) -> tuple[int, int] | N
     return (s, e)
 
 def align_generated(text: str, nc: NormCache) -> tuple[int, int] | None:
-    hit = _try_r0_to_r3(text, nc)
+    hit = _find_span(text, nc)
     if hit is None:
         return None
     _, s, e, _ = hit
