@@ -1,0 +1,51 @@
+{
+  "system": "R9",
+  "members": [
+    {
+      "name": "seed1",
+      "run_id": "baseline-full-s1",
+      "step": 160
+    },
+    {
+      "name": "seed2",
+      "run_id": "baseline-full-s2",
+      "step": 120
+    }
+  ],
+  "threshold_estimator": {
+    "name": "bagged_argmax_f1",
+    "bootstrap_draws": 200,
+    "seed": 20260815,
+    "fit_pool": "merged two-seed grouped OOF representatives"
+  },
+  "source_artifacts": {
+    "seed1_oof_sha256": "14da215a867caca97d527cf8588e8e6b4c32ff2572238d001d4f960d1ce238a3",
+    "seed2_oof_sha256": "477ff481304acd23b887bada8fe796aed417b5ecca89d757ce12f9ca9e739041"
+  },
+  "thresholds": {
+    "hopelessness": 0.40941412378439646,
+    "emotion dysregulation": 0.3351795929846845,
+    "poor social support": 0.4046606303474164,
+    "low self-esteem": 0.49870376054058896,
+    "suicide means (with access)": 0.42562460922545725,
+    "mental health issues": 0.334146270244981,
+    "prior self-harm or suicidal thought/attempt": 0.40669682397539797,
+    "interpersonal difficulty": 0.3413850154305017,
+    "stressful life event": 0.3474584834045291,
+    "dysfunctional family": 0.43268629853661006,
+    "interpersonal violence": 0.2736415203286733,
+    "physical health/characteristic": 0.2687052201144343,
+    "traumatic experience": 0.47711671639589176,
+    "low socio-economic status": 0.31187255509414186,
+    "cognitive deficits": 0.32002879280364316,
+    "substance use": 0.4515145615154331,
+    "poor school performance": 0.7219739210874164,
+    "exposure to others' suicide": 0.36462633896595603,
+    "sexual orientation related issues": 0.4031734576272058,
+    "coping strategy": 0.41730047602479386,
+    "psychological capital": 0.39583855991516714,
+    "social support": 0.2539396663800577,
+    "sense of responsibility": 0.34524250942661167,
+    "meaning in life": 0.15449161382416668
+  }
+}

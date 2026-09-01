@@ -7,3 +7,5 @@ data/raw/
 data/processed/
 data/synthetic/
 runs/
+adapters/*
+!adapters/README.md

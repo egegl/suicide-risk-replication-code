@@ -51,7 +51,8 @@ def cmd_preflight(args, P):
     except ImportError:
         sys.exit('preflight needs `transformers` (tokenizer-only, no torch/GPU) — run it on the login node in .venv-train')
     from train import data as tdata, probe
-    sp_list = _specs(P)
+    arms = _arms_or_launch_default(args.arms)
+    sp_list = [spec for spec in _specs(P) if spec['arm'] in arms]
     model = args.model or sp_list[0]['base_model']
     report: dict = {'model': model}
     failures: list[str] = []
@@ -343,6 +344,8 @@ def main():
     sub.add_parser('specs').set_defaults(fn=cmd_specs)
     preflight = sub.add_parser('preflight')
     preflight.add_argument('--model')
+    preflight.add_argument('--arms', default='',
+                           help='comma-separated arms to validate')
     preflight.set_defaults(fn=cmd_preflight)
     indices = sub.add_parser('indices')
     indices.add_argument('--stage', choices=('train', 'eval'), required=True)
