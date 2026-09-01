@@ -7,7 +7,7 @@ sys.path.insert(0, str(ROOT / 'src'))
 
 import scorer
 from prep import constants as PC
-from train import ensemble, specs, thresholds
+from train import ensemble, parse, specs, thresholds
 import submission
 
 sys.path.insert(0, str(ROOT))
@@ -166,3 +166,24 @@ def test_r9_run_orchestrates_ensemble_thresholds_and_writer(tmp_path, monkeypatc
     assert result['system'] == 'R9'
     written = output.read_text(encoding='utf-8')
     assert "H2,Ideation,want to die,['hopelessness']" in written
+
+
+def test_csv_illegal_characters_never_abort_a_run():
+    post = "I want to die tonight\nand I have the pills; ready"
+    spans = predict.csv_safe_spans([post])
+    assert spans == ["I want to die tonight"]
+    assert all(";" not in s and "\n" not in s and s in post for s in spans)
+    assert predict.csv_safe_spans(["clean span"]) == ["clean span"]
+
+
+def test_generated_evidence_aligns_back_to_the_raw_post():
+    """Covers the inference alignment path predict.py depends on."""
+    post = "I keep thinking about Ending It, and nobody notices."
+    parsed = parse.parse_generation(
+        '{"evidence": ["ending it"], "factors": {"hopelessness": true},'
+        ' "risk": "Ideation"}', post)
+    assert parsed["spans"] == ["Ending It"]
+    assert parsed["risk"] == "Ideation" and parsed["factors"] == ["hopelessness"]
+    assert parse.parse_generation(
+        '{"evidence": ["not in the post at all"], "factors": {},'
+        ' "risk": "Ideation"}', post)["align_dropped"] == 1

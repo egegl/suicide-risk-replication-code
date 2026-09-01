@@ -29,6 +29,8 @@ If the adapters are not supplied separately, they can be rebuilt from the organi
 
 Then copy `runs/real_only-full-s1/adapters/step160` and `runs/real_only-full-s2/adapters/step120` to the two adapter locations above.
 
+Rebuilt adapters match the reported system in every registered setting (data, folds, seeds, steps, checkpoints) but are not bit-identical to the two adapters behind the 0.7644 leaderboard score: the training example order is seeded from the run identifier, which was `baseline-full-s{1,2}` in the original runs and is `real_only-full-s{1,2}` here. Expect a score close to, but not exactly, the reported one. Use the supplied adapters to reproduce the leaderboard figure itself.
+
 The unseen input may be `.xlsx` or `.csv` and must contain exactly these columns:
 
 ```text
