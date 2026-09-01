@@ -1,0 +1,7 @@
+transformers>=5.5.0
+vllm>=0.23
+peft>=0.18.1
+accelerate>=1.10.0
+safetensors
+sentencepiece
+bitsandbytes>=0.46.1

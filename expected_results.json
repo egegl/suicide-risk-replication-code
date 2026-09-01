@@ -1,0 +1,24 @@
+{
+  "final_ensemble": {
+    "composite": 0.7830854192238926,
+    "risk_weighted_f1": 0.8302260261443892,
+    "supporting_phrase_f1": 0.787821442913186,
+    "factor_macro_f1": 0.715495252973937,
+    "delta_vs_seed1": 0.007008171259936473,
+    "delta_vs_seed1_ci95": [-0.0001307591672374875, 0.013994324637272314]
+  },
+  "controlled_comparison": {
+    "real_only": 0.7751225611253916,
+    "synthetic": 0.7585260036976067,
+    "synthetic_delta": -0.016490899977822295,
+    "synthetic_delta_ci95": [-0.02328589920184656, -0.009774522507709944],
+    "repeated_real": 0.7733993818044803,
+    "repeated_real_delta": -0.0016008041748662655,
+    "repeated_real_delta_ci95": [-0.00745794046659595, 0.004155212402338645],
+    "rare_factor_f1": {
+      "real_only": 0.6232763613399562,
+      "synthetic": 0.5883173086671629,
+      "repeated_real": 0.6382880641231661
+    }
+  }
+}
