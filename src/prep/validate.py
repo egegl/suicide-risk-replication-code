@@ -161,18 +161,3 @@ def run_all(train, lb, spans, out_dir: Path) -> Report:
         assert record1['input'].split('\n\n', 1)[1] == record2['input'].split('\n\n', 1)[1], record1['row_id']
     rep.check('sft_schemas_equivalent', True, f'{len(sft_v1)} rows')
     return rep
-
-def check_inference_frame(df, train_users: set, train_char_census: set) -> list[str]:
-    problems = []
-    if not df['row_id'].str.fullmatch('P\\d{5}').all() or not df['row_id'].is_unique:
-        problems.append('row_id format/uniqueness')
-    if set(df['anon_user_id']) & train_users:
-        problems.append('user overlap with train')
-    novel = {ch for ch in set(''.join(df['post'])) - train_char_census if ord(ch) > 127}
-    if novel:
-        problems.append(f'novel non-ASCII chars {sorted(novel)!r} — extend CHAR_MAP?')
-    for _, g in df.groupby('anon_user_id'):
-        if sorted(g['post_id']) != list(range(len(g))):
-            problems.append(f"post_id not consecutive for {g['anon_user_id'].iloc[0]}")
-            break
-    return problems

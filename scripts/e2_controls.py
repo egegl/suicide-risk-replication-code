@@ -17,7 +17,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from synth import assemble, pkgc, state  # noqa: E402
+import random  # noqa: E402
+
+from synth import pkgc, state  # noqa: E402
 from synth import constants as SC  # noqa: E402
 from train import constants as TC  # noqa: E402
 from train.specs import _mean_weight  # noqa: E402
@@ -41,14 +43,20 @@ PAPER_SHA256 = {  # the training files behind the paper
 }
 
 
+def _upsample(real: list[dict], target: int, seed_key: str) -> list[dict]:
+    """The competition sweep's repeated-real recipe: whole copies, then a seeded remainder."""
+    out = list(real) * (target // len(real))
+    extra = list(real)
+    random.Random(seed_key).shuffle(extra)
+    return out + extra[:target - len(out)]
+
+
 def build() -> None:
     manifest = {"arm": "qcontrol", "folds": {}}
     for k in range(5):
         real = state.read_jsonl(SFT / f"train_fold{k}.jsonl")
-        # the competition sweep's repeated-real recipe (synth.assemble) under its arm name
-        rows = assemble._interleave(
-            assemble._upsample(real, len(real) + pkgc.FULL_DOSE[k], f"{SC.SYNTH_SEED}|qcontrol|{k}"),
-            [], f"{SC.SYNTH_SEED}|assemble|qcontrol|{k}")
+        rows = _upsample(real, len(real) + pkgc.FULL_DOSE[k], f"{SC.SYNTH_SEED}|qcontrol|{k}")
+        random.Random(f"{SC.SYNTH_SEED}|assemble|qcontrol|{k}").shuffle(rows)
         state.atomic_write_jsonl(QCONTROL / f"train_fold{k}.jsonl", rows)
         manifest["folds"][str(k)] = {"n_real": len(rows), "sha256_out": state.sha256_file(QCONTROL / f"train_fold{k}.jsonl")}
         rare = [{**r, "weight": float(r["weight"]) * RARE_W}

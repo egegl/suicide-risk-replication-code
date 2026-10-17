@@ -65,15 +65,6 @@ def score_slice(preds: dict[str, dict], gold: dict[str, dict], ids, empty_conven
     sub_gold = {i: gold[i] for i in ids if i in gold}
     return score({i: preds[i] for i in sub_gold}, sub_gold, empty_convention=empty_convention)
 
-def hard_slice_report(preds: dict[str, dict], gold: dict[str, dict], hard_slice_path: str | Path) -> dict:
-    hs = json.loads(Path(hard_slice_path).read_text())
-    by_tag: dict[str, list[str]] = {}
-    for rid, tag in hs['curated'].items():
-        if rid in gold:
-            by_tag.setdefault(tag, []).append(rid)
-    out = {tag: {'n': len(ids), 'risk_acc': round(sum((preds[i]['risk'] == gold[i]['risk'] for i in ids)) / len(ids), 3), 'miss_ids': sorted((i for i in ids if preds[i]['risk'] != gold[i]['risk']))} for tag, ids in sorted(by_tag.items())}
-    out['_curated_overall'] = {k: round(v, 4) for k, v in score_slice(preds, gold, list(hs['curated'])).items()}
-    return out
 
 def score(preds: dict[str, dict], gold: dict[str, dict], empty_convention: str='ee1') -> dict[str, float]:
     missing = set(gold) - set(preds)

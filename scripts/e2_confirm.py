@@ -6,7 +6,7 @@ Inputs: pooled, nested-thresholded OOF predictions per arm and seed
 `run_experiment.py thresholds` with the default argmax estimator, as for runs31).
 
 Reproduction guard: the three reused controls must reproduce, per seed, the
-composites frozen for the ICHI paper (paper/figures/frozen.json, stored to 8
+composites frozen for the ICHI paper (results/frozen.json, stored to 8
 decimals) or the script aborts.
 
 Registered readout:
@@ -35,7 +35,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 _spec = importlib.util.spec_from_file_location(
-    "freeze", ROOT / "paper/figures/freeze.py")
+    "freeze", ROOT / "scripts/freeze.py")
 freeze = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(freeze)            # main() is guarded; this only defines helpers
 
@@ -86,7 +86,7 @@ def main() -> None:
     users = dict(zip(posts.row_id, posts.anon_user_id))
     ids = sorted(gold)
     sc = freeze.Scorer(gold, ids)
-    frozen = json.loads((ROOT / "paper/figures/frozen.json").read_text())
+    frozen = json.loads((ROOT / "results" / "frozen.json").read_text())
 
     labs, per_seed = {}, {}
     for name, (runs, arm) in {**CONTROLS, **ARMS}.items():

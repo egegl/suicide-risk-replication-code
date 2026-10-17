@@ -1,7 +1,5 @@
 anthropic
-matplotlib
 numpy
-openai
 openpyxl
 pandas
 pyarrow

@@ -32,7 +32,7 @@ import pandas as pd
 
 from prep import constants as PC
 from prep import context
-from . import bundles as legacy_bundles
+from . import bundles
 from . import constants as SC
 from prep import textnorm
 from . import filters, state
@@ -211,7 +211,7 @@ def build_cases(processed: Path, pool: int = POOL, n_cases: int | None = None) -
     fold-local cases for held-out fold `pool`, carriers drawn at their natural
     risk mix, hosts reused as often as the dose needs, ids "K<fold>C<n>"."""
     full = n_cases is not None
-    rows = [r for r in legacy_bundles.load_rows(processed)["rows"] if r["fold"] != pool]
+    rows = [r for r in bundles.load_rows(processed)["rows"] if r["fold"] != pool]
     timelines = _timelines(processed, pool)
     hosts = sorted(u for u, t in timelines.items() if len(t) >= 3)
     per_factor = -(-n_cases // len(SC.RARE_FACTORS)) if full else CASES_PER_FACTOR

@@ -6,10 +6,6 @@ __pycache__/
 data/raw
 data/processed/
 data/synthetic/
-runs/
-adapters/*
-!adapters/README.md
 data/synthetic_pkgc/
 runs31*/
 models/
-paper/figures/out/
