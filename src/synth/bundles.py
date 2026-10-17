@@ -20,7 +20,7 @@ def load_rows(processed: Path) -> dict:
     for g in gold[gold['is_representative']].itertuples():
         p = tr_posts.loc[g.row_id]
         slices = sup.get(g.row_id, [])
-        rows.append({'row_id': g.row_id, 'fold': int(g.fold), 'risk': g.risk_train, 'factors': tuple(sorted(set(g.factors_set), key=PC.FACTOR_INDEX.__getitem__)), 'n_tokens': int(p['n_ws_tokens']), 'span_lens': tuple((t for _, t in slices)), 'evidence_slices': tuple((s for s, _ in slices)), 'post_raw': p['post_raw']})
+        rows.append({'row_id': g.row_id, 'anon_user_id': p['anon_user_id'], 'fold': int(g.fold), 'risk': g.risk_train, 'factors': tuple(sorted(set(g.factors_set), key=PC.FACTOR_INDEX.__getitem__)), 'n_tokens': int(p['n_ws_tokens']), 'span_lens': tuple((t for _, t in slices)), 'evidence_slices': tuple((s for s, _ in slices)), 'post_raw': p['post_raw']})
     rows.sort(key=lambda r: r['row_id'])
     user_counts = sorted(posts[posts['split'] == 'train'].groupby('anon_user_id').size().sort_index().tolist())
     return {'rows': rows, 'user_counts': user_counts}

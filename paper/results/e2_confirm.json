@@ -1,0 +1,799 @@
+{
+  "registration": "DECISIONS.md section 2j",
+  "seeds": [
+    1,
+    2
+  ],
+  "fallback_seed1_only": false,
+  "bootstrap_B": 2000,
+  "n_users": 153,
+  "controls_reproduced": true,
+  "observed_mean_seed": {
+    "real_only": {
+      "composite": 0.77512256,
+      "risk_wf1": 0.82675934,
+      "phrase_f1": 0.78531586,
+      "factor_macro_f1": 0.69608022,
+      "rare6_macro_f1": 0.62327636,
+      "other18_macro_f1": 0.72034818
+    },
+    "repeated_real": {
+      "composite": 0.77339938,
+      "risk_wf1": 0.8250053,
+      "phrase_f1": 0.78162697,
+      "factor_macro_f1": 0.6963639,
+      "rare6_macro_f1": 0.63828806,
+      "other18_macro_f1": 0.71572251
+    },
+    "rare_weighted": {
+      "composite": 0.77289061,
+      "risk_wf1": 0.8241868,
+      "phrase_f1": 0.78726195,
+      "factor_macro_f1": 0.69012436,
+      "rare6_macro_f1": 0.58666927,
+      "other18_macro_f1": 0.72460938
+    },
+    "pkgc_sonnet": {
+      "composite": 0.76177284,
+      "risk_wf1": 0.80955012,
+      "phrase_f1": 0.78419266,
+      "factor_macro_f1": 0.67564996,
+      "rare6_macro_f1": 0.62327069,
+      "other18_macro_f1": 0.69310972
+    },
+    "pkgc_gemma": {
+      "composite": 0.7621403,
+      "risk_wf1": 0.81185816,
+      "phrase_f1": 0.77977137,
+      "factor_macro_f1": 0.67821877,
+      "rare6_macro_f1": 0.60649761,
+      "other18_macro_f1": 0.70212582
+    }
+  },
+  "per_seed": {
+    "real_only": {
+      "1": {
+        "composite": 0.77603881,
+        "risk_wf1": 0.8265548,
+        "phrase_f1": 0.788535,
+        "factor_macro_f1": 0.69618796,
+        "rare6_macro_f1": 0.62414705,
+        "other18_macro_f1": 0.7202016,
+        "per_factor_f1": {
+          "hopelessness": 0.83333333,
+          "emotion dysregulation": 0.73044925,
+          "poor social support": 0.83757339,
+          "low self-esteem": 0.85412262,
+          "suicide means (with access)": 0.80921053,
+          "mental health issues": 0.78091106,
+          "prior self-harm or suicidal thought/attempt": 0.76258993,
+          "interpersonal difficulty": 0.63882064,
+          "stressful life event": 0.63687151,
+          "dysfunctional family": 0.86554622,
+          "interpersonal violence": 0.63316583,
+          "physical health/characteristic": 0.61744966,
+          "traumatic experience": 0.55,
+          "low socio-economic status": 0.78846154,
+          "cognitive deficits": 0.51515152,
+          "substance use": 0.73529412,
+          "poor school performance": 0.78571429,
+          "exposure to others' suicide": 0.81481481,
+          "sexual orientation related issues": 0.625,
+          "coping strategy": 0.82389937,
+          "psychological capital": 0.62309368,
+          "social support": 0.5840708,
+          "sense of responsibility": 0.59405941,
+          "meaning in life": 0.26890756
+        }
+      },
+      "2": {
+        "composite": 0.77420632,
+        "risk_wf1": 0.82696388,
+        "phrase_f1": 0.78209673,
+        "factor_macro_f1": 0.69597249,
+        "rare6_macro_f1": 0.62240567,
+        "other18_macro_f1": 0.72049476,
+        "per_factor_f1": {
+          "hopelessness": 0.83311772,
+          "emotion dysregulation": 0.73220339,
+          "poor social support": 0.84722222,
+          "low self-esteem": 0.8544102,
+          "suicide means (with access)": 0.8,
+          "mental health issues": 0.78470825,
+          "prior self-harm or suicidal thought/attempt": 0.74698795,
+          "interpersonal difficulty": 0.65822785,
+          "stressful life event": 0.62395543,
+          "dysfunctional family": 0.8879668,
+          "interpersonal violence": 0.6407767,
+          "physical health/characteristic": 0.6025641,
+          "traumatic experience": 0.60550459,
+          "low socio-economic status": 0.83478261,
+          "cognitive deficits": 0.50793651,
+          "substance use": 0.70422535,
+          "poor school performance": 0.77419355,
+          "exposure to others' suicide": 0.81481481,
+          "sexual orientation related issues": 0.71428571,
+          "coping strategy": 0.80837004,
+          "psychological capital": 0.61842105,
+          "social support": 0.56716418,
+          "sense of responsibility": 0.52252252,
+          "meaning in life": 0.2189781
+        }
+      }
+    },
+    "repeated_real": {
+      "1": {
+        "composite": 0.77108134,
+        "risk_wf1": 0.82371484,
+        "phrase_f1": 0.78352842,
+        "factor_macro_f1": 0.68845628,
+        "rare6_macro_f1": 0.63116061,
+        "other18_macro_f1": 0.70755483,
+        "per_factor_f1": {
+          "hopelessness": 0.83343969,
+          "emotion dysregulation": 0.73142857,
+          "poor social support": 0.83654822,
+          "low self-esteem": 0.85383807,
+          "suicide means (with access)": 0.82504013,
+          "mental health issues": 0.77642276,
+          "prior self-harm or suicidal thought/attempt": 0.78117647,
+          "interpersonal difficulty": 0.62034739,
+          "stressful life event": 0.60941828,
+          "dysfunctional family": 0.87704918,
+          "interpersonal violence": 0.55958549,
+          "physical health/characteristic": 0.58426966,
+          "traumatic experience": 0.52380952,
+          "low socio-economic status": 0.75675676,
+          "cognitive deficits": 0.57971014,
+          "substance use": 0.72222222,
+          "poor school performance": 0.68965517,
+          "exposure to others' suicide": 0.78571429,
+          "sexual orientation related issues": 0.77777778,
+          "coping strategy": 0.80130293,
+          "psychological capital": 0.62729124,
+          "social support": 0.58653846,
+          "sense of responsibility": 0.55172414,
+          "meaning in life": 0.23188406
+        }
+      },
+      "2": {
+        "composite": 0.77571742,
+        "risk_wf1": 0.82629576,
+        "phrase_f1": 0.77972552,
+        "factor_macro_f1": 0.70427153,
+        "rare6_macro_f1": 0.64541552,
+        "other18_macro_f1": 0.7238902,
+        "per_factor_f1": {
+          "hopelessness": 0.84092409,
+          "emotion dysregulation": 0.72925398,
+          "poor social support": 0.85089463,
+          "low self-esteem": 0.85169492,
+          "suicide means (with access)": 0.80452342,
+          "mental health issues": 0.7966805,
+          "prior self-harm or suicidal thought/attempt": 0.77590361,
+          "interpersonal difficulty": 0.6529563,
+          "stressful life event": 0.65129683,
+          "dysfunctional family": 0.87288136,
+          "interpersonal violence": 0.67326733,
+          "physical health/characteristic": 0.6163522,
+          "traumatic experience": 0.57943925,
+          "low socio-economic status": 0.76470588,
+          "cognitive deficits": 0.50980392,
+          "substance use": 0.77142857,
+          "poor school performance": 0.77419355,
+          "exposure to others' suicide": 0.81481481,
+          "sexual orientation related issues": 0.75,
+          "coping strategy": 0.8308026,
+          "psychological capital": 0.66071429,
+          "social support": 0.5862069,
+          "sense of responsibility": 0.49152542,
+          "meaning in life": 0.25225225
+        }
+      }
+    },
+    "rare_weighted": {
+      "1": {
+        "composite": 0.77103818,
+        "risk_wf1": 0.82108405,
+        "phrase_f1": 0.78582251,
+        "factor_macro_f1": 0.68952601,
+        "rare6_macro_f1": 0.58820625,
+        "other18_macro_f1": 0.72329927,
+        "per_factor_f1": {
+          "hopelessness": 0.83928571,
+          "emotion dysregulation": 0.75461741,
+          "poor social support": 0.84126984,
+          "low self-esteem": 0.84893617,
+          "suicide means (with access)": 0.81730769,
+          "mental health issues": 0.76767677,
+          "prior self-harm or suicidal thought/attempt": 0.79716981,
+          "interpersonal difficulty": 0.66161616,
+          "stressful life event": 0.62468514,
+          "dysfunctional family": 0.86808511,
+          "interpersonal violence": 0.59907834,
+          "physical health/characteristic": 0.61445783,
+          "traumatic experience": 0.59322034,
+          "low socio-economic status": 0.78991597,
+          "cognitive deficits": 0.5,
+          "substance use": 0.68493151,
+          "poor school performance": 0.68965517,
+          "exposure to others' suicide": 0.71428571,
+          "sexual orientation related issues": 0.70588235,
+          "coping strategy": 0.81028939,
+          "psychological capital": 0.65638767,
+          "social support": 0.57983193,
+          "sense of responsibility": 0.55555556,
+          "meaning in life": 0.23448276
+        }
+      },
+      "2": {
+        "composite": 0.77474305,
+        "risk_wf1": 0.82728956,
+        "phrase_f1": 0.78870139,
+        "factor_macro_f1": 0.6907227,
+        "rare6_macro_f1": 0.58513229,
+        "other18_macro_f1": 0.7259195,
+        "per_factor_f1": {
+          "hopelessness": 0.83062946,
+          "emotion dysregulation": 0.73931266,
+          "poor social support": 0.82820258,
+          "low self-esteem": 0.85416667,
+          "suicide means (with access)": 0.82857143,
+          "mental health issues": 0.78455285,
+          "prior self-harm or suicidal thought/attempt": 0.74418605,
+          "interpersonal difficulty": 0.69129288,
+          "stressful life event": 0.61931818,
+          "dysfunctional family": 0.87763713,
+          "interpersonal violence": 0.61202186,
+          "physical health/characteristic": 0.58227848,
+          "traumatic experience": 0.62385321,
+          "low socio-economic status": 0.81818182,
+          "cognitive deficits": 0.6031746,
+          "substance use": 0.64197531,
+          "poor school performance": 0.62068966,
+          "exposure to others' suicide": 0.75862069,
+          "sexual orientation related issues": 0.70588235,
+          "coping strategy": 0.79530917,
+          "psychological capital": 0.6622807,
+          "social support": 0.57798165,
+          "sense of responsibility": 0.59677419,
+          "meaning in life": 0.18045113
+        }
+      }
+    },
+    "pkgc_sonnet": {
+      "1": {
+        "composite": 0.76304161,
+        "risk_wf1": 0.81467875,
+        "phrase_f1": 0.78284871,
+        "factor_macro_f1": 0.674385,
+        "rare6_macro_f1": 0.61223118,
+        "other18_macro_f1": 0.69510294,
+        "per_factor_f1": {
+          "hopelessness": 0.79764244,
+          "emotion dysregulation": 0.71514115,
+          "poor social support": 0.8244898,
+          "low self-esteem": 0.83651805,
+          "suicide means (with access)": 0.8177496,
+          "mental health issues": 0.75,
+          "prior self-harm or suicidal thought/attempt": 0.73732719,
+          "interpersonal difficulty": 0.57665904,
+          "stressful life event": 0.53846154,
+          "dysfunctional family": 0.84081633,
+          "interpersonal violence": 0.59663866,
+          "physical health/characteristic": 0.6010929,
+          "traumatic experience": 0.67741935,
+          "low socio-economic status": 0.86238532,
+          "cognitive deficits": 0.6031746,
+          "substance use": 0.82352941,
+          "poor school performance": 0.84848485,
+          "exposure to others' suicide": 0.8,
+          "sexual orientation related issues": 0.4,
+          "coping strategy": 0.75343915,
+          "psychological capital": 0.62785863,
+          "social support": 0.54976303,
+          "sense of responsibility": 0.4084507,
+          "meaning in life": 0.1981982
+        }
+      },
+      "2": {
+        "composite": 0.76050406,
+        "risk_wf1": 0.80442149,
+        "phrase_f1": 0.7855366,
+        "factor_macro_f1": 0.67691493,
+        "rare6_macro_f1": 0.63431021,
+        "other18_macro_f1": 0.6911165,
+        "per_factor_f1": {
+          "hopelessness": 0.82361016,
+          "emotion dysregulation": 0.73763621,
+          "poor social support": 0.83168317,
+          "low self-esteem": 0.8460733,
+          "suicide means (with access)": 0.80388979,
+          "mental health issues": 0.776,
+          "prior self-harm or suicidal thought/attempt": 0.73193473,
+          "interpersonal difficulty": 0.61057692,
+          "stressful life event": 0.51336898,
+          "dysfunctional family": 0.8,
+          "interpersonal violence": 0.58295964,
+          "physical health/characteristic": 0.59459459,
+          "traumatic experience": 0.5785124,
+          "low socio-economic status": 0.7962963,
+          "cognitive deficits": 0.62068966,
+          "substance use": 0.75362319,
+          "poor school performance": 0.78787879,
+          "exposure to others' suicide": 0.82758621,
+          "sexual orientation related issues": 0.58823529,
+          "coping strategy": 0.74897119,
+          "psychological capital": 0.63829787,
+          "social support": 0.5631068,
+          "sense of responsibility": 0.46258503,
+          "meaning in life": 0.2278481
+        }
+      }
+    },
+    "pkgc_gemma": {
+      "1": {
+        "composite": 0.76273566,
+        "risk_wf1": 0.81177507,
+        "phrase_f1": 0.77967843,
+        "factor_macro_f1": 0.68040701,
+        "rare6_macro_f1": 0.5976436,
+        "other18_macro_f1": 0.70799482,
+        "per_factor_f1": {
+          "hopelessness": 0.81084656,
+          "emotion dysregulation": 0.74358974,
+          "poor social support": 0.81036269,
+          "low self-esteem": 0.83710895,
+          "suicide means (with access)": 0.82148499,
+          "mental health issues": 0.78059072,
+          "prior self-harm or suicidal thought/attempt": 0.74056604,
+          "interpersonal difficulty": 0.62953995,
+          "stressful life event": 0.55670103,
+          "dysfunctional family": 0.81666667,
+          "interpersonal violence": 0.60487805,
+          "physical health/characteristic": 0.64550265,
+          "traumatic experience": 0.62184874,
+          "low socio-economic status": 0.81081081,
+          "cognitive deficits": 0.39473684,
+          "substance use": 0.62857143,
+          "poor school performance": 0.77419355,
+          "exposure to others' suicide": 0.74074074,
+          "sexual orientation related issues": 0.85714286,
+          "coping strategy": 0.75699888,
+          "psychological capital": 0.67054264,
+          "social support": 0.58974359,
+          "sense of responsibility": 0.49612403,
+          "meaning in life": 0.19047619
+        }
+      },
+      "2": {
+        "composite": 0.76154495,
+        "risk_wf1": 0.81194124,
+        "phrase_f1": 0.7798643,
+        "factor_macro_f1": 0.67603053,
+        "rare6_macro_f1": 0.61535162,
+        "other18_macro_f1": 0.69625683,
+        "per_factor_f1": {
+          "hopelessness": 0.79790713,
+          "emotion dysregulation": 0.7305282,
+          "poor social support": 0.81773399,
+          "low self-esteem": 0.83780881,
+          "suicide means (with access)": 0.80511182,
+          "mental health issues": 0.77987421,
+          "prior self-harm or suicidal thought/attempt": 0.73317865,
+          "interpersonal difficulty": 0.63849765,
+          "stressful life event": 0.56424581,
+          "dysfunctional family": 0.81746032,
+          "interpersonal violence": 0.64390244,
+          "physical health/characteristic": 0.62295082,
+          "traumatic experience": 0.63380282,
+          "low socio-economic status": 0.81818182,
+          "cognitive deficits": 0.48780488,
+          "substance use": 0.73239437,
+          "poor school performance": 0.75862069,
+          "exposure to others' suicide": 0.74074074,
+          "sexual orientation related issues": 0.66666667,
+          "coping strategy": 0.7254509,
+          "psychological capital": 0.62300885,
+          "social support": 0.56,
+          "sense of responsibility": 0.38297872,
+          "meaning in life": 0.30588235
+        }
+      }
+    }
+  },
+  "primary": {
+    "P1": {
+      "composite": {
+        "mean": -0.01328115,
+        "ci_low": -0.02025649,
+        "ci_high": -0.00623147,
+        "positive_fraction": 0.0,
+        "observed": -0.01334973,
+        "p_two_sided": 0.0
+      },
+      "risk_wf1": {
+        "mean": -0.01740297,
+        "ci_low": -0.02576015,
+        "ci_high": -0.00915098,
+        "positive_fraction": 0.0,
+        "observed": -0.01720922,
+        "p_two_sided": 0.0
+      },
+      "phrase_f1": {
+        "mean": -0.00118761,
+        "ci_low": -0.00708511,
+        "ci_high": 0.005155,
+        "positive_fraction": 0.343,
+        "observed": -0.0011232,
+        "p_two_sided": 0.686
+      },
+      "factor_macro_f1": {
+        "mean": -0.01987894,
+        "ci_low": -0.03786421,
+        "ci_high": -0.00263511,
+        "positive_fraction": 0.012,
+        "observed": -0.02043026,
+        "p_two_sided": 0.024
+      },
+      "rare6_macro_f1": {
+        "mean": 0.00206176,
+        "ci_low": -0.06355872,
+        "ci_high": 0.06071759,
+        "positive_fraction": 0.5285,
+        "observed": -5.67e-06,
+        "p_two_sided": 0.943
+      },
+      "other18_macro_f1": {
+        "mean": -0.02719251,
+        "ci_low": -0.0378531,
+        "ci_high": -0.01600047,
+        "positive_fraction": 0.0,
+        "observed": -0.02723846,
+        "p_two_sided": 0.0
+      }
+    },
+    "P2": {
+      "composite": {
+        "mean": -0.01317765,
+        "ci_low": -0.02119221,
+        "ci_high": -0.00631342,
+        "positive_fraction": 0.0,
+        "observed": -0.01298226,
+        "p_two_sided": 0.0
+      },
+      "risk_wf1": {
+        "mean": -0.01507283,
+        "ci_low": -0.0271454,
+        "ci_high": -0.00301176,
+        "positive_fraction": 0.0085,
+        "observed": -0.01490118,
+        "p_two_sided": 0.017
+      },
+      "phrase_f1": {
+        "mean": -0.00566116,
+        "ci_low": -0.0113263,
+        "ci_high": 0.00041304,
+        "positive_fraction": 0.032,
+        "observed": -0.0055445,
+        "p_two_sided": 0.064
+      },
+      "factor_macro_f1": {
+        "mean": -0.01816723,
+        "ci_low": -0.03691398,
+        "ci_high": -0.00041381,
+        "positive_fraction": 0.023,
+        "observed": -0.01786145,
+        "p_two_sided": 0.046
+      },
+      "rare6_macro_f1": {
+        "mean": -0.01873854,
+        "ci_low": -0.086652,
+        "ci_high": 0.04064224,
+        "positive_fraction": 0.284,
+        "observed": -0.01677875,
+        "p_two_sided": 0.568
+      },
+      "other18_macro_f1": {
+        "mean": -0.01797679,
+        "ci_low": -0.02944252,
+        "ci_high": -0.00598446,
+        "positive_fraction": 0.001,
+        "observed": -0.01822235,
+        "p_two_sided": 0.002
+      }
+    }
+  },
+  "holm": {
+    "P1": {
+      "p": 0.0,
+      "holm_threshold": 0.025,
+      "reject_null": true
+    },
+    "P2": {
+      "p": 0.0,
+      "holm_threshold": 0.05,
+      "reject_null": true
+    }
+  },
+  "adoption": {
+    "pkgc_sonnet": {
+      "delta_vs_real_only": -0.01328115,
+      "delta_vs_repeated_real": -0.01168035,
+      "ship_bar": 0.01,
+      "adopt": false
+    },
+    "pkgc_gemma": {
+      "delta_vs_real_only": -0.01317765,
+      "delta_vs_repeated_real": -0.01157685,
+      "ship_bar": 0.01,
+      "adopt": false
+    }
+  },
+  "secondary": {
+    "sonnet_vs_repeated_real": {
+      "composite": {
+        "mean": -0.01168035,
+        "ci_low": -0.01846788,
+        "ci_high": -0.0045087,
+        "positive_fraction": 0.002,
+        "observed": -0.01162655,
+        "p_two_sided": 0.004
+      },
+      "risk_wf1": {
+        "mean": -0.01572471,
+        "ci_low": -0.02642712,
+        "ci_high": -0.00542802,
+        "positive_fraction": 0.0015,
+        "observed": -0.01545518,
+        "p_two_sided": 0.003
+      },
+      "phrase_f1": {
+        "mean": 0.00250818,
+        "ci_low": -0.00389116,
+        "ci_high": 0.00878146,
+        "positive_fraction": 0.782,
+        "observed": 0.00256569,
+        "p_two_sided": 0.436
+      },
+      "factor_macro_f1": {
+        "mean": -0.0204764,
+        "ci_low": -0.03695894,
+        "ci_high": -0.00449733,
+        "positive_fraction": 0.005,
+        "observed": -0.02071394,
+        "p_two_sided": 0.01
+      },
+      "rare6_macro_f1": {
+        "mean": -0.01385704,
+        "ci_low": -0.07445656,
+        "ci_high": 0.04411429,
+        "positive_fraction": 0.3135,
+        "observed": -0.01501737,
+        "p_two_sided": 0.627
+      },
+      "other18_macro_f1": {
+        "mean": -0.02268285,
+        "ci_low": -0.03206405,
+        "ci_high": -0.01234676,
+        "positive_fraction": 0.0,
+        "observed": -0.02261279,
+        "p_two_sided": 0.0
+      }
+    },
+    "gemma_vs_repeated_real": {
+      "composite": {
+        "mean": -0.01157685,
+        "ci_low": -0.01924728,
+        "ci_high": -0.00409219,
+        "positive_fraction": 0.001,
+        "observed": -0.01125908,
+        "p_two_sided": 0.002
+      },
+      "risk_wf1": {
+        "mean": -0.01339457,
+        "ci_low": -0.02536959,
+        "ci_high": -0.00221552,
+        "positive_fraction": 0.009,
+        "observed": -0.01314715,
+        "p_two_sided": 0.018
+      },
+      "phrase_f1": {
+        "mean": -0.00196537,
+        "ci_low": -0.00822784,
+        "ci_high": 0.00436552,
+        "positive_fraction": 0.26,
+        "observed": -0.0018556,
+        "p_two_sided": 0.52
+      },
+      "factor_macro_f1": {
+        "mean": -0.01876469,
+        "ci_low": -0.03776314,
+        "ci_high": -0.00157488,
+        "positive_fraction": 0.016,
+        "observed": -0.01814513,
+        "p_two_sided": 0.032
+      },
+      "rare6_macro_f1": {
+        "mean": -0.03465735,
+        "ci_low": -0.0969131,
+        "ci_high": 0.02217832,
+        "positive_fraction": 0.1185,
+        "observed": -0.03179046,
+        "p_two_sided": 0.237
+      },
+      "other18_macro_f1": {
+        "mean": -0.01346713,
+        "ci_low": -0.02368001,
+        "ci_high": -0.00236556,
+        "positive_fraction": 0.0105,
+        "observed": -0.01359669,
+        "p_two_sided": 0.021
+      }
+    },
+    "sonnet_vs_rare_weighted": {
+      "composite": {
+        "mean": -0.0109641,
+        "ci_low": -0.01827405,
+        "ci_high": -0.00304332,
+        "positive_fraction": 0.003,
+        "observed": -0.01111778,
+        "p_two_sided": 0.006
+      },
+      "risk_wf1": {
+        "mean": -0.01468978,
+        "ci_low": -0.02471598,
+        "ci_high": -0.00486508,
+        "positive_fraction": 0.002,
+        "observed": -0.01463668,
+        "p_two_sided": 0.004
+      },
+      "phrase_f1": {
+        "mean": -0.00310178,
+        "ci_low": -0.01048635,
+        "ci_high": 0.00420658,
+        "positive_fraction": 0.211,
+        "observed": -0.00306929,
+        "p_two_sided": 0.422
+      },
+      "factor_macro_f1": {
+        "mean": -0.01385883,
+        "ci_low": -0.03148486,
+        "ci_high": 0.00459373,
+        "positive_fraction": 0.065,
+        "observed": -0.01447439,
+        "p_two_sided": 0.13
+      },
+      "rare6_macro_f1": {
+        "mean": 0.03937345,
+        "ci_low": -0.0269463,
+        "ci_high": 0.10706261,
+        "positive_fraction": 0.885,
+        "observed": 0.03660142,
+        "p_two_sided": 0.23
+      },
+      "other18_macro_f1": {
+        "mean": -0.03160292,
+        "ci_low": -0.04131506,
+        "ci_high": -0.02158088,
+        "positive_fraction": 0.0,
+        "observed": -0.03149966,
+        "p_two_sided": 0.0
+      }
+    },
+    "gemma_vs_rare_weighted": {
+      "composite": {
+        "mean": -0.01086059,
+        "ci_low": -0.01923173,
+        "ci_high": -0.0030301,
+        "positive_fraction": 0.001,
+        "observed": -0.01075031,
+        "p_two_sided": 0.002
+      },
+      "risk_wf1": {
+        "mean": -0.01235965,
+        "ci_low": -0.02482736,
+        "ci_high": -0.00048102,
+        "positive_fraction": 0.0195,
+        "observed": -0.01232865,
+        "p_two_sided": 0.039
+      },
+      "phrase_f1": {
+        "mean": -0.00757533,
+        "ci_low": -0.01439684,
+        "ci_high": -0.00075977,
+        "positive_fraction": 0.019,
+        "observed": -0.00749058,
+        "p_two_sided": 0.038
+      },
+      "factor_macro_f1": {
+        "mean": -0.01214712,
+        "ci_low": -0.03052823,
+        "ci_high": 0.00692015,
+        "positive_fraction": 0.1135,
+        "observed": -0.01190558,
+        "p_two_sided": 0.227
+      },
+      "rare6_macro_f1": {
+        "mean": 0.01857314,
+        "ci_low": -0.05492149,
+        "ci_high": 0.0865995,
+        "positive_fraction": 0.713,
+        "observed": 0.01982834,
+        "p_two_sided": 0.574
+      },
+      "other18_macro_f1": {
+        "mean": -0.02238721,
+        "ci_low": -0.03308629,
+        "ci_high": -0.01111311,
+        "positive_fraction": 0.0,
+        "observed": -0.02248356,
+        "p_two_sided": 0.0
+      }
+    },
+    "sonnet_vs_gemma": {
+      "composite": {
+        "mean": -0.0001035,
+        "ci_low": -0.00689274,
+        "ci_high": 0.00628692,
+        "positive_fraction": 0.4965,
+        "observed": -0.00036747,
+        "p_two_sided": 0.993
+      },
+      "risk_wf1": {
+        "mean": -0.00233014,
+        "ci_low": -0.01398024,
+        "ci_high": 0.00812356,
+        "positive_fraction": 0.358,
+        "observed": -0.00230803,
+        "p_two_sided": 0.716
+      },
+      "phrase_f1": {
+        "mean": 0.00447355,
+        "ci_low": -0.00160497,
+        "ci_high": 0.010774,
+        "positive_fraction": 0.929,
+        "observed": 0.00442129,
+        "p_two_sided": 0.142
+      },
+      "factor_macro_f1": {
+        "mean": -0.00171171,
+        "ci_low": -0.01673234,
+        "ci_high": 0.01279424,
+        "positive_fraction": 0.417,
+        "observed": -0.00256881,
+        "p_two_sided": 0.834
+      },
+      "rare6_macro_f1": {
+        "mean": 0.0208003,
+        "ci_low": -0.03335362,
+        "ci_high": 0.07675711,
+        "positive_fraction": 0.7625,
+        "observed": 0.01677308,
+        "p_two_sided": 0.475
+      },
+      "other18_macro_f1": {
+        "mean": -0.00921572,
+        "ci_low": -0.01608375,
+        "ci_high": -0.00209484,
+        "positive_fraction": 0.0045,
+        "observed": -0.0090161,
+        "p_two_sided": 0.009
+      }
+    }
+  },
+  "inputs_sha256": {
+    "data/processed/gold.jsonl": "d06ee63ea3d8125e670d9af0b8ff8229ed6e188f0adc7420e77907b63c860ce8",
+    "data/processed/posts.parquet": "9edf2feb8d86bf2d09e2226a3b73546fad2a854cc53790cdc4ea13310293414b",
+    "runs31/pooled/baseline-s1.thresholded.jsonl": "ea424f18997cf3f2490cc675c580876e8cd1d19dbe44f88974b64a2cd2803a36",
+    "runs31/pooled/baseline-s2.thresholded.jsonl": "c4414fbca343effd6a5a7d36953c3b8fd8d12a9765a8838c81181399e22015b4",
+    "runs31/pooled/qcontrol-s1.thresholded.jsonl": "e12712e76d088fee0802f3b2a9bc91c1569b0641598f4b243c5ca9c77a0be8a1",
+    "runs31/pooled/qcontrol-s2.thresholded.jsonl": "8a93ebeca76aaded3becfacf979671bba43598ca4231ba3abea6c4790b6ef45d",
+    "runs31-rare/pooled/rareweight-s1.thresholded.jsonl": "fb58471c2253a37be23d02c160d12454a1cae359a417c516032f442bb0ce791a",
+    "runs31-rare/pooled/rareweight-s2.thresholded.jsonl": "7f91d93fdcc875f868a60ed3c3a23915669cdf6612abb901cbad83f65107d5e4",
+    "runs31-pkgc/pooled/pkgc_sonnet-s1.thresholded.jsonl": "bb8f632dbbc2a14843ceefd3d15d6aa03a5a08a6ad4b7f172a4cc90b4a6172c5",
+    "runs31-pkgc/pooled/pkgc_sonnet-s2.thresholded.jsonl": "ea5302c6e7e3913a5ef4aa52eada50a8f61af79eca6223f1d4c743033701581b",
+    "runs31-pkgc/pooled/pkgc_gemma-s1.thresholded.jsonl": "313d0e091ba7d1f76649208a63c421b8222b72fa8294985593a3874f9d21c129",
+    "runs31-pkgc/pooled/pkgc_gemma-s2.thresholded.jsonl": "ebafc405b8534838a331417b0bd7be38ccf149bffc52fccd09b2e929af63f2dd"
+  }
+}
