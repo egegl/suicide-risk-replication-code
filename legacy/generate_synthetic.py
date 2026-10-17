@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-'Generate and assemble synthetic training data.'
+'Competition-era synthetic pipeline (GPT-5.4-mini, OpenAI Batch API). Not the method of the ICHI 2027 paper; see README.md.'
 import argparse
 import json
 import os
 import sys
 import time
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).parent / 'src'))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
 
-def _load_dotenv(path: Path=Path(__file__).parent / '.env') -> None:
+def _load_dotenv(path: Path=Path(__file__).resolve().parents[1] / '.env') -> None:
     if not path.exists():
         return
     for line in path.read_text(encoding='utf-8').splitlines():

@@ -43,7 +43,7 @@ def _arms_or_launch_default(arms_csv: str, require_real_only: bool=False) -> lis
 def cmd_specs(args, P):
     built = specs_mod.write_specs(P['root'], P['runs'] / 'specs.json')
     pending = sorted({s['arm'] for s in built if s['train_file_sha'] == 'pending'})
-    _print({'specs': len(built), 'sweep_runs': sum((1 for s in built if s['fold'] != 'full')), 'pending_arms': pending, 'note': 'pending arms need `generate_synthetic.py assemble` (realism-gated) before their runs can launch' if pending else ''})
+    _print({'specs': len(built), 'sweep_runs': sum((1 for s in built if s['fold'] != 'full')), 'pending_arms': pending, 'note': 'pending arms need `legacy/generate_synthetic.py assemble` (realism-gated) before their runs can launch' if pending else ''})
 
 def cmd_preflight(args, P):
     try:
@@ -99,7 +99,7 @@ def cmd_preflight(args, P):
                 continue
             path = P['root'] / rel
             if sha == 'pending' or not path.exists():
-                failures.append(f'{rel}: pending/missing — run `generate_synthetic.py assemble`, rebuild specs')
+                failures.append(f'{rel}: pending/missing — run `legacy/generate_synthetic.py assemble`, rebuild specs')
                 train_report[rel] = 'pending/missing'
                 continue
             if state.sha256_file(path) != sha:

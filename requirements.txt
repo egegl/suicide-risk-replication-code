@@ -1,3 +1,5 @@
+anthropic
+matplotlib
 numpy
 openai
 openpyxl

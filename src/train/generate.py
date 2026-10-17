@@ -39,7 +39,7 @@ def _plain_output(req_out) -> dict:
 
 class Engine:
 
-    def __init__(self, base_model: str, max_model_len: int=C.VLLM_MAX_MODEL_LEN, gpu_mem_util: float=C.VLLM_GPU_MEM_UTIL, max_loras: int=C.VLLM_MAX_LORAS, enable_guided: bool=False, quantization: str | None=C.VLLM_QUANTIZATION, tensor_parallel: int=C.VLLM_TENSOR_PARALLEL):
+    def __init__(self, base_model: str, max_model_len: int=C.VLLM_MAX_MODEL_LEN, gpu_mem_util: float=C.VLLM_GPU_MEM_UTIL, max_loras: int=C.VLLM_MAX_LORAS, enable_guided: bool=False, quantization: str | None=C.VLLM_QUANTIZATION, tensor_parallel: int=C.VLLM_TENSOR_PARALLEL, **llm_kwargs):
         from vllm import LLM
         self.base_model = base_model
         self.max_model_len = max_model_len
@@ -47,7 +47,7 @@ class Engine:
         self.quantization = quantization
         self._lora_ids: dict[str, int] = {}
         quant_kwargs = {'quantization': quantization} if quantization else {}
-        self.llm = LLM(model=base_model, dtype='bfloat16', enable_lora=True, max_lora_rank=C.LORA_R, max_loras=max_loras, max_model_len=max_model_len, tensor_parallel_size=tensor_parallel, gpu_memory_utilization=gpu_mem_util, **quant_kwargs)
+        self.llm = LLM(model=base_model, dtype='bfloat16', enable_lora=True, max_lora_rank=C.LORA_R, max_loras=max_loras, max_model_len=max_model_len, tensor_parallel_size=tensor_parallel, gpu_memory_utilization=gpu_mem_util, **quant_kwargs, **llm_kwargs)
 
     def get_tokenizer(self):
         return self.llm.get_tokenizer()

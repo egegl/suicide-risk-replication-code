@@ -187,3 +187,13 @@ def test_generated_evidence_aligns_back_to_the_raw_post():
     assert parse.parse_generation(
         '{"evidence": ["not in the post at all"], "factors": {},'
         ' "risk": "Ideation"}', post)["align_dropped"] == 1
+
+
+def test_e2_generated_rows_keep_verbatim_spans_and_the_registered_dose():
+    from synth import pkgc
+    post = 'i want to die. i want to die tonight'
+    assert pkgc._span_ranges(post, ['i want to die', 'i want to die']) == [(0, 13), (15, 28)]
+    assert pkgc._span_ranges(post, ['not in the post']) is None
+    assert pkgc._PLAN_DISCLAIMER.search('No plan, just the thought')
+    assert not pkgc._PLAN_DISCLAIMER.search('I made a plan')
+    assert sum(pkgc.FULL_DOSE) == 6384

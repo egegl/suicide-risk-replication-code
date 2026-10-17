@@ -1,0 +1,3536 @@
+{
+ "audit": {
+  "annotators": 3,
+  "factor_mean_fleiss_kappa": 0.88664965,
+  "majority_decided": 8,
+  "n_posts": 48,
+  "paired_risk_match": {
+   "both": 18,
+   "gemma_only": 3,
+   "neither": 0,
+   "sonnet_only": 3
+  },
+  "pairwise_evidence_f1": [
+   0.73472222,
+   0.82986111
+  ],
+  "pairwise_factor_micro_f1": [
+   0.94290375,
+   0.95
+  ],
+  "pairwise_risk_exact": [
+   0.83333333,
+   0.95833333
+  ],
+  "per_factor": 4,
+  "per_writer": 24,
+  "risk_all_three_agree": 40,
+  "risk_fleiss_kappa": 0.8427733,
+  "seed": 20261015,
+  "writers": {
+   "gemma": {
+    "evidence_phrase_f1": 0.64444444,
+    "exact_factor_set": 0.125,
+    "factor_micro": {
+     "f1": 0.80645161,
+     "precision": 0.86206897,
+     "recall": 0.75757576
+    },
+    "naturalness_mean": 3.55555556,
+    "risk_matches": 21,
+    "risk_mismatches": {
+     "Behavior->Indicator": 3
+    },
+    "target_affirmed": {
+     "cognitive deficits": [
+      4,
+      4
+     ],
+     "exposure to others' suicide": [
+      3,
+      4
+     ],
+     "meaning in life": [
+      4,
+      4
+     ],
+     "poor school performance": [
+      4,
+      4
+     ],
+     "sexual orientation related issues": [
+      1,
+      4
+     ],
+     "substance use": [
+      4,
+      4
+     ]
+    }
+   },
+   "sonnet": {
+    "evidence_phrase_f1": 0.70992063,
+    "exact_factor_set": 0.20833333,
+    "factor_micro": {
+     "f1": 0.81114551,
+     "precision": 0.82911392,
+     "recall": 0.79393939
+    },
+    "naturalness_mean": 4.23611111,
+    "risk_matches": 21,
+    "risk_mismatches": {
+     "Behavior->Attempt": 1,
+     "Behavior->Indicator": 1,
+     "Indicator->Behavior": 1
+    },
+    "target_affirmed": {
+     "cognitive deficits": [
+      4,
+      4
+     ],
+     "exposure to others' suicide": [
+      1,
+      4
+     ],
+     "meaning in life": [
+      0,
+      4
+     ],
+     "poor school performance": [
+      4,
+      4
+     ],
+     "sexual orientation related issues": [
+      4,
+      4
+     ],
+     "substance use": [
+      4,
+      4
+     ]
+    }
+   }
+  }
+ },
+ "bootstrap": {
+  "b": 2000,
+  "n_scored_rows": 1635,
+  "n_users": 153,
+  "seed": 20260815,
+  "unit": "user"
+ },
+ "checkpoints": {
+  "curves": {
+   "gemma": {
+    "120": {
+     "mean_seed": 0.75450101,
+     "per_seed": [
+      0.75290725,
+      0.75609477
+     ]
+    },
+    "160": {
+     "mean_seed": 0.7625851,
+     "per_seed": [
+      0.76386251,
+      0.76130768
+     ]
+    },
+    "40": {
+     "mean_seed": 0.73482954,
+     "per_seed": [
+      0.73462644,
+      0.73503265
+     ]
+    },
+    "80": {
+     "mean_seed": 0.74252931,
+     "per_seed": [
+      0.73994156,
+      0.74511705
+     ]
+    }
+   },
+   "real_only": {
+    "120": {
+     "mean_seed": 0.77150212,
+     "per_seed": [
+      0.76902172,
+      0.77398251
+     ]
+    },
+    "160": {
+     "mean_seed": 0.77527184,
+     "per_seed": [
+      0.7751766,
+      0.77536708
+     ]
+    },
+    "40": {
+     "mean_seed": 0.73519371,
+     "per_seed": [
+      0.72977437,
+      0.74061305
+     ]
+    },
+    "80": {
+     "mean_seed": 0.76247514,
+     "per_seed": [
+      0.76200391,
+      0.76294638
+     ]
+    }
+   },
+   "repeated_real": {
+    "120": {
+     "mean_seed": 0.77100276,
+     "per_seed": [
+      0.76722854,
+      0.77477697
+     ]
+    },
+    "160": {
+     "mean_seed": 0.7748828,
+     "per_seed": [
+      0.77450968,
+      0.77525593
+     ]
+    },
+    "40": {
+     "mean_seed": 0.73513805,
+     "per_seed": [
+      0.72471441,
+      0.74556169
+     ]
+    },
+    "80": {
+     "mean_seed": 0.76400854,
+     "per_seed": [
+      0.76430817,
+      0.76370891
+     ]
+    }
+   },
+   "sonnet": {
+    "120": {
+     "mean_seed": 0.7584158,
+     "per_seed": [
+      0.758412,
+      0.75841959
+     ]
+    },
+    "160": {
+     "mean_seed": 0.76380208,
+     "per_seed": [
+      0.76450156,
+      0.76310259
+     ]
+    },
+    "40": {
+     "mean_seed": 0.73372111,
+     "per_seed": [
+      0.73082363,
+      0.73661859
+     ]
+    },
+    "80": {
+     "mean_seed": 0.75282153,
+     "per_seed": [
+      0.74996912,
+      0.75567395
+     ]
+    }
+   }
+  },
+  "paired_by_step": {
+   "120": {
+    "gemma_vs_real_only": {
+     "ci_high": -0.0097274,
+     "ci_low": -0.02463178,
+     "mean": -0.0170509,
+     "observed": -0.01700111,
+     "positive_fraction": 0.0
+    },
+    "repeated_real_vs_real_only": {
+     "ci_high": 0.00537931,
+     "ci_low": -0.00576401,
+     "mean": -0.00031646,
+     "observed": -0.00049936,
+     "positive_fraction": 0.4585
+    },
+    "sonnet_vs_real_only": {
+     "ci_high": -0.00568387,
+     "ci_low": -0.0203062,
+     "mean": -0.01315327,
+     "observed": -0.01308632,
+     "positive_fraction": 0.0
+    }
+   },
+   "160": {
+    "gemma_vs_real_only": {
+     "ci_high": -0.004782,
+     "ci_low": -0.02173387,
+     "mean": -0.01274101,
+     "observed": -0.01268675,
+     "positive_fraction": 0.0
+    },
+    "repeated_real_vs_real_only": {
+     "ci_high": 0.00530725,
+     "ci_low": -0.00585978,
+     "mean": -0.00030906,
+     "observed": -0.00038904,
+     "positive_fraction": 0.454
+    },
+    "sonnet_vs_real_only": {
+     "ci_high": -0.00445404,
+     "ci_low": -0.01884888,
+     "mean": -0.01130972,
+     "observed": -0.01146977,
+     "positive_fraction": 0.0
+    }
+   },
+   "40": {
+    "gemma_vs_real_only": {
+     "ci_high": 0.01004091,
+     "ci_low": -0.01037616,
+     "mean": -7.663e-05,
+     "observed": -0.00036417,
+     "positive_fraction": 0.502
+    },
+    "repeated_real_vs_real_only": {
+     "ci_high": 0.00634243,
+     "ci_low": -0.0062638,
+     "mean": 3.401e-05,
+     "observed": -5.566e-05,
+     "positive_fraction": 0.5
+    },
+    "sonnet_vs_real_only": {
+     "ci_high": 0.0071083,
+     "ci_low": -0.01011776,
+     "mean": -0.00144561,
+     "observed": -0.0014726,
+     "positive_fraction": 0.372
+    }
+   },
+   "80": {
+    "gemma_vs_real_only": {
+     "ci_high": -0.01323197,
+     "ci_low": -0.02700668,
+     "mean": -0.01992715,
+     "observed": -0.01994584,
+     "positive_fraction": 0.0
+    },
+    "repeated_real_vs_real_only": {
+     "ci_high": 0.00872309,
+     "ci_low": -0.00516719,
+     "mean": 0.0016508,
+     "observed": 0.0015334,
+     "positive_fraction": 0.68
+    },
+    "sonnet_vs_real_only": {
+     "ci_high": -0.00313586,
+     "ci_low": -0.0157743,
+     "mean": -0.00950243,
+     "observed": -0.00965361,
+     "positive_fraction": 0.002
+    }
+   }
+  },
+  "selected_steps": {
+   "gemma": [
+    80,
+    120,
+    120,
+    120,
+    120,
+    160,
+    160,
+    160,
+    160,
+    160
+   ],
+   "real_only": [
+    120,
+    120,
+    120,
+    120,
+    160,
+    160,
+    160,
+    160,
+    160,
+    160
+   ],
+   "repeated_real": [
+    80,
+    120,
+    120,
+    160,
+    160,
+    160,
+    160,
+    160,
+    160,
+    160
+   ],
+   "sonnet": [
+    120,
+    120,
+    120,
+    160,
+    160,
+    160,
+    160,
+    160,
+    160,
+    160
+   ]
+  }
+ },
+ "conditions": {
+  "gemma": {
+   "mean_seed": {
+    "composite": 0.7621403,
+    "composite_no_evidence": 0.75458413,
+    "factor_macro_f1": 0.67821877,
+    "other18_macro_f1": 0.70212582,
+    "phrase_f1": 0.77977137,
+    "rare6_macro_f1": 0.60649761,
+    "risk_wf1": 0.81185816
+   },
+   "per_factor_f1_mean_seed": {
+    "cognitive deficits": 0.44127086,
+    "coping strategy": 0.74122489,
+    "dysfunctional family": 0.81706349,
+    "emotion dysregulation": 0.73705897,
+    "exposure to others' suicide": 0.74074074,
+    "hopelessness": 0.80437684,
+    "interpersonal difficulty": 0.6340188,
+    "interpersonal violence": 0.62439024,
+    "low self-esteem": 0.83745888,
+    "low socio-economic status": 0.81449631,
+    "meaning in life": 0.24817927,
+    "mental health issues": 0.78023247,
+    "physical health/characteristic": 0.63422673,
+    "poor school performance": 0.76640712,
+    "poor social support": 0.81404834,
+    "prior self-harm or suicidal thought/attempt": 0.73687235,
+    "psychological capital": 0.64677574,
+    "sense of responsibility": 0.43955138,
+    "sexual orientation related issues": 0.76190476,
+    "social support": 0.57487179,
+    "stressful life event": 0.56047342,
+    "substance use": 0.6804829,
+    "suicide means (with access)": 0.81329841,
+    "traumatic experience": 0.62782578
+   },
+   "per_seed": {
+    "1": {
+     "composite": 0.76273566,
+     "factor_macro_f1": 0.68040701,
+     "other18_macro_f1": 0.70799482,
+     "per_factor_f1": {
+      "cognitive deficits": 0.39473684,
+      "coping strategy": 0.75699888,
+      "dysfunctional family": 0.81666667,
+      "emotion dysregulation": 0.74358974,
+      "exposure to others' suicide": 0.74074074,
+      "hopelessness": 0.81084656,
+      "interpersonal difficulty": 0.62953995,
+      "interpersonal violence": 0.60487805,
+      "low self-esteem": 0.83710895,
+      "low socio-economic status": 0.81081081,
+      "meaning in life": 0.19047619,
+      "mental health issues": 0.78059072,
+      "physical health/characteristic": 0.64550265,
+      "poor school performance": 0.77419355,
+      "poor social support": 0.81036269,
+      "prior self-harm or suicidal thought/attempt": 0.74056604,
+      "psychological capital": 0.67054264,
+      "sense of responsibility": 0.49612403,
+      "sexual orientation related issues": 0.85714286,
+      "social support": 0.58974359,
+      "stressful life event": 0.55670103,
+      "substance use": 0.62857143,
+      "suicide means (with access)": 0.82148499,
+      "traumatic experience": 0.62184874
+     },
+     "phrase_f1": 0.77967843,
+     "rare6_macro_f1": 0.5976436,
+     "risk_wf1": 0.81177507
+    },
+    "2": {
+     "composite": 0.76154495,
+     "factor_macro_f1": 0.67603053,
+     "other18_macro_f1": 0.69625683,
+     "per_factor_f1": {
+      "cognitive deficits": 0.48780488,
+      "coping strategy": 0.7254509,
+      "dysfunctional family": 0.81746032,
+      "emotion dysregulation": 0.7305282,
+      "exposure to others' suicide": 0.74074074,
+      "hopelessness": 0.79790713,
+      "interpersonal difficulty": 0.63849765,
+      "interpersonal violence": 0.64390244,
+      "low self-esteem": 0.83780881,
+      "low socio-economic status": 0.81818182,
+      "meaning in life": 0.30588235,
+      "mental health issues": 0.77987421,
+      "physical health/characteristic": 0.62295082,
+      "poor school performance": 0.75862069,
+      "poor social support": 0.81773399,
+      "prior self-harm or suicidal thought/attempt": 0.73317865,
+      "psychological capital": 0.62300885,
+      "sense of responsibility": 0.38297872,
+      "sexual orientation related issues": 0.66666667,
+      "social support": 0.56,
+      "stressful life event": 0.56424581,
+      "substance use": 0.73239437,
+      "suicide means (with access)": 0.80511182,
+      "traumatic experience": 0.63380282
+     },
+     "phrase_f1": 0.7798643,
+     "rare6_macro_f1": 0.61535162,
+     "risk_wf1": 0.81194124
+    }
+   }
+  },
+  "rare_weighted": {
+   "mean_seed": {
+    "composite": 0.77289061,
+    "composite_no_evidence": 0.76673147,
+    "factor_macro_f1": 0.69012436,
+    "other18_macro_f1": 0.72460938,
+    "phrase_f1": 0.78726195,
+    "rare6_macro_f1": 0.58666927,
+    "risk_wf1": 0.8241868
+   },
+   "per_factor_f1_mean_seed": {
+    "cognitive deficits": 0.5515873,
+    "coping strategy": 0.80279928,
+    "dysfunctional family": 0.87286112,
+    "emotion dysregulation": 0.74696504,
+    "exposure to others' suicide": 0.7364532,
+    "hopelessness": 0.83495759,
+    "interpersonal difficulty": 0.67645452,
+    "interpersonal violence": 0.6055501,
+    "low self-esteem": 0.85155142,
+    "low socio-economic status": 0.80404889,
+    "meaning in life": 0.20746694,
+    "mental health issues": 0.77611481,
+    "physical health/characteristic": 0.59836816,
+    "poor school performance": 0.65517241,
+    "poor social support": 0.83473621,
+    "prior self-harm or suicidal thought/attempt": 0.77067793,
+    "psychological capital": 0.65933418,
+    "sense of responsibility": 0.57616487,
+    "sexual orientation related issues": 0.70588235,
+    "social support": 0.57890679,
+    "stressful life event": 0.62200166,
+    "substance use": 0.66345341,
+    "suicide means (with access)": 0.82293956,
+    "traumatic experience": 0.60853677
+   },
+   "per_seed": {
+    "1": {
+     "composite": 0.77103818,
+     "factor_macro_f1": 0.68952601,
+     "other18_macro_f1": 0.72329927,
+     "per_factor_f1": {
+      "cognitive deficits": 0.5,
+      "coping strategy": 0.81028939,
+      "dysfunctional family": 0.86808511,
+      "emotion dysregulation": 0.75461741,
+      "exposure to others' suicide": 0.71428571,
+      "hopelessness": 0.83928571,
+      "interpersonal difficulty": 0.66161616,
+      "interpersonal violence": 0.59907834,
+      "low self-esteem": 0.84893617,
+      "low socio-economic status": 0.78991597,
+      "meaning in life": 0.23448276,
+      "mental health issues": 0.76767677,
+      "physical health/characteristic": 0.61445783,
+      "poor school performance": 0.68965517,
+      "poor social support": 0.84126984,
+      "prior self-harm or suicidal thought/attempt": 0.79716981,
+      "psychological capital": 0.65638767,
+      "sense of responsibility": 0.55555556,
+      "sexual orientation related issues": 0.70588235,
+      "social support": 0.57983193,
+      "stressful life event": 0.62468514,
+      "substance use": 0.68493151,
+      "suicide means (with access)": 0.81730769,
+      "traumatic experience": 0.59322034
+     },
+     "phrase_f1": 0.78582251,
+     "rare6_macro_f1": 0.58820625,
+     "risk_wf1": 0.82108405
+    },
+    "2": {
+     "composite": 0.77474305,
+     "factor_macro_f1": 0.6907227,
+     "other18_macro_f1": 0.7259195,
+     "per_factor_f1": {
+      "cognitive deficits": 0.6031746,
+      "coping strategy": 0.79530917,
+      "dysfunctional family": 0.87763713,
+      "emotion dysregulation": 0.73931266,
+      "exposure to others' suicide": 0.75862069,
+      "hopelessness": 0.83062946,
+      "interpersonal difficulty": 0.69129288,
+      "interpersonal violence": 0.61202186,
+      "low self-esteem": 0.85416667,
+      "low socio-economic status": 0.81818182,
+      "meaning in life": 0.18045113,
+      "mental health issues": 0.78455285,
+      "physical health/characteristic": 0.58227848,
+      "poor school performance": 0.62068966,
+      "poor social support": 0.82820258,
+      "prior self-harm or suicidal thought/attempt": 0.74418605,
+      "psychological capital": 0.6622807,
+      "sense of responsibility": 0.59677419,
+      "sexual orientation related issues": 0.70588235,
+      "social support": 0.57798165,
+      "stressful life event": 0.61931818,
+      "substance use": 0.64197531,
+      "suicide means (with access)": 0.82857143,
+      "traumatic experience": 0.62385321
+     },
+     "phrase_f1": 0.78870139,
+     "rare6_macro_f1": 0.58513229,
+     "risk_wf1": 0.82728956
+    }
+   }
+  },
+  "real_only": {
+   "mean_seed": {
+    "composite": 0.77512256,
+    "composite_no_evidence": 0.770754,
+    "factor_macro_f1": 0.69608022,
+    "other18_macro_f1": 0.72034818,
+    "phrase_f1": 0.78531586,
+    "rare6_macro_f1": 0.62327636,
+    "risk_wf1": 0.82675934
+   },
+   "per_factor_f1_mean_seed": {
+    "cognitive deficits": 0.51154401,
+    "coping strategy": 0.81613471,
+    "dysfunctional family": 0.87675651,
+    "emotion dysregulation": 0.73132632,
+    "exposure to others' suicide": 0.81481481,
+    "hopelessness": 0.83322553,
+    "interpersonal difficulty": 0.64852424,
+    "interpersonal violence": 0.63697126,
+    "low self-esteem": 0.85426641,
+    "low socio-economic status": 0.81162207,
+    "meaning in life": 0.24394283,
+    "mental health issues": 0.78280966,
+    "physical health/characteristic": 0.61000688,
+    "poor school performance": 0.77995392,
+    "poor social support": 0.8423978,
+    "prior self-harm or suicidal thought/attempt": 0.75478894,
+    "psychological capital": 0.62075737,
+    "sense of responsibility": 0.55829096,
+    "sexual orientation related issues": 0.66964286,
+    "social support": 0.57561749,
+    "stressful life event": 0.63041347,
+    "substance use": 0.71975973,
+    "suicide means (with access)": 0.80460526,
+    "traumatic experience": 0.57775229
+   },
+   "per_seed": {
+    "1": {
+     "composite": 0.77603881,
+     "factor_macro_f1": 0.69618796,
+     "other18_macro_f1": 0.7202016,
+     "per_factor_f1": {
+      "cognitive deficits": 0.51515152,
+      "coping strategy": 0.82389937,
+      "dysfunctional family": 0.86554622,
+      "emotion dysregulation": 0.73044925,
+      "exposure to others' suicide": 0.81481481,
+      "hopelessness": 0.83333333,
+      "interpersonal difficulty": 0.63882064,
+      "interpersonal violence": 0.63316583,
+      "low self-esteem": 0.85412262,
+      "low socio-economic status": 0.78846154,
+      "meaning in life": 0.26890756,
+      "mental health issues": 0.78091106,
+      "physical health/characteristic": 0.61744966,
+      "poor school performance": 0.78571429,
+      "poor social support": 0.83757339,
+      "prior self-harm or suicidal thought/attempt": 0.76258993,
+      "psychological capital": 0.62309368,
+      "sense of responsibility": 0.59405941,
+      "sexual orientation related issues": 0.625,
+      "social support": 0.5840708,
+      "stressful life event": 0.63687151,
+      "substance use": 0.73529412,
+      "suicide means (with access)": 0.80921053,
+      "traumatic experience": 0.55
+     },
+     "phrase_f1": 0.788535,
+     "rare6_macro_f1": 0.62414705,
+     "risk_wf1": 0.8265548
+    },
+    "2": {
+     "composite": 0.77420632,
+     "factor_macro_f1": 0.69597249,
+     "other18_macro_f1": 0.72049476,
+     "per_factor_f1": {
+      "cognitive deficits": 0.50793651,
+      "coping strategy": 0.80837004,
+      "dysfunctional family": 0.8879668,
+      "emotion dysregulation": 0.73220339,
+      "exposure to others' suicide": 0.81481481,
+      "hopelessness": 0.83311772,
+      "interpersonal difficulty": 0.65822785,
+      "interpersonal violence": 0.6407767,
+      "low self-esteem": 0.8544102,
+      "low socio-economic status": 0.83478261,
+      "meaning in life": 0.2189781,
+      "mental health issues": 0.78470825,
+      "physical health/characteristic": 0.6025641,
+      "poor school performance": 0.77419355,
+      "poor social support": 0.84722222,
+      "prior self-harm or suicidal thought/attempt": 0.74698795,
+      "psychological capital": 0.61842105,
+      "sense of responsibility": 0.52252252,
+      "sexual orientation related issues": 0.71428571,
+      "social support": 0.56716418,
+      "stressful life event": 0.62395543,
+      "substance use": 0.70422535,
+      "suicide means (with access)": 0.8,
+      "traumatic experience": 0.60550459
+     },
+     "phrase_f1": 0.78209673,
+     "rare6_macro_f1": 0.62240567,
+     "risk_wf1": 0.82696388
+    }
+   }
+  },
+  "repeated_real": {
+   "mean_seed": {
+    "composite": 0.77339938,
+    "composite_no_evidence": 0.76987327,
+    "factor_macro_f1": 0.6963639,
+    "other18_macro_f1": 0.71572251,
+    "phrase_f1": 0.78162697,
+    "rare6_macro_f1": 0.63828806,
+    "risk_wf1": 0.8250053
+   },
+   "per_factor_f1_mean_seed": {
+    "cognitive deficits": 0.54475703,
+    "coping strategy": 0.81605277,
+    "dysfunctional family": 0.87496527,
+    "emotion dysregulation": 0.73034128,
+    "exposure to others' suicide": 0.80026455,
+    "hopelessness": 0.83718189,
+    "interpersonal difficulty": 0.63665185,
+    "interpersonal violence": 0.61642641,
+    "low self-esteem": 0.85276649,
+    "low socio-economic status": 0.76073132,
+    "meaning in life": 0.24206816,
+    "mental health issues": 0.78655163,
+    "physical health/characteristic": 0.60031093,
+    "poor school performance": 0.73192436,
+    "poor social support": 0.84372143,
+    "prior self-harm or suicidal thought/attempt": 0.77854004,
+    "psychological capital": 0.64400276,
+    "sense of responsibility": 0.52162478,
+    "sexual orientation related issues": 0.76388889,
+    "social support": 0.58637268,
+    "stressful life event": 0.63035756,
+    "substance use": 0.7468254,
+    "suicide means (with access)": 0.81478178,
+    "traumatic experience": 0.55162439
+   },
+   "per_seed": {
+    "1": {
+     "composite": 0.77108134,
+     "factor_macro_f1": 0.68845628,
+     "other18_macro_f1": 0.70755483,
+     "per_factor_f1": {
+      "cognitive deficits": 0.57971014,
+      "coping strategy": 0.80130293,
+      "dysfunctional family": 0.87704918,
+      "emotion dysregulation": 0.73142857,
+      "exposure to others' suicide": 0.78571429,
+      "hopelessness": 0.83343969,
+      "interpersonal difficulty": 0.62034739,
+      "interpersonal violence": 0.55958549,
+      "low self-esteem": 0.85383807,
+      "low socio-economic status": 0.75675676,
+      "meaning in life": 0.23188406,
+      "mental health issues": 0.77642276,
+      "physical health/characteristic": 0.58426966,
+      "poor school performance": 0.68965517,
+      "poor social support": 0.83654822,
+      "prior self-harm or suicidal thought/attempt": 0.78117647,
+      "psychological capital": 0.62729124,
+      "sense of responsibility": 0.55172414,
+      "sexual orientation related issues": 0.77777778,
+      "social support": 0.58653846,
+      "stressful life event": 0.60941828,
+      "substance use": 0.72222222,
+      "suicide means (with access)": 0.82504013,
+      "traumatic experience": 0.52380952
+     },
+     "phrase_f1": 0.78352842,
+     "rare6_macro_f1": 0.63116061,
+     "risk_wf1": 0.82371484
+    },
+    "2": {
+     "composite": 0.77571742,
+     "factor_macro_f1": 0.70427153,
+     "other18_macro_f1": 0.7238902,
+     "per_factor_f1": {
+      "cognitive deficits": 0.50980392,
+      "coping strategy": 0.8308026,
+      "dysfunctional family": 0.87288136,
+      "emotion dysregulation": 0.72925398,
+      "exposure to others' suicide": 0.81481481,
+      "hopelessness": 0.84092409,
+      "interpersonal difficulty": 0.6529563,
+      "interpersonal violence": 0.67326733,
+      "low self-esteem": 0.85169492,
+      "low socio-economic status": 0.76470588,
+      "meaning in life": 0.25225225,
+      "mental health issues": 0.7966805,
+      "physical health/characteristic": 0.6163522,
+      "poor school performance": 0.77419355,
+      "poor social support": 0.85089463,
+      "prior self-harm or suicidal thought/attempt": 0.77590361,
+      "psychological capital": 0.66071429,
+      "sense of responsibility": 0.49152542,
+      "sexual orientation related issues": 0.75,
+      "social support": 0.5862069,
+      "stressful life event": 0.65129683,
+      "substance use": 0.77142857,
+      "suicide means (with access)": 0.80452342,
+      "traumatic experience": 0.57943925
+     },
+     "phrase_f1": 0.77972552,
+     "rare6_macro_f1": 0.64541552,
+     "risk_wf1": 0.82629576
+    }
+   }
+  },
+  "sonnet": {
+   "mean_seed": {
+    "composite": 0.76177284,
+    "composite_no_evidence": 0.75216434,
+    "factor_macro_f1": 0.67564996,
+    "other18_macro_f1": 0.69310972,
+    "phrase_f1": 0.78419266,
+    "rare6_macro_f1": 0.62327069,
+    "risk_wf1": 0.80955012
+   },
+   "per_factor_f1_mean_seed": {
+    "cognitive deficits": 0.61193213,
+    "coping strategy": 0.75120517,
+    "dysfunctional family": 0.82040816,
+    "emotion dysregulation": 0.72638868,
+    "exposure to others' suicide": 0.8137931,
+    "hopelessness": 0.8106263,
+    "interpersonal difficulty": 0.59361798,
+    "interpersonal violence": 0.58979915,
+    "low self-esteem": 0.84129567,
+    "low socio-economic status": 0.82934081,
+    "meaning in life": 0.21302315,
+    "mental health issues": 0.763,
+    "physical health/characteristic": 0.59784375,
+    "poor school performance": 0.81818182,
+    "poor social support": 0.82808648,
+    "prior self-harm or suicidal thought/attempt": 0.73463096,
+    "psychological capital": 0.63307825,
+    "sense of responsibility": 0.43551787,
+    "sexual orientation related issues": 0.49411765,
+    "social support": 0.55643491,
+    "stressful life event": 0.52591526,
+    "substance use": 0.7885763,
+    "suicide means (with access)": 0.8108197,
+    "traumatic experience": 0.62796588
+   },
+   "per_seed": {
+    "1": {
+     "composite": 0.76304161,
+     "factor_macro_f1": 0.674385,
+     "other18_macro_f1": 0.69510294,
+     "per_factor_f1": {
+      "cognitive deficits": 0.6031746,
+      "coping strategy": 0.75343915,
+      "dysfunctional family": 0.84081633,
+      "emotion dysregulation": 0.71514115,
+      "exposure to others' suicide": 0.8,
+      "hopelessness": 0.79764244,
+      "interpersonal difficulty": 0.57665904,
+      "interpersonal violence": 0.59663866,
+      "low self-esteem": 0.83651805,
+      "low socio-economic status": 0.86238532,
+      "meaning in life": 0.1981982,
+      "mental health issues": 0.75,
+      "physical health/characteristic": 0.6010929,
+      "poor school performance": 0.84848485,
+      "poor social support": 0.8244898,
+      "prior self-harm or suicidal thought/attempt": 0.73732719,
+      "psychological capital": 0.62785863,
+      "sense of responsibility": 0.4084507,
+      "sexual orientation related issues": 0.4,
+      "social support": 0.54976303,
+      "stressful life event": 0.53846154,
+      "substance use": 0.82352941,
+      "suicide means (with access)": 0.8177496,
+      "traumatic experience": 0.67741935
+     },
+     "phrase_f1": 0.78284871,
+     "rare6_macro_f1": 0.61223118,
+     "risk_wf1": 0.81467875
+    },
+    "2": {
+     "composite": 0.76050406,
+     "factor_macro_f1": 0.67691493,
+     "other18_macro_f1": 0.6911165,
+     "per_factor_f1": {
+      "cognitive deficits": 0.62068966,
+      "coping strategy": 0.74897119,
+      "dysfunctional family": 0.8,
+      "emotion dysregulation": 0.73763621,
+      "exposure to others' suicide": 0.82758621,
+      "hopelessness": 0.82361016,
+      "interpersonal difficulty": 0.61057692,
+      "interpersonal violence": 0.58295964,
+      "low self-esteem": 0.8460733,
+      "low socio-economic status": 0.7962963,
+      "meaning in life": 0.2278481,
+      "mental health issues": 0.776,
+      "physical health/characteristic": 0.59459459,
+      "poor school performance": 0.78787879,
+      "poor social support": 0.83168317,
+      "prior self-harm or suicidal thought/attempt": 0.73193473,
+      "psychological capital": 0.63829787,
+      "sense of responsibility": 0.46258503,
+      "sexual orientation related issues": 0.58823529,
+      "social support": 0.5631068,
+      "stressful life event": 0.51336898,
+      "substance use": 0.75362319,
+      "suicide means (with access)": 0.80388979,
+      "traumatic experience": 0.5785124
+     },
+     "phrase_f1": 0.7855366,
+     "rare6_macro_f1": 0.63431021,
+     "risk_wf1": 0.80442149
+    }
+   }
+  }
+ },
+ "dataset": {
+  "factor_order": [
+   "hopelessness",
+   "emotion dysregulation",
+   "poor social support",
+   "low self-esteem",
+   "suicide means (with access)",
+   "mental health issues",
+   "prior self-harm or suicidal thought/attempt",
+   "interpersonal difficulty",
+   "stressful life event",
+   "dysfunctional family",
+   "interpersonal violence",
+   "physical health/characteristic",
+   "traumatic experience",
+   "low socio-economic status",
+   "cognitive deficits",
+   "substance use",
+   "poor school performance",
+   "exposure to others' suicide",
+   "sexual orientation related issues",
+   "coping strategy",
+   "psychological capital",
+   "social support",
+   "sense of responsibility",
+   "meaning in life"
+  ],
+  "factor_support": {
+   "cognitive deficits": 33,
+   "coping strategy": 443,
+   "dysfunctional family": 118,
+   "emotion dysregulation": 542,
+   "exposure to others' suicide": 14,
+   "hopelessness": 745,
+   "interpersonal difficulty": 195,
+   "interpersonal violence": 83,
+   "low self-esteem": 475,
+   "low socio-economic status": 54,
+   "meaning in life": 45,
+   "mental health issues": 228,
+   "physical health/characteristic": 78,
+   "poor school performance": 16,
+   "poor social support": 501,
+   "prior self-harm or suicidal thought/attempt": 215,
+   "psychological capital": 238,
+   "sense of responsibility": 58,
+   "sexual orientation related issues": 8,
+   "social support": 112,
+   "stressful life event": 182,
+   "substance use": 33,
+   "suicide means (with access)": 292,
+   "traumatic experience": 64
+  },
+  "factors_per_post": 2.91865443,
+  "factors_per_post_with_rare_factor": 6.09558824,
+  "folds_posts": [
+   331,
+   326,
+   332,
+   325,
+   321
+  ],
+  "folds_users": [
+   29,
+   31,
+   34,
+   30,
+   29
+  ],
+  "indicator_posts_with_evidence": 22,
+  "n_distinct_inputs": 1569,
+  "n_no_factor": 128,
+  "n_posts": 1635,
+  "n_users": 153,
+  "rare6": [
+   "cognitive deficits",
+   "substance use",
+   "poor school performance",
+   "exposure to others' suicide",
+   "sexual orientation related issues",
+   "meaning in life"
+  ],
+  "risk_counts": {
+   "Attempt": 114,
+   "Behavior": 391,
+   "Ideation": 519,
+   "Indicator": 611
+  }
+ },
+ "factor_behaviour": {
+  "gemma": {
+   "factors_per_post": 3.16850153,
+   "micro_precision": 0.70877541,
+   "micro_recall": 0.76927913,
+   "predicted_risk_share": {
+    "Attempt": 0.04892966,
+    "Behavior": 0.26544343,
+    "Ideation": 0.33394495,
+    "Indicator": 0.35168196
+   },
+   "risk_calls_above_annotated": 157.0,
+   "risk_calls_below_annotated": 151.5
+  },
+  "gold_factors_per_post": 2.91865443,
+  "gold_risk_share": {
+   "Attempt": 0.06972477,
+   "Behavior": 0.23914373,
+   "Ideation": 0.31743119,
+   "Indicator": 0.37370031
+  },
+  "rare_weighted": {
+   "factors_per_post": 3.14373089,
+   "micro_precision": 0.73435655,
+   "micro_recall": 0.79096815,
+   "predicted_risk_share": {
+    "Attempt": 0.06666667,
+    "Behavior": 0.25932722,
+    "Ideation": 0.31957187,
+    "Indicator": 0.35443425
+   },
+   "risk_calls_above_annotated": 168.5,
+   "risk_calls_below_annotated": 120.5
+  },
+  "real_only": {
+   "factors_per_post": 3.0969419,
+   "micro_precision": 0.73784961,
+   "micro_recall": 0.78290025,
+   "predicted_risk_share": {
+    "Attempt": 0.06636086,
+    "Behavior": 0.26085627,
+    "Ideation": 0.32171254,
+    "Indicator": 0.35107034
+   },
+   "risk_calls_above_annotated": 169.5,
+   "risk_calls_below_annotated": 115.5
+  },
+  "repeated_real": {
+   "factors_per_post": 3.11070336,
+   "micro_precision": 0.73835226,
+   "micro_recall": 0.78656748,
+   "predicted_risk_share": {
+    "Attempt": 0.06697248,
+    "Behavior": 0.25688073,
+    "Ideation": 0.32966361,
+    "Indicator": 0.34648318
+   },
+   "risk_calls_above_annotated": 171.5,
+   "risk_calls_below_annotated": 116.5
+  },
+  "sonnet": {
+   "factors_per_post": 3.17859327,
+   "micro_precision": 0.70579622,
+   "micro_recall": 0.76854568,
+   "predicted_risk_share": {
+    "Attempt": 0.05443425,
+    "Behavior": 0.25168196,
+    "Ideation": 0.34373089,
+    "Indicator": 0.35015291
+   },
+   "risk_calls_above_annotated": 160.5,
+   "risk_calls_below_annotated": 152.5
+  }
+ },
+ "generation": {
+  "gemma": {
+   "cases": 7025,
+   "check_rejects": {
+    "plan_disclaimer": 91,
+    "real_overlap": 423,
+    "reference_copy": 9,
+    "soft_refusal": 5
+   },
+   "no_evidence_span_before_dose": 81,
+   "passed_checks": 6497,
+   "status": {
+    "ok": 7025
+   },
+   "usage": {
+    "input_tokens": 4405558,
+    "output_tokens": 1192496
+   }
+  },
+  "sonnet": {
+   "cases": 7025,
+   "check_rejects": {
+    "plan_disclaimer": 357,
+    "real_overlap": 75,
+    "reference_copy": 27,
+    "soft_refusal": 16,
+    "status:batch_errored": 1
+   },
+   "cost_usd_batch": 15.172226,
+   "no_evidence_span_before_dose": 39,
+   "passed_checks": 6549,
+   "status": {
+    "batch_errored": 1,
+    "ok": 7024
+   },
+   "usage": {
+    "input_tokens": 6306566,
+    "output_tokens": 1773132
+   }
+  }
+ },
+ "inputs_sha256": {
+  "DECISIONS.md": "88868a16fee196b91ba9dd0c29f1e91843f158f64ba0d318875c375987c4de8a",
+  "data/processed/gold.jsonl": "d06ee63ea3d8125e670d9af0b8ff8229ed6e188f0adc7420e77907b63c860ce8",
+  "data/processed/posts.parquet": "9edf2feb8d86bf2d09e2226a3b73546fad2a854cc53790cdc4ea13310293414b",
+  "data/synthetic/arms/qcontrol/manifest.json": "0cbfcc4c01b044c39cae14356fdd851f8779fba0b54eb8ff04daac118e9281bf",
+  "data/synthetic_pkgc/arms/gemma31_pkgc-v2/manifest.json": "4d2feda5b400ad055b8830ab19a5de0d6b18bcb0f5b4263193917e1ca1c265ed",
+  "data/synthetic_pkgc/arms/gemma31_pkgc-v2/train_fold0.jsonl": "78de5b9279492349c9e9346d628769850d1a27b4a4eb12ad30eab16f411688f6",
+  "data/synthetic_pkgc/arms/gemma31_pkgc-v2/train_fold1.jsonl": "7a643f1e7e8fa2bc22a2eff7ec047ee760f08588272c1e53e7c49e365deb5179",
+  "data/synthetic_pkgc/arms/gemma31_pkgc-v2/train_fold2.jsonl": "923dadad461298c206fe1536894dd5ea42edf032bf445d6054f65f72f23aa1aa",
+  "data/synthetic_pkgc/arms/gemma31_pkgc-v2/train_fold3.jsonl": "21cb53ca378879301915fde8ec15847d0031749efa6f4b5c9817055142b8b5f8",
+  "data/synthetic_pkgc/arms/gemma31_pkgc-v2/train_fold4.jsonl": "7cfae9f9c1312e89b213b4af39ec46d0744db2717cd3a6cadd0ffd0599d97e49",
+  "data/synthetic_pkgc/arms/sonnet_pkgc-v2/manifest.json": "21c47900e057efe7a540bfa2288cadf7e58c325a457e1c9cb43be54a87da176b",
+  "data/synthetic_pkgc/arms/sonnet_pkgc-v2/train_fold0.jsonl": "2abb7f1b00a61f44e28a954132d9aeda96626d5654660db47be2ffabfb8509f0",
+  "data/synthetic_pkgc/arms/sonnet_pkgc-v2/train_fold1.jsonl": "cce8052dfae6f25cccc3c1233b731875c2ca505898b7f54a9743e8f3a0eefabb",
+  "data/synthetic_pkgc/arms/sonnet_pkgc-v2/train_fold2.jsonl": "ac77633382728beb20afb6b383a1be492a7c83504fbbdfefc6a4e8f28e6f42da",
+  "data/synthetic_pkgc/arms/sonnet_pkgc-v2/train_fold3.jsonl": "312dbfb7fa235bec56c842496b043c24a6cc24fa64a8fcce37c4b9abbf1437a7",
+  "data/synthetic_pkgc/arms/sonnet_pkgc-v2/train_fold4.jsonl": "ee931b5ddeda0c470c8dfcd4367be59d81312732e35ae8b3519af0e537507be7",
+  "data/synthetic_pkgc/audit/e2_v1/adjudication/consensus.json": "647f312010548eb8335ef9fbcc2b8da37ee6df550aae9710b5c3d42910fe4b44",
+  "data/synthetic_pkgc/audit/e2_v1/manifest.json": "248b5a87c2fa11c181bcfc1da00ce3b09cbcbe2a0fb8a3a1a8e3515205cc281f",
+  "data/synthetic_pkgc/audit/e2_v1/report.json": "eb16837ad3214422a1b508dff110255971eb7e175d2893edd07e02b9348b5625",
+  "data/synthetic_pkgc/full/pkgc-v2/fold0/cases.jsonl": "b95474833191643ae64ea59ed071ca6bc97d2f4a777fed7426ba6f42bc395953",
+  "data/synthetic_pkgc/full/pkgc-v2/fold0/labels/gemma31.jsonl": "5e4dc62643a5125201f5469533a9c95e7fc84db1c15a2e376f6f8f3131d21cf3",
+  "data/synthetic_pkgc/full/pkgc-v2/fold0/labels/sonnet.jsonl": "fcb2baa70539619a22be5459aa1069225d2d4bb2d9b011274429855156aaccd8",
+  "data/synthetic_pkgc/full/pkgc-v2/fold0/outputs/gemma31.jsonl": "d9caf376411751a8ff5d23d4cb3a6dc1fead448faf1206f1a6f3d797a69989b9",
+  "data/synthetic_pkgc/full/pkgc-v2/fold0/outputs/sonnet.jsonl": "885c0e9bfc8069899a18f83376a10a666e323f498d4c3d85683907304abe953b",
+  "data/synthetic_pkgc/full/pkgc-v2/fold1/cases.jsonl": "33d0b7abee8da11d3955ffcdd3fcd2d4969d796f6faf4d183146538267788559",
+  "data/synthetic_pkgc/full/pkgc-v2/fold1/labels/gemma31.jsonl": "a064baf9d00ef4dbd82d2abbb025be37b6d18e134baf70fcbad5af54aff4056b",
+  "data/synthetic_pkgc/full/pkgc-v2/fold1/labels/sonnet.jsonl": "e3892a34a4e72df3352a01a3010d1fe86e034966a70370da2786a893cd6d5c4c",
+  "data/synthetic_pkgc/full/pkgc-v2/fold1/outputs/gemma31.jsonl": "f336add663e17e58bb56c60a905524cdd6b6a87505126a36294f416180986e0a",
+  "data/synthetic_pkgc/full/pkgc-v2/fold1/outputs/sonnet.jsonl": "3014cf458cf5ff0dc61ce716cb9390609b31c10cf7307221711630f5d875046c",
+  "data/synthetic_pkgc/full/pkgc-v2/fold2/cases.jsonl": "792477ec8e9fafc9ee95f6df9c523d9db497f691e2cb88df97a3fc8a060517fc",
+  "data/synthetic_pkgc/full/pkgc-v2/fold2/labels/gemma31.jsonl": "bc34435d6fba979dc25b69b033ddae5954e4f0c021f497a2c00a850ad513f71e",
+  "data/synthetic_pkgc/full/pkgc-v2/fold2/labels/sonnet.jsonl": "0fa060d2fe0d1769e65564ce43b5ee6614c9cf8a3f3a43326d21ddafde7b432e",
+  "data/synthetic_pkgc/full/pkgc-v2/fold2/outputs/gemma31.jsonl": "615363b2f2f579e884380a45cf1f127d2ea0c8b4f9a65845541b433df977227a",
+  "data/synthetic_pkgc/full/pkgc-v2/fold2/outputs/sonnet.jsonl": "dcc76e3bc892c1fb909f0ac76640659c82899d8b452189217fb4fbaa5055fd31",
+  "data/synthetic_pkgc/full/pkgc-v2/fold3/cases.jsonl": "60ad167eef1fd63ede801d069ab2da8b94b2635d555f034c5ad33646806886f9",
+  "data/synthetic_pkgc/full/pkgc-v2/fold3/labels/gemma31.jsonl": "280ec3257a21f27d9f3f2e6b6467b2f55d79ed586ca758bd6daa16884aaddedf",
+  "data/synthetic_pkgc/full/pkgc-v2/fold3/labels/sonnet.jsonl": "6cc4c851d3fb6b422690b21ce7bb3eefa2ce1fda065f82199bee146dca804408",
+  "data/synthetic_pkgc/full/pkgc-v2/fold3/outputs/gemma31.jsonl": "15110bbecd08d208d0963da184c06c063fe6f26517782e5764df2b4eacbe5f3a",
+  "data/synthetic_pkgc/full/pkgc-v2/fold3/outputs/sonnet.jsonl": "323c24f081059c630515164bc8d903b928ad8769965c1f0b5b6abb0e298d4eed",
+  "data/synthetic_pkgc/full/pkgc-v2/fold4/cases.jsonl": "4469469deb8ded61ca57dc3d324523a41fce23a677dd92bdf3b60628e14ab569",
+  "data/synthetic_pkgc/full/pkgc-v2/fold4/labels/gemma31.jsonl": "d9bbe25fb1605aa0b5e9192db100200a3d1abb504fb3dfd3a5b8b4863dffc428",
+  "data/synthetic_pkgc/full/pkgc-v2/fold4/labels/sonnet.jsonl": "f2d102db0e8411e627cfcb19dffaa6beee3cfb156b847dd190b511ea3ed714a6",
+  "data/synthetic_pkgc/full/pkgc-v2/fold4/outputs/gemma31.jsonl": "ed65fd1ac0ba6d6ae9336f0135861fe868a0537dfc254799d56e7e1159a36df1",
+  "data/synthetic_pkgc/full/pkgc-v2/fold4/outputs/sonnet.jsonl": "547667c715d808d02e6b67ad71a017ca9322ffbfd7a8173b8847db9bb50b2648",
+  "data/synthetic_pkgc/pilot/report.json": "391eb3130dbc290ff30b5a36d487e3f4b80635819c5f309e78edde312d9fe3fe",
+  "data/synthetic_pkgc/pilot_v2/report.json": "1c833e6f39c5c8240f7fab59721a84b855522345528693efc078af96c2725f78",
+  "runs13/review/base/shipbase-asrun.jsonl": "26324a0292c736e86371af9edadc99555e1fd377aac7a51c8337aaa2f8e1ae34",
+  "runs31-pkgc/pkgc_gemma-f0-s1/eval/step160/preds.jsonl": "8b25dcdd2a21e52dac8f691e92a7397382ba484fead22dcd31a59608412519fc",
+  "runs31-pkgc/pkgc_gemma-f0-s1/eval/step40/preds.jsonl": "6cdf15732de05ebf4823d3f7ba41eced30ae882feaffb93269fce430f9548067",
+  "runs31-pkgc/pkgc_gemma-f0-s1/eval/step80/preds.jsonl": "edd6498ff1d1970d2455fe4f7fcf87224b97ff712803d21025428b366b7ad58b",
+  "runs31-pkgc/pkgc_gemma-f0-s1/oof.jsonl": "8202a68ae199f92aa1c09f5bfc72809540d5a4a917317ac060f38d98a1578457",
+  "runs31-pkgc/pkgc_gemma-f0-s1/selected.json": "e438fb149c5ff0bf259c098bff8809f763a0171340bbfa9a3c84f5eb5a1d6836",
+  "runs31-pkgc/pkgc_gemma-f0-s2/eval/step160/preds.jsonl": "2fa88598057950ea26197b953100c8ac8a20a3704e1aab5902ef696c67dfb5b2",
+  "runs31-pkgc/pkgc_gemma-f0-s2/eval/step40/preds.jsonl": "73307bd15e2e9545897324b747854bb05401f56c4acc0b6447c45798d70a12c9",
+  "runs31-pkgc/pkgc_gemma-f0-s2/eval/step80/preds.jsonl": "790a2007a721a621b9c93fd462654c349224ac1afe88438a31a85f7b02ba9047",
+  "runs31-pkgc/pkgc_gemma-f0-s2/oof.jsonl": "a3fa0ac54190e1d0c1361bb852c6e7addb1580c8677f42112bd77d3c59404135",
+  "runs31-pkgc/pkgc_gemma-f0-s2/selected.json": "7024d1435f33d779821c2a0a8761eceb1fa5f3482cc8aff08e382f4007365a82",
+  "runs31-pkgc/pkgc_gemma-f1-s1/eval/step40/preds.jsonl": "8e09f36594e1aa763ca36e88ad98fa949ff5970619fafe9c040f9c3943939847",
+  "runs31-pkgc/pkgc_gemma-f1-s1/eval/step80/preds.jsonl": "6b0c3edcbfeaedb0490ba8189d08424aead228f73deaf5be559c444070e40c02",
+  "runs31-pkgc/pkgc_gemma-f1-s1/oof.jsonl": "85385480460eb3a2bff901c9bc1e11c3af378393c2966f7155b68d55c0da4971",
+  "runs31-pkgc/pkgc_gemma-f1-s1/oof_skip.jsonl": "49b3f5ce59d983aafb5fb803e6352dd13fd346f775452b269568536c62971c1e",
+  "runs31-pkgc/pkgc_gemma-f1-s1/selected.json": "b4ddebccfefda99d0ef3f8b7eeb2e83ba05dbf2e7b4f9bb97fcc247dc544dc05",
+  "runs31-pkgc/pkgc_gemma-f1-s2/eval/step120/preds.jsonl": "cdb1f30fa831a1a4994af65d3cf65def2eef4e163c32fb352be65ca396b7dd94",
+  "runs31-pkgc/pkgc_gemma-f1-s2/eval/step40/preds.jsonl": "15d5cbe709e73475bd3276044dae451beee0f335b185ce37be2fc042cd52a760",
+  "runs31-pkgc/pkgc_gemma-f1-s2/eval/step80/preds.jsonl": "11dc380f826d4369c3753d93dc8cd0e5e5373b035bcb79f720539414ae781274",
+  "runs31-pkgc/pkgc_gemma-f1-s2/oof.jsonl": "5441d53357fa52319bdb418769c2445edb3b2e25c9de9d2043b93eee2a42c308",
+  "runs31-pkgc/pkgc_gemma-f1-s2/selected.json": "0b1b0c1a9fda715d2eedac3ca70e40d03094875f838dda98dc9fcd1a6e955ef4",
+  "runs31-pkgc/pkgc_gemma-f2-s1/eval/step120/preds.jsonl": "bc2638444fcd7bf261a2ff28bb3d5044ff2d4d1db3459fd94095bc93e8a2c91b",
+  "runs31-pkgc/pkgc_gemma-f2-s1/eval/step160/preds.jsonl": "6197acffb6a952060bf6637a523bc438a25d53362ecf83663110102e0aec1a94",
+  "runs31-pkgc/pkgc_gemma-f2-s1/eval/step40/preds.jsonl": "0f31c8e36da2da084ff7efedccd356afa41cfaac3598515ee02d4b1430bd55df",
+  "runs31-pkgc/pkgc_gemma-f2-s1/oof.jsonl": "1577b249ae74a81f1efd14f5b0642884a7ba7834711a9b100b9280b58ca1ed55",
+  "runs31-pkgc/pkgc_gemma-f2-s1/selected.json": "42a61d9a3db4dbdf523a0a06ebe2ee65ef6b0e85dc32f2f41186e2fc039d4724",
+  "runs31-pkgc/pkgc_gemma-f2-s2/eval/step40/preds.jsonl": "cd2c2b4001bd6bddecf07f625674a0d64731fc410cd6faa9040022772645351f",
+  "runs31-pkgc/pkgc_gemma-f2-s2/eval/step80/preds.jsonl": "175de532c5db3030f1ba48306e6ba125cde5ce1111302bcedc67315e1cdd20b5",
+  "runs31-pkgc/pkgc_gemma-f2-s2/oof.jsonl": "626b09b74c7cc51298fc245ee5b33767dbf1e521c348aede8e624956e6f2c54e",
+  "runs31-pkgc/pkgc_gemma-f2-s2/oof_skip.jsonl": "840c415538f8b5677505248b37f5f85ade56da42ae4bd888048c582cb1e31e82",
+  "runs31-pkgc/pkgc_gemma-f2-s2/selected.json": "794f781fd3256c50967c1bf3a4f5730aff4f0cf7e37adcb72daa6c83ec78c737",
+  "runs31-pkgc/pkgc_gemma-f3-s1/eval/step120/preds.jsonl": "ce71e4a2b424945a295cc0cd8921f6ab8a805c8bf47694398b8294e483fe166f",
+  "runs31-pkgc/pkgc_gemma-f3-s1/eval/step40/preds.jsonl": "3fd63157a5c65c6e8b65a90eb9a22095805615f43c87dd701d3fc55c514f3539",
+  "runs31-pkgc/pkgc_gemma-f3-s1/eval/step80/preds.jsonl": "b17884a1f9eb4e02c12d936874fb9603616d5b29b2b307d2f4cc86248ddcaf9d",
+  "runs31-pkgc/pkgc_gemma-f3-s1/oof.jsonl": "56dc93b7b9d7d7010346943b5b4d1a8e4082ca11928b87b8e7a5b2687ade497f",
+  "runs31-pkgc/pkgc_gemma-f3-s1/selected.json": "d8bc31c1878384ae737a7e283e33b86f678899e9fd1390ccd5e8cdb08170f80e",
+  "runs31-pkgc/pkgc_gemma-f3-s2/eval/step160/preds.jsonl": "0da948a92c6cbae683c4a04f4f41459133a6832214b602b1f3de0fa70f5ddeb5",
+  "runs31-pkgc/pkgc_gemma-f3-s2/eval/step40/preds.jsonl": "86e46250d573b59e5ae506275900e741fa5b0a586b83a63deee2365b2e0d7a14",
+  "runs31-pkgc/pkgc_gemma-f3-s2/eval/step80/preds.jsonl": "ce759d0c6aa09d25a7178a3822c4f146d318096676ff2b301adb9af2990c59a8",
+  "runs31-pkgc/pkgc_gemma-f3-s2/oof.jsonl": "bf3e37126eb4848e57e644ea6bdcbc6d1b372fa31850f83b682cc85ddddeaed3",
+  "runs31-pkgc/pkgc_gemma-f3-s2/selected.json": "3f5fa73c7d26fa085e603135edfcb70564458faa131816881eddab1bf453d81c",
+  "runs31-pkgc/pkgc_gemma-f4-s1/eval/step120/preds.jsonl": "3e9513fd44c27efb85be84ee3b891dce14d44516d3ed6b26cc870722879ce450",
+  "runs31-pkgc/pkgc_gemma-f4-s1/eval/step40/preds.jsonl": "7057518d76cb11eeb383e007a3f79db6c8a5e3a667226d8ccc7b83c7c29f9052",
+  "runs31-pkgc/pkgc_gemma-f4-s1/eval/step80/preds.jsonl": "307015abf9f1d04bf01fd73a6a6f8fb58f64e8b6b3a4f8939243bdfc17e7ecd9",
+  "runs31-pkgc/pkgc_gemma-f4-s1/oof.jsonl": "e4d3cf09eae7db69796b7d698b1e795c4c7cdfd6fc2ec9426dded11fdb49a338",
+  "runs31-pkgc/pkgc_gemma-f4-s1/selected.json": "62355cf6f5ec8a79c735829df8de7869f09b2ea571cfc8bf3f0592644087b2f5",
+  "runs31-pkgc/pkgc_gemma-f4-s2/eval/step120/preds.jsonl": "a78fe26f1853faac7b869163bd8955e0aeedfab6a3fec299fc203e927bde76f1",
+  "runs31-pkgc/pkgc_gemma-f4-s2/eval/step40/preds.jsonl": "8d46d0423857786f4d04992b5d3bb9f1fd0417b17bbbf7b8396dd4bf9b715bd8",
+  "runs31-pkgc/pkgc_gemma-f4-s2/eval/step80/preds.jsonl": "cea0dd25e3d1e6b6e3cbfad49331f2c848426c2172d55d32b63ed3048440b838",
+  "runs31-pkgc/pkgc_gemma-f4-s2/oof.jsonl": "946b9831022675fd994ca6ea78e98b69788f182575336e450b30abc7b4086ecd",
+  "runs31-pkgc/pkgc_gemma-f4-s2/selected.json": "17028e4309a9935143be6271ab05c07e41840a9b2a26675ae27f6db22ee7eeb0",
+  "runs31-pkgc/pkgc_sonnet-f0-s1/eval/step120/preds.jsonl": "59f04087afc038da6bc79e4041567f829b79e5fee903179cb82b189d4300fc2f",
+  "runs31-pkgc/pkgc_sonnet-f0-s1/eval/step40/preds.jsonl": "acdb22daf95b6f5f76f5ef247b7f9ad912b4fbc4252550bbbf20778b11c3216d",
+  "runs31-pkgc/pkgc_sonnet-f0-s1/eval/step80/preds.jsonl": "f2fe5bab791ea1471c9fc7e27a051b3bdd79c3764ef084df48c309d918223394",
+  "runs31-pkgc/pkgc_sonnet-f0-s1/oof.jsonl": "9df61ec56141db366e041618f50d7f799db9754f83ef407d7f6d1ad171986bea",
+  "runs31-pkgc/pkgc_sonnet-f0-s1/selected.json": "816b67721af13793084a0d2fa5d0a854e2145bc836ca5424eb649b59495e692a",
+  "runs31-pkgc/pkgc_sonnet-f0-s2/eval/step120/preds.jsonl": "18e7a5797f701f67c39e414d1fa168c1f41c635c053a7dfbd41aa83d39fad67d",
+  "runs31-pkgc/pkgc_sonnet-f0-s2/eval/step40/preds.jsonl": "c1387b6687cee9e2465361997e363cc85efce1bfbe2d3072660a56aaafcee9bb",
+  "runs31-pkgc/pkgc_sonnet-f0-s2/eval/step80/preds.jsonl": "37af043883f8a4d0ce1db9405697adca3c233b7a0f01077b1eb76b4e63bf7ba4",
+  "runs31-pkgc/pkgc_sonnet-f0-s2/oof.jsonl": "1f3c99ba1f7ecb854705e61e2d0e3240d4fc3208ad518e12c5e7df578cae3a2b",
+  "runs31-pkgc/pkgc_sonnet-f0-s2/selected.json": "46b1a7917ddb812773510d78cb17d79210bc6ee72e9262bd7469551db8789d11",
+  "runs31-pkgc/pkgc_sonnet-f1-s1/eval/step120/preds.jsonl": "d8c44d620d02888aa6f53e259a6b5bb589dde62a0d8849c6fb4206c90d95b616",
+  "runs31-pkgc/pkgc_sonnet-f1-s1/eval/step40/preds.jsonl": "6c354961e8951b75d950ac09cca3140bec0a1349e1d0a4edf680a733d2c2a1a5",
+  "runs31-pkgc/pkgc_sonnet-f1-s1/eval/step80/preds.jsonl": "468878fd0a2b26f8cf0bc914309f462c06c22f45a64b0ed87f187c1ba8abead2",
+  "runs31-pkgc/pkgc_sonnet-f1-s1/oof.jsonl": "819c526a556d6c3aacd5ec5fef1943b8b9846ef86816d4e2f0c968c06742350b",
+  "runs31-pkgc/pkgc_sonnet-f1-s1/selected.json": "ab625bcd2574723d74d0fc905ec306b48211b2cd7cf2bb4e81d046f1da816f7d",
+  "runs31-pkgc/pkgc_sonnet-f1-s2/eval/step120/preds.jsonl": "72638051db823e414b92d26643ec65df8ae4779f6d57224633cfa3bf969137ff",
+  "runs31-pkgc/pkgc_sonnet-f1-s2/eval/step40/preds.jsonl": "698c8b608c98c2f3b31d2ae7dfbb59d90ce069934a6aa636637cad90dbd83a5f",
+  "runs31-pkgc/pkgc_sonnet-f1-s2/eval/step80/preds.jsonl": "261e799a99f89eaa6d516d64b1bfacd676f9b6135bab8416caca517d5c0a00eb",
+  "runs31-pkgc/pkgc_sonnet-f1-s2/oof.jsonl": "d97bb0ad93a75e75084aa9f1a51d4a85481936709f1cd686ad77bed17fac9718",
+  "runs31-pkgc/pkgc_sonnet-f1-s2/selected.json": "9de0278e500d58cd0d673198569fafec5ccfa8ff2772f58f4eed7862a431581c",
+  "runs31-pkgc/pkgc_sonnet-f2-s1/eval/step120/preds.jsonl": "eb023846e79e6a5df09e582a0828108747c2a9f61a1a3201899158e57f4cbb07",
+  "runs31-pkgc/pkgc_sonnet-f2-s1/eval/step40/preds.jsonl": "2b1ef301d3697ad3ecb5bf7443ba710b9c0dee7aed5bdca34283797db02d774f",
+  "runs31-pkgc/pkgc_sonnet-f2-s1/eval/step80/preds.jsonl": "a6a27f4977f9438eb723d61ad7fc1f98c5375ec6179176dc7068c1ebe3b7c506",
+  "runs31-pkgc/pkgc_sonnet-f2-s1/oof.jsonl": "8c77e49dd0e126e878970e940ddb19f630df22d17b5cc3681bc41c4945b11133",
+  "runs31-pkgc/pkgc_sonnet-f2-s1/selected.json": "c66422e49ab8d1cd42c503cd1e3308694d3090956079831d8a1eee5bb3b32ecc",
+  "runs31-pkgc/pkgc_sonnet-f2-s2/eval/step120/preds.jsonl": "92f8f55a7faf5fd28cbdc657884ac120c0d43be25188ad76056297d3b2e69614",
+  "runs31-pkgc/pkgc_sonnet-f2-s2/eval/step40/preds.jsonl": "c5c7ae81a2b60449b52bfcd59300588e3ff962cf3f52f6bac04a6b1435f6514e",
+  "runs31-pkgc/pkgc_sonnet-f2-s2/eval/step80/preds.jsonl": "777cf816c28a32b1100160fbe0c6bb47a70c26ce453b19ee64233db038ab6f6c",
+  "runs31-pkgc/pkgc_sonnet-f2-s2/oof.jsonl": "a6fc248de8bad9e4ad40c78d0e4b936e0fe2d56c6e826567d78625df6260b9e2",
+  "runs31-pkgc/pkgc_sonnet-f2-s2/selected.json": "64edc9c91fd8b8ec49cda868098f5a2d03ab5b20ca574bd99228ba8431e7f323",
+  "runs31-pkgc/pkgc_sonnet-f3-s1/eval/step160/preds.jsonl": "7ff070ba0cb9b9832f364de864304211cd72026e1f00bc49525a19887d32b8f9",
+  "runs31-pkgc/pkgc_sonnet-f3-s1/eval/step40/preds.jsonl": "d061e9f0f88a9eca8fd21ce06a5a56f6c813135c42fcd046e5fd9ec5bcf092b9",
+  "runs31-pkgc/pkgc_sonnet-f3-s1/eval/step80/preds.jsonl": "34f1f93dd2fd7ea2e86bfdf4c9a53415ae09b33a96c6f16819843cbad04ec86c",
+  "runs31-pkgc/pkgc_sonnet-f3-s1/oof.jsonl": "5f06dfb3f8e2a6980c21e488f9b9f5b02138068d324d7a284d756cb6170a1b0a",
+  "runs31-pkgc/pkgc_sonnet-f3-s1/selected.json": "4ac8c6b8f3075b2c3e806765f04a329a238dce0e8605ffa1854caf594269d6bc",
+  "runs31-pkgc/pkgc_sonnet-f3-s2/eval/step120/preds.jsonl": "93396fb20ce207ff2b00985cfa9814e20ba8ddc39b6c7d9123067bf9b9c144c4",
+  "runs31-pkgc/pkgc_sonnet-f3-s2/eval/step40/preds.jsonl": "2c980e7dbf22d6dab541c10529106b799ad4d842d8094c4d10f7e62e7b3343a5",
+  "runs31-pkgc/pkgc_sonnet-f3-s2/eval/step80/preds.jsonl": "65129b38628c37184b7055eeada04f53e4c9821f2243a293de6b0f5c9991ac9b",
+  "runs31-pkgc/pkgc_sonnet-f3-s2/oof.jsonl": "4351af1596403e74d7fac430048942bb9370336514dfd952161111e3d9c38cbf",
+  "runs31-pkgc/pkgc_sonnet-f3-s2/selected.json": "fd17c537f2af4f72554fa191acfedf1f4c25ad124e997dc083b7e191eba243a0",
+  "runs31-pkgc/pkgc_sonnet-f4-s1/eval/step160/preds.jsonl": "16942e0238683e449ed6b3259a177adb988994546a2467cc4a2bff9e1077fce5",
+  "runs31-pkgc/pkgc_sonnet-f4-s1/eval/step40/preds.jsonl": "af62f1ad3a9d38b703d04e020acc05551ea09d6d2595967f1bfa5c0defbcb097",
+  "runs31-pkgc/pkgc_sonnet-f4-s1/eval/step80/preds.jsonl": "ce98c0fc4b7652ec36a7cc2e69ab42a8d7ed7d5e00765879373bfe5b2c3b7e5e",
+  "runs31-pkgc/pkgc_sonnet-f4-s1/oof.jsonl": "b2547419db65feeb8d2761ccea272b05185d3710edb2150f91573d0bc8bf5327",
+  "runs31-pkgc/pkgc_sonnet-f4-s1/selected.json": "ae744ebfd3786413a0d4c0eb21dafc0d1252e54388537bd7e3c4b35e0b6d3db0",
+  "runs31-pkgc/pkgc_sonnet-f4-s2/eval/step40/preds.jsonl": "760c62214a215aec7bb7f2824564ba77c600f8e2e26c3552e7bc8209aa5d99d4",
+  "runs31-pkgc/pkgc_sonnet-f4-s2/eval/step80/preds.jsonl": "4211bb449c69d57d9e04d45dac5b304014dcc3ac643c804c4d98c15b9bd9bdf1",
+  "runs31-pkgc/pkgc_sonnet-f4-s2/oof.jsonl": "4d0b12be6aaddfc1d7c637ca7adb521dbfd586b824a17c7500e9018e9cb03aff",
+  "runs31-pkgc/pkgc_sonnet-f4-s2/oof_skip.jsonl": "4d12facc850a797c6d9304a3de04eb8a78cfe63b52bdafd1a141338e26ce4ba2",
+  "runs31-pkgc/pkgc_sonnet-f4-s2/selected.json": "72f80f33b8b80fb2c9b38a888a35245873163c05b254e16364dfa118ce134549",
+  "runs31-pkgc/pooled/pkgc_gemma-s1.fixed160.thresholded.jsonl": "e0665d734db7d10311c05b97878415a3d3f972e0c53bb347162ff1204717004b",
+  "runs31-pkgc/pooled/pkgc_gemma-s1.nested.thresholded.jsonl": "76ff5d5152522a66fed06d97e2172d7911dcac4d46cb3567d082a405265bd86b",
+  "runs31-pkgc/pooled/pkgc_gemma-s1.thresholded.jsonl": "313d0e091ba7d1f76649208a63c421b8222b72fa8294985593a3874f9d21c129",
+  "runs31-pkgc/pooled/pkgc_gemma-s2.fixed160.thresholded.jsonl": "9833f068abdb7794def0f7069558d93719474a9fa9e4da019af56df93ab6fcea",
+  "runs31-pkgc/pooled/pkgc_gemma-s2.nested.thresholded.jsonl": "3596bffe49b6f5459e49efa76515f26aba80f681f58f79f5dff53ee38ca56699",
+  "runs31-pkgc/pooled/pkgc_gemma-s2.thresholded.jsonl": "ebafc405b8534838a331417b0bd7be38ccf149bffc52fccd09b2e929af63f2dd",
+  "runs31-pkgc/pooled/pkgc_sonnet-s1.fixed160.thresholded.jsonl": "8aba8f9b17d0a378856ee1c1fa6b5d6cc1f7fde91fe8e62d902b8c5417e93472",
+  "runs31-pkgc/pooled/pkgc_sonnet-s1.nested.thresholded.jsonl": "8aba8f9b17d0a378856ee1c1fa6b5d6cc1f7fde91fe8e62d902b8c5417e93472",
+  "runs31-pkgc/pooled/pkgc_sonnet-s1.thresholded.jsonl": "bb8f632dbbc2a14843ceefd3d15d6aa03a5a08a6ad4b7f172a4cc90b4a6172c5",
+  "runs31-pkgc/pooled/pkgc_sonnet-s2.fixed160.thresholded.jsonl": "35b7dddfd9beb1b0f31feedbb1acca7ca4a05dd1de03317caf7c668c4a027014",
+  "runs31-pkgc/pooled/pkgc_sonnet-s2.nested.thresholded.jsonl": "35b7dddfd9beb1b0f31feedbb1acca7ca4a05dd1de03317caf7c668c4a027014",
+  "runs31-pkgc/pooled/pkgc_sonnet-s2.thresholded.jsonl": "ea5302c6e7e3913a5ef4aa52eada50a8f61af79eca6223f1d4c743033701581b",
+  "runs31-pkgc/reanalysis/e2_confirm.json": "240cd553b6f6dde829e0e4f7b911fbdbab9121cc1e6e3a5b3fa0deb3a60dcfec",
+  "runs31-rare/pooled/rareweight-s1.fixed160.thresholded.jsonl": "c5848d5f6c826ef2c05c684dd252a368e3fb2f487f19f1db732f2c56d52349b8",
+  "runs31-rare/pooled/rareweight-s1.thresholded.jsonl": "fb58471c2253a37be23d02c160d12454a1cae359a417c516032f442bb0ce791a",
+  "runs31-rare/pooled/rareweight-s2.fixed160.thresholded.jsonl": "7b2b83889cf21aa1b851e56d6741dfe537ef0481c82e359a9c7262e48f34bdd4",
+  "runs31-rare/pooled/rareweight-s2.thresholded.jsonl": "7f91d93fdcc875f868a60ed3c3a23915669cdf6612abb901cbad83f65107d5e4",
+  "runs31/baseline-f0-s1/eval/step120/preds.jsonl": "e4cb6b9ce68c5f5d9ff08bb999fbe0bf7829f4e458cda959f32b411be9ee832f",
+  "runs31/baseline-f0-s1/eval/step40/preds.jsonl": "fdf27e859efc38d09522bfaa692e0d277541a39e90607fe0bf7c8fee412d7f3f",
+  "runs31/baseline-f0-s1/oof.jsonl": "525159659d7d131ce2c0071b29fa24691b476b9582cbd205ac32ffa19313514f",
+  "runs31/baseline-f0-s1/oof_skip.jsonl": "854ff1c1133e10b5d839e0ad10b1ce218f98cef25df74cd97bd0176573035ef8",
+  "runs31/baseline-f0-s1/selected.json": "5bdb7b0b1ced88d0bf9601c6689dac8c00e6286f72367116cb1a1185a90e660c",
+  "runs31/baseline-f0-s2/eval/step120/preds.jsonl": "23b6fdf2165af84b961c4646f40c7f61f56dd8f263aa089586db64e965035a56",
+  "runs31/baseline-f0-s2/eval/step40/preds.jsonl": "9a68e270c1cca5eea311865536237886bb1c13aec365bcfb73c2e611eb765a86",
+  "runs31/baseline-f0-s2/eval/step80/preds.jsonl": "7c920bb39973b1bb8b1b200a2f66793ce37b7dcd36dd92296616731f83e69ea0",
+  "runs31/baseline-f0-s2/oof.jsonl": "5324bae70892ff696621a1b4b67ee3cd478411f0b45f5914d784ee5e7f538d35",
+  "runs31/baseline-f0-s2/selected.json": "48eb6238cc969966bec7eb81cc67446b6f84b8c61a8fd0a1ed0c4809d375a483",
+  "runs31/baseline-f1-s1/eval/step120/preds.jsonl": "a1bf9f91e983fc52a1a55cae7c0b79550dc94c7ed478db432e54bcb4b9b2de43",
+  "runs31/baseline-f1-s1/eval/step40/preds.jsonl": "a58826fea4ebe8613b5437f2a8c56aa60a4f57260969ac783165d6ae802e13bb",
+  "runs31/baseline-f1-s1/eval/step80/preds.jsonl": "10c657016bfd826718df74ad6f68ba32e62fe253befa8bec853c52ee86eabad6",
+  "runs31/baseline-f1-s1/oof.jsonl": "8573df2409711ee8a39bcec27115db30b32e770dcbd2b67ca0f0fb0348d550c7",
+  "runs31/baseline-f1-s1/selected.json": "2030e19cafa7938c11e50bd2ee0236cc35fabaaef71bbce6aad941b8132f7bdd",
+  "runs31/baseline-f1-s2/eval/step160/preds.jsonl": "d9287e98c8116b099505d5bfb4697d6e24b731e82a9fe08ae6d9d10aa24aa0b0",
+  "runs31/baseline-f1-s2/eval/step40/preds.jsonl": "d8af77cbea887e590923eaa3abd9c4b7a41d55f865ad905a94ee19ab88a9225c",
+  "runs31/baseline-f1-s2/eval/step80/preds.jsonl": "62c737374c6cac30a5831d60163f16f544ff49245ce98074031d79c86772b976",
+  "runs31/baseline-f1-s2/oof.jsonl": "0a9be6e881249bf6497d3d98fb79e53e2859972cb03ea8efaba9b253c91f9587",
+  "runs31/baseline-f1-s2/selected.json": "2c2df9d6d0064aadbc9ab573b3633e1ad47e0f557f7b79a10d2b0e9f3f2f3f66",
+  "runs31/baseline-f2-s1/eval/step40/preds.jsonl": "cbc2bc79b63e6ab6d13f76fa8bc00c3eebfd87de0d0c72ea024192cfe3ae678d",
+  "runs31/baseline-f2-s1/eval/step80/preds.jsonl": "d013355ee19f113def0a5a205d03f3bc28434719820e0c11d9d9944364d9f44f",
+  "runs31/baseline-f2-s1/oof.jsonl": "34a2b3664dd7cd30dbaf9f7ebfb5ab117a71cc78b051219936bff46bd72357b2",
+  "runs31/baseline-f2-s1/oof_skip.jsonl": "f50dc95b094630a8d38c0198616fc3b77d2a9ce016c433e8384d3e60793b8dee",
+  "runs31/baseline-f2-s1/selected.json": "a9b5b4e5f9e436692832402953384f70f5e955dc53c157a91a971372b0beb4b8",
+  "runs31/baseline-f2-s2/eval/step40/preds.jsonl": "c71259223608e8ccb132a46a70f163eb6b968459362fbd51330fe41cbd0600ad",
+  "runs31/baseline-f2-s2/eval/step80/preds.jsonl": "a6fc67be06284fdb1e61d63deb1dd5a5087800880cd1dc988b55f9f7af4f9d33",
+  "runs31/baseline-f2-s2/oof.jsonl": "77c92013f7b79de90d5eda2dac9e60d13941bf36c4d27b4cf3f69499da1ffa74",
+  "runs31/baseline-f2-s2/oof_skip.jsonl": "3e3efdc84da69533f1a03b33ee39621ac7b78d553da27ca961e12b40f3acfec8",
+  "runs31/baseline-f2-s2/selected.json": "a6484383b15bbe219901e7d55ba86ec56b3c6394ad349dbc500256874f743e6b",
+  "runs31/baseline-f3-s1/eval/step120/preds.jsonl": "743551cd4853b86aef23677eb92bc78f04bb74d1b73768330453f0d73c39b0a5",
+  "runs31/baseline-f3-s1/eval/step40/preds.jsonl": "d99bf6332f588db2c6ba9c68bb57f0ffbd98fb53c84b5e4b0ecdc8721c74e5ed",
+  "runs31/baseline-f3-s1/eval/step80/preds.jsonl": "c8d57422324e6705367056543872f6661080131d6f6879d8d4324a63723d9d0e",
+  "runs31/baseline-f3-s1/oof.jsonl": "7cbeedf7b3bdb6cab7b7ea760ad7603fb2bdcae5d7a0f4a9a99df1479c3b96d6",
+  "runs31/baseline-f3-s1/selected.json": "53598ee886a0977bcec6a260d29ed3210611ed6e6e7decc8e5d2f2232f9a944e",
+  "runs31/baseline-f3-s2/eval/step160/preds.jsonl": "91757574d92caaa58f4dd4341a35ca8670bcf915e3b86b051d47919df3146ed4",
+  "runs31/baseline-f3-s2/eval/step40/preds.jsonl": "70e1406d880ff94cbb1bee12765f81fd26e5eb13de0a45afba7532556424abd9",
+  "runs31/baseline-f3-s2/eval/step80/preds.jsonl": "42f265431e0382528931879a99ac26a6f111fca3d384e5793c1634ef484861f9",
+  "runs31/baseline-f3-s2/oof.jsonl": "9cb8e9daa84dbf197ae2ef4259cfd0e61e6193af4a04e98cccb61fdc9cff8496",
+  "runs31/baseline-f3-s2/selected.json": "1804d6a55ba26c1853b8c79bca9bcef1736547c0a4cd85b492f436be0f154cb7",
+  "runs31/baseline-f4-s1/eval/step160/preds.jsonl": "f95b0f1ca07f80c9119a693cd918112332141612b27102ade3a52d0ae493915a",
+  "runs31/baseline-f4-s1/eval/step40/preds.jsonl": "d790dca72f2afb867e98979343b8d3139451fa184cf534bc5d52bc72f862c89c",
+  "runs31/baseline-f4-s1/eval/step80/preds.jsonl": "f47eecd4426d9423e1242b34649446f330f2ada38d158f6345f5dcee192a282a",
+  "runs31/baseline-f4-s1/oof.jsonl": "b9dfb5110094887a96832f0117a6377ea11a7793492e1848c1157956dfa3ac68",
+  "runs31/baseline-f4-s1/selected.json": "b0dea5e27c63d6940fcd938bcec3a8f002d8252c647ae0640a53f3799e148af4",
+  "runs31/baseline-f4-s2/eval/step120/preds.jsonl": "4e2a0776c3009fc6b384b68c54e13785843f0601079c779763a1bd384b8f6cc2",
+  "runs31/baseline-f4-s2/eval/step40/preds.jsonl": "e000629d9bcf1efcf1a6d53d50238add078d5ea4deb1a4921d9c6353da7fb93a",
+  "runs31/baseline-f4-s2/eval/step80/preds.jsonl": "81b70da903a2b7c78181982b601b8cb4dbe595e008e841bf36a088addfc2c2f8",
+  "runs31/baseline-f4-s2/oof.jsonl": "06c8b4b0a7d7a7a3f970b4b5b31ad9e5790c4693f4619196d0697adc8b1e864f",
+  "runs31/baseline-f4-s2/selected.json": "51e560f9b9c0df472b8639b23d40a010f0c39e083e1f50d3e496b9d4dffad6f0",
+  "runs31/pooled/baseline-s1.fixed160.thresholded.jsonl": "744c29a8f7f48cc338848d8a97b833465bb31125ff6315d9e3d9c731a9161774",
+  "runs31/pooled/baseline-s1.nested.thresholded.jsonl": "744c29a8f7f48cc338848d8a97b833465bb31125ff6315d9e3d9c731a9161774",
+  "runs31/pooled/baseline-s1.thresholded.jsonl": "ea424f18997cf3f2490cc675c580876e8cd1d19dbe44f88974b64a2cd2803a36",
+  "runs31/pooled/baseline-s2.fixed160.thresholded.jsonl": "c093df2419eefbcd033339b9bfe39fb5770e4dccfed376ad5bf8cf4048c60cf1",
+  "runs31/pooled/baseline-s2.nested.thresholded.jsonl": "adf675fcbb4d076f6f1808deef5b29515f9faa5d22c4f031e806641c501c9076",
+  "runs31/pooled/baseline-s2.thresholded.jsonl": "c4414fbca343effd6a5a7d36953c3b8fd8d12a9765a8838c81181399e22015b4",
+  "runs31/pooled/qcontrol-s1.fixed160.thresholded.jsonl": "17969a586dc444d9ee0788a521ed719c21579c9f29242c4d6da54cb254ed0983",
+  "runs31/pooled/qcontrol-s1.nested.thresholded.jsonl": "17969a586dc444d9ee0788a521ed719c21579c9f29242c4d6da54cb254ed0983",
+  "runs31/pooled/qcontrol-s1.thresholded.jsonl": "e12712e76d088fee0802f3b2a9bc91c1569b0641598f4b243c5ca9c77a0be8a1",
+  "runs31/pooled/qcontrol-s2.fixed160.thresholded.jsonl": "9dd1715be237a51e1c64369c4acf969054aa7da405511fcde07c04db5841b342",
+  "runs31/pooled/qcontrol-s2.nested.thresholded.jsonl": "9dd1715be237a51e1c64369c4acf969054aa7da405511fcde07c04db5841b342",
+  "runs31/pooled/qcontrol-s2.thresholded.jsonl": "8a93ebeca76aaded3becfacf979671bba43598ca4231ba3abea6c4790b6ef45d",
+  "runs31/qcontrol-f0-s1/eval/step120/preds.jsonl": "67c4e2bbc0dea005d8cdac004e354010117de89978aadf59f6aac744569bd66f",
+  "runs31/qcontrol-f0-s1/eval/step160/preds.jsonl": "99f9793aca80b9b1da5c3850399ae9e688f0b96103e8089f9857447590817f31",
+  "runs31/qcontrol-f0-s1/eval/step40/preds.jsonl": "7f549e7abc92def96ad16713884037a41de855fb92196c1cb6ddd69a8e3126c7",
+  "runs31/qcontrol-f0-s1/oof.jsonl": "80015e2c6cdeae9e1f4ba8ce03673cc6636fde58483d6c00a83f036ff314ac48",
+  "runs31/qcontrol-f0-s1/selected.json": "3fe25e95735ebaf6d082caa9fb0d3904d562f918fbbeb8bb1b0dd77369e0390f",
+  "runs31/qcontrol-f0-s2/eval/step120/preds.jsonl": "a0ee7401f58c334255b8d20c505aa6014bbe1e3b0b267c84febc10db15faa194",
+  "runs31/qcontrol-f0-s2/eval/step40/preds.jsonl": "0d60b41b4f81e8ca25d2de50448c719f0793395c1167c2c2cd0b80e02d875a6b",
+  "runs31/qcontrol-f0-s2/eval/step80/preds.jsonl": "c70602a17fa5b70f2ae440d515e80592f19a6c88d68b926ef372008963ded21d",
+  "runs31/qcontrol-f0-s2/oof.jsonl": "0f1bd0e060333bd536d7be41838a0e55dcd33a64c1696f22bd66ef6541abfa36",
+  "runs31/qcontrol-f0-s2/selected.json": "a78bc50aeb47776ecda5fbb93046170660693b3c1f6338a1adac8e68b9976359",
+  "runs31/qcontrol-f1-s1/eval/step160/preds.jsonl": "d91aab0bf886b78a0abb450f2d5a95dbae78149427fa37a6ac376c8a3e2a1679",
+  "runs31/qcontrol-f1-s1/eval/step40/preds.jsonl": "f7f5cadaa34d73e1b3b665933e2b6a894be84be9468af8b8976d9d1798ec35a3",
+  "runs31/qcontrol-f1-s1/eval/step80/preds.jsonl": "9ae62508eb571b7114df828885d1ef74acca616ac400c0dcb8f67460aa808621",
+  "runs31/qcontrol-f1-s1/oof.jsonl": "5edb6aea6b6cb39e1e3e837b20267f4d2e1e8d73623611564589e5e43b914535",
+  "runs31/qcontrol-f1-s1/selected.json": "a8bcf54ab293057b40e9397be8e2de6834419966e7f3bc87e3f1416c791fdca4",
+  "runs31/qcontrol-f1-s2/eval/step120/preds.jsonl": "871e5fd473363902612ae3dfb9fa5b88254146fabb74ce4de46515c6a9f15cd3",
+  "runs31/qcontrol-f1-s2/eval/step40/preds.jsonl": "d94786b26b95677392daa24285245b955471379c040886aa11b7af8f7ccc142e",
+  "runs31/qcontrol-f1-s2/eval/step80/preds.jsonl": "b8f51b2cf2b8904d84644be76c3684ce4189eb7c89f3c4c8bf69b6ce9e50c658",
+  "runs31/qcontrol-f1-s2/oof.jsonl": "fc71cbbe50844f305d78fc5aa638fea094f82795d37d0eaf4ecdc7ced678ccdb",
+  "runs31/qcontrol-f1-s2/selected.json": "26aca04822d81d9dbd2fcb9f9843683e76e4ae1ce9df63e9dcf4c3987850eb47",
+  "runs31/qcontrol-f2-s1/eval/step120/preds.jsonl": "cf5c34b19e9f8bc2ffd7dc7016b6e2f97ba655cb9b67a67d3e64ae4aef1de97c",
+  "runs31/qcontrol-f2-s1/eval/step40/preds.jsonl": "7d65bef5fb3d916af8b644628aff343d5bab2dadd5f84f71067a977a4dfb7f5f",
+  "runs31/qcontrol-f2-s1/eval/step80/preds.jsonl": "76ecf89ba83f9883b4b90264b2a4c985682fc7aa44211a5a57594e4b9ff92af6",
+  "runs31/qcontrol-f2-s1/oof.jsonl": "15101c08df86e42f791bf7f7a64bf525d817745164393c5df924a42b8d0a14fb",
+  "runs31/qcontrol-f2-s1/selected.json": "11b2f2a6e9fc4f40e5c73886cc0500f4b397e1a8b549a1173ee91d11407e6910",
+  "runs31/qcontrol-f2-s2/eval/step160/preds.jsonl": "ad06bd8ac3e72365c2885254714159f331c93f097f8adb515b6783e576fdbafb",
+  "runs31/qcontrol-f2-s2/eval/step40/preds.jsonl": "833b05ac76140caf6784e159ea983432004485216eafd043d1c661ed41ddade8",
+  "runs31/qcontrol-f2-s2/eval/step80/preds.jsonl": "ad36056aba375cf9028bede91b76959d5292924259b030c7b13ffc8afca243ea",
+  "runs31/qcontrol-f2-s2/oof.jsonl": "5657a91f9d3f720a3ffcca12ebcc823affd6b8ed39babc4d49419f76a38ef100",
+  "runs31/qcontrol-f2-s2/selected.json": "2fa4f376326de629800187ecf24181291638af2ac1cc2d5a48692f29676492d0",
+  "runs31/qcontrol-f3-s1/eval/step120/preds.jsonl": "d1da8fe7c7611b5671e5650ffc6ce47c3c3ad02ce0f5c2a5ea2598fc1a788828",
+  "runs31/qcontrol-f3-s1/eval/step40/preds.jsonl": "517eea2d4962760565946f9cd9278835d505f3a0db4ef196e4d6951560f4cb25",
+  "runs31/qcontrol-f3-s1/eval/step80/preds.jsonl": "cef734f818bc944a126bd994be61b581f20bdcc9377735fe3262c023e6d271d0",
+  "runs31/qcontrol-f3-s1/oof.jsonl": "bf4dae7aba8f09fd187a062b75d9ae52cb503b34d9034febdf96ea743c487856",
+  "runs31/qcontrol-f3-s1/selected.json": "1e3461cec3e8f5b0034a60b31cf32679e1d21c4f3c12cf7c9bb128a887b48d6f",
+  "runs31/qcontrol-f3-s2/eval/step120/preds.jsonl": "81840ea47c51d3e75df23abbee94333483b2de4de177d24bbeb451ff2aab7374",
+  "runs31/qcontrol-f3-s2/eval/step40/preds.jsonl": "c7274a07289f45b49d192b1953bb41768642d28060087cb7fc55f846492aa2ce",
+  "runs31/qcontrol-f3-s2/eval/step80/preds.jsonl": "ca719fbdd312dc27bb252e3cbeb865348a3ec715596e7d9d5368024e0b2c6200",
+  "runs31/qcontrol-f3-s2/oof.jsonl": "e37b68ccda6f627aec46fbf201719417ed0b6a0313b95965b7512153cd18f286",
+  "runs31/qcontrol-f3-s2/selected.json": "761a7031e672f8e2ee657f461c200e27d65124b9c1d02c8703ec9dbc4c856e68",
+  "runs31/qcontrol-f4-s1/eval/step120/preds.jsonl": "21a022bc9d9eaed9946f2a94d3b11ad8f2620400f47e407f601ef93ec0dfd0a9",
+  "runs31/qcontrol-f4-s1/eval/step40/preds.jsonl": "685ee774c141f4b0e5d9611bd384f1e4991f07892ae66bf3b4bffdc4b1aa768d",
+  "runs31/qcontrol-f4-s1/eval/step80/preds.jsonl": "88bb2f6df3a7505d6d19f5f2ddfe37de8236e6cb058eee694e1666e433add6eb",
+  "runs31/qcontrol-f4-s1/oof.jsonl": "2bf1f52cecca1d879266d511a553a86ad2a9933e53ae4da37ea4c9434fe30cff",
+  "runs31/qcontrol-f4-s1/selected.json": "952fd8c659f17b21a76cb56f12aef6442729916b90800db61e2da4458a707a95",
+  "runs31/qcontrol-f4-s2/eval/step120/preds.jsonl": "3940b96e94b0cf4d3928de4d03667efc09a67829caf5c8472863fae8d8c0fd24",
+  "runs31/qcontrol-f4-s2/eval/step40/preds.jsonl": "f021ff8e8b0eb3463bf13ab2612a17b65335dc2b3490af22e312712d965fb444",
+  "runs31/qcontrol-f4-s2/eval/step80/preds.jsonl": "85ab341f8bf640cbf8c433d49567026770238d4fd58726d037d7928e9a3292f6",
+  "runs31/qcontrol-f4-s2/oof.jsonl": "9473b0fd6b95de983220f1db33438585c3cdc15ed915a2809ac75ad6ddd2a333",
+  "runs31/qcontrol-f4-s2/selected.json": "9ab30b5ec5a653f2f36079426e94a06c81a87da762867c66714efb785076af9b",
+  "runs31/reanalysis/fixed160_sweep_table.json": "cb90d63157ef9aacf471b10bc05c2ac22e99ffaf22adbc72f5dcad5490b978a9",
+  "runs31/reanalysis/nested_sweep_table.json": "815576231d3a7d63d02eaf5d5c6c879dfe2747dcb768ac8fd79d101a3360024b"
+ },
+ "label_fidelity": {
+  "gemma": {
+   "factor_micro": {
+    "f1": 0.78675188,
+    "precision": 0.75894052,
+    "recall": 0.81667906
+   },
+   "n": 6384,
+   "n_by_factor": {
+    "cognitive deficits": 1057,
+    "exposure to others' suicide": 1011,
+    "meaning in life": 1062,
+    "poor school performance": 1074,
+    "sexual orientation related issues": 1106,
+    "substance use": 1074
+   },
+   "risk_agreement": 0.88925439,
+   "risk_confusion": {
+    "Attempt->Behavior": 6,
+    "Behavior->Attempt": 379,
+    "Ideation->Attempt": 102,
+    "Ideation->Behavior": 161,
+    "Indicator->Attempt": 31,
+    "Indicator->Behavior": 16,
+    "Indicator->Ideation": 12
+   },
+   "risk_read_higher": 0.10980576,
+   "risk_read_lower": 0.00093985,
+   "target_recall_balanced": 0.71141165,
+   "target_recall_by_factor": {
+    "cognitive deficits": 0.74266793,
+    "exposure to others' suicide": 0.8793274,
+    "meaning in life": 0.19114878,
+    "poor school performance": 0.93668529,
+    "sexual orientation related issues": 0.59312839,
+    "substance use": 0.9255121
+   },
+   "target_recall_pooled": 0.71005639
+  },
+  "real_held_out": {
+   "factor_micro": {
+    "f1": 0.78723404,
+    "precision": 0.85384615,
+    "recall": 0.73026316
+   },
+   "n": 142,
+   "n_by_factor": {
+    "cognitive deficits": 32,
+    "exposure to others' suicide": 14,
+    "meaning in life": 43,
+    "poor school performance": 16,
+    "sexual orientation related issues": 8,
+    "substance use": 29
+   },
+   "risk_agreement": 0.85915493,
+   "risk_confusion": {
+    "Attempt->Behavior": 2,
+    "Behavior->Attempt": 2,
+    "Behavior->Ideation": 4,
+    "Behavior->Indicator": 1,
+    "Ideation->Behavior": 3,
+    "Ideation->Indicator": 3,
+    "Indicator->Attempt": 1,
+    "Indicator->Behavior": 2,
+    "Indicator->Ideation": 2
+   },
+   "risk_read_higher": 0.07042254,
+   "risk_read_lower": 0.07042254,
+   "target_recall_balanced": 0.58190013,
+   "target_recall_by_factor": {
+    "cognitive deficits": 0.375,
+    "exposure to others' suicide": 0.71428571,
+    "meaning in life": 0.04651163,
+    "poor school performance": 0.8125,
+    "sexual orientation related issues": 0.75,
+    "substance use": 0.79310345
+   },
+   "target_recall_pooled": 0.46478873
+  },
+  "sonnet": {
+   "factor_micro": {
+    "f1": 0.79109464,
+    "precision": 0.75030382,
+    "recall": 0.83657569
+   },
+   "n": 6384,
+   "n_by_factor": {
+    "cognitive deficits": 1060,
+    "exposure to others' suicide": 1019,
+    "meaning in life": 1064,
+    "poor school performance": 1063,
+    "sexual orientation related issues": 1099,
+    "substance use": 1079
+   },
+   "risk_agreement": 0.92073935,
+   "risk_confusion": {
+    "Attempt->Behavior": 3,
+    "Behavior->Attempt": 212,
+    "Behavior->Ideation": 3,
+    "Ideation->Attempt": 82,
+    "Ideation->Behavior": 157,
+    "Indicator->Attempt": 21,
+    "Indicator->Behavior": 23,
+    "Indicator->Ideation": 5
+   },
+   "risk_read_higher": 0.0783208,
+   "risk_read_lower": 0.00093985,
+   "target_recall_balanced": 0.72445462,
+   "target_recall_by_factor": {
+    "cognitive deficits": 0.92264151,
+    "exposure to others' suicide": 0.74288518,
+    "meaning in life": 0.05075188,
+    "poor school performance": 0.96331138,
+    "sexual orientation related issues": 0.70791629,
+    "substance use": 0.9592215
+   },
+   "target_recall_pooled": 0.72462406
+  }
+ },
+ "meaning_in_life_oracle_cutoff_f1": 0.327,
+ "paired": {
+  "gemma_vs_rare_weighted": {
+   "composite": {
+    "ci_high": -0.0030301,
+    "ci_low": -0.01923173,
+    "mean": -0.01086059,
+    "observed": -0.01075031,
+    "p_two_sided": 0.002,
+    "positive_fraction": 0.001
+   },
+   "composite_no_evidence": {
+    "ci_high": -0.00226894,
+    "ci_low": -0.02322964,
+    "mean": -0.01226856,
+    "observed": -0.01214733,
+    "p_two_sided": 0.011,
+    "positive_fraction": 0.0055
+   },
+   "factor_macro_f1": {
+    "ci_high": 0.00692015,
+    "ci_low": -0.03052823,
+    "mean": -0.01214712,
+    "observed": -0.01190558,
+    "p_two_sided": 0.227,
+    "positive_fraction": 0.1135
+   },
+   "other18_macro_f1": {
+    "ci_high": -0.01111311,
+    "ci_low": -0.03308629,
+    "mean": -0.02238721,
+    "observed": -0.02248356,
+    "p_two_sided": 0.0,
+    "positive_fraction": 0.0
+   },
+   "phrase_f1": {
+    "ci_high": -0.00075977,
+    "ci_low": -0.01439684,
+    "mean": -0.00757533,
+    "observed": -0.00749058,
+    "p_two_sided": 0.038,
+    "positive_fraction": 0.019
+   },
+   "rare6_macro_f1": {
+    "ci_high": 0.0865995,
+    "ci_low": -0.05492149,
+    "mean": 0.01857314,
+    "observed": 0.01982834,
+    "p_two_sided": 0.574,
+    "positive_fraction": 0.713
+   },
+   "risk_wf1": {
+    "ci_high": -0.00048102,
+    "ci_low": -0.02482736,
+    "mean": -0.01235965,
+    "observed": -0.01232865,
+    "p_two_sided": 0.039,
+    "positive_fraction": 0.0195
+   }
+  },
+  "gemma_vs_real_only": {
+   "composite": {
+    "ci_high": -0.00631342,
+    "ci_low": -0.02119221,
+    "mean": -0.01317765,
+    "observed": -0.01298226,
+    "p_two_sided": 0.0,
+    "positive_fraction": 0.0
+   },
+   "composite_no_evidence": {
+    "ci_high": -0.00727024,
+    "ci_low": -0.02674868,
+    "mean": -0.016399,
+    "observed": -0.01616987,
+    "p_two_sided": 0.0,
+    "positive_fraction": 0.0
+   },
+   "factor_macro_f1": {
+    "ci_high": -0.00041381,
+    "ci_low": -0.03691398,
+    "mean": -0.01816723,
+    "observed": -0.01786145,
+    "p_two_sided": 0.046,
+    "positive_fraction": 0.023
+   },
+   "other18_macro_f1": {
+    "ci_high": -0.00598446,
+    "ci_low": -0.02944252,
+    "mean": -0.01797679,
+    "observed": -0.01822235,
+    "p_two_sided": 0.002,
+    "positive_fraction": 0.001
+   },
+   "phrase_f1": {
+    "ci_high": 0.00041304,
+    "ci_low": -0.0113263,
+    "mean": -0.00566116,
+    "observed": -0.0055445,
+    "p_two_sided": 0.064,
+    "positive_fraction": 0.032
+   },
+   "rare6_macro_f1": {
+    "ci_high": 0.04064224,
+    "ci_low": -0.086652,
+    "mean": -0.01873854,
+    "observed": -0.01677875,
+    "p_two_sided": 0.568,
+    "positive_fraction": 0.284
+   },
+   "risk_wf1": {
+    "ci_high": -0.00301176,
+    "ci_low": -0.0271454,
+    "mean": -0.01507283,
+    "observed": -0.01490118,
+    "p_two_sided": 0.017,
+    "positive_fraction": 0.0085
+   }
+  },
+  "gemma_vs_repeated_real": {
+   "composite": {
+    "ci_high": -0.00409219,
+    "ci_low": -0.01924728,
+    "mean": -0.01157685,
+    "observed": -0.01125908,
+    "p_two_sided": 0.002,
+    "positive_fraction": 0.001
+   },
+   "composite_no_evidence": {
+    "ci_high": -0.00633841,
+    "ci_low": -0.02598823,
+    "mean": -0.01569605,
+    "observed": -0.01528914,
+    "p_two_sided": 0.002,
+    "positive_fraction": 0.001
+   },
+   "factor_macro_f1": {
+    "ci_high": -0.00157488,
+    "ci_low": -0.03776314,
+    "mean": -0.01876469,
+    "observed": -0.01814513,
+    "p_two_sided": 0.032,
+    "positive_fraction": 0.016
+   },
+   "other18_macro_f1": {
+    "ci_high": -0.00236556,
+    "ci_low": -0.02368001,
+    "mean": -0.01346713,
+    "observed": -0.01359669,
+    "p_two_sided": 0.021,
+    "positive_fraction": 0.0105
+   },
+   "phrase_f1": {
+    "ci_high": 0.00436552,
+    "ci_low": -0.00822784,
+    "mean": -0.00196537,
+    "observed": -0.0018556,
+    "p_two_sided": 0.52,
+    "positive_fraction": 0.26
+   },
+   "rare6_macro_f1": {
+    "ci_high": 0.02217832,
+    "ci_low": -0.0969131,
+    "mean": -0.03465735,
+    "observed": -0.03179046,
+    "p_two_sided": 0.237,
+    "positive_fraction": 0.1185
+   },
+   "risk_wf1": {
+    "ci_high": -0.00221552,
+    "ci_low": -0.02536959,
+    "mean": -0.01339457,
+    "observed": -0.01314715,
+    "p_two_sided": 0.018,
+    "positive_fraction": 0.009
+   }
+  },
+  "rare_weighted_vs_real_only": {
+   "composite": {
+    "ci_high": 0.0033464,
+    "ci_low": -0.00813261,
+    "mean": -0.00231706,
+    "observed": -0.00223195,
+    "p_two_sided": 0.432,
+    "positive_fraction": 0.216
+   },
+   "composite_no_evidence": {
+    "ci_high": 0.00260166,
+    "ci_low": -0.01122879,
+    "mean": -0.00413044,
+    "observed": -0.00402253,
+    "p_two_sided": 0.222,
+    "positive_fraction": 0.111
+   },
+   "factor_macro_f1": {
+    "ci_high": 0.00854393,
+    "ci_low": -0.01976431,
+    "mean": -0.00602011,
+    "observed": -0.00595587,
+    "p_two_sided": 0.374,
+    "positive_fraction": 0.187
+   },
+   "other18_macro_f1": {
+    "ci_high": 0.0110745,
+    "ci_low": -0.00194429,
+    "mean": 0.00441041,
+    "observed": 0.00426121,
+    "p_two_sided": 0.194,
+    "positive_fraction": 0.903
+   },
+   "phrase_f1": {
+    "ci_high": 0.00874534,
+    "ci_low": -0.0047281,
+    "mean": 0.00191417,
+    "observed": 0.00194609,
+    "p_two_sided": 0.593,
+    "positive_fraction": 0.7035
+   },
+   "rare6_macro_f1": {
+    "ci_high": 0.01114761,
+    "ci_low": -0.08702165,
+    "mean": -0.03731169,
+    "observed": -0.03660709,
+    "p_two_sided": 0.128,
+    "positive_fraction": 0.064
+   },
+   "risk_wf1": {
+    "ci_high": 0.00528052,
+    "ci_low": -0.01154958,
+    "mean": -0.00271319,
+    "observed": -0.00257253,
+    "p_two_sided": 0.543,
+    "positive_fraction": 0.2715
+   }
+  },
+  "repeated_real_vs_real_only": {
+   "composite": {
+    "ci_high": 0.00415521,
+    "ci_low": -0.00745794,
+    "mean": -0.0016008,
+    "observed": -0.00172318,
+    "p_two_sided": 0.587,
+    "positive_fraction": 0.2935
+   },
+   "composite_no_evidence": {
+    "ci_high": 0.006843,
+    "ci_low": -0.0079421,
+    "mean": -0.00070295,
+    "observed": -0.00088073,
+    "p_two_sided": 0.843,
+    "positive_fraction": 0.4215
+   },
+   "factor_macro_f1": {
+    "ci_high": 0.01475952,
+    "ci_low": -0.01230583,
+    "mean": 0.00059746,
+    "observed": 0.00028368,
+    "p_two_sided": 0.96,
+    "positive_fraction": 0.52
+   },
+   "other18_macro_f1": {
+    "ci_high": 0.00417462,
+    "ci_low": -0.01351669,
+    "mean": -0.00450966,
+    "observed": -0.00462566,
+    "p_two_sided": 0.314,
+    "positive_fraction": 0.157
+   },
+   "phrase_f1": {
+    "ci_high": 0.00250426,
+    "ci_low": -0.00995967,
+    "mean": -0.00369579,
+    "observed": -0.0036889,
+    "p_two_sided": 0.25,
+    "positive_fraction": 0.125
+   },
+   "rare6_macro_f1": {
+    "ci_high": 0.0643172,
+    "ci_low": -0.02725946,
+    "mean": 0.01591881,
+    "observed": 0.0150117,
+    "p_two_sided": 0.509,
+    "positive_fraction": 0.7455
+   },
+   "risk_wf1": {
+    "ci_high": 0.0073198,
+    "ci_low": -0.01024818,
+    "mean": -0.00167826,
+    "observed": -0.00175404,
+    "p_two_sided": 0.704,
+    "positive_fraction": 0.352
+   }
+  },
+  "sonnet_vs_gemma": {
+   "composite": {
+    "ci_high": 0.00628692,
+    "ci_low": -0.00689274,
+    "mean": -0.0001035,
+    "observed": -0.00036747,
+    "p_two_sided": 0.993,
+    "positive_fraction": 0.4965
+   },
+   "composite_no_evidence": {
+    "ci_high": 0.00639225,
+    "ci_low": -0.01071744,
+    "mean": -0.0020651,
+    "observed": -0.00241979,
+    "p_two_sided": 0.652,
+    "positive_fraction": 0.326
+   },
+   "factor_macro_f1": {
+    "ci_high": 0.01279424,
+    "ci_low": -0.01673234,
+    "mean": -0.00171171,
+    "observed": -0.00256881,
+    "p_two_sided": 0.834,
+    "positive_fraction": 0.417
+   },
+   "other18_macro_f1": {
+    "ci_high": -0.00209484,
+    "ci_low": -0.01608375,
+    "mean": -0.00921572,
+    "observed": -0.0090161,
+    "p_two_sided": 0.009,
+    "positive_fraction": 0.0045
+   },
+   "phrase_f1": {
+    "ci_high": 0.010774,
+    "ci_low": -0.00160497,
+    "mean": 0.00447355,
+    "observed": 0.00442129,
+    "p_two_sided": 0.142,
+    "positive_fraction": 0.929
+   },
+   "rare6_macro_f1": {
+    "ci_high": 0.07675711,
+    "ci_low": -0.03335362,
+    "mean": 0.0208003,
+    "observed": 0.01677308,
+    "p_two_sided": 0.475,
+    "positive_fraction": 0.7625
+   },
+   "risk_wf1": {
+    "ci_high": 0.00812356,
+    "ci_low": -0.01398024,
+    "mean": -0.00233014,
+    "observed": -0.00230803,
+    "p_two_sided": 0.716,
+    "positive_fraction": 0.358
+   }
+  },
+  "sonnet_vs_rare_weighted": {
+   "composite": {
+    "ci_high": -0.00304332,
+    "ci_low": -0.01827405,
+    "mean": -0.0109641,
+    "observed": -0.01111778,
+    "p_two_sided": 0.006,
+    "positive_fraction": 0.003
+   },
+   "composite_no_evidence": {
+    "ci_high": -0.00426392,
+    "ci_low": -0.02413509,
+    "mean": -0.01433366,
+    "observed": -0.01456713,
+    "p_two_sided": 0.006,
+    "positive_fraction": 0.003
+   },
+   "factor_macro_f1": {
+    "ci_high": 0.00459373,
+    "ci_low": -0.03148486,
+    "mean": -0.01385883,
+    "observed": -0.01447439,
+    "p_two_sided": 0.13,
+    "positive_fraction": 0.065
+   },
+   "other18_macro_f1": {
+    "ci_high": -0.02158088,
+    "ci_low": -0.04131506,
+    "mean": -0.03160292,
+    "observed": -0.03149966,
+    "p_two_sided": 0.0,
+    "positive_fraction": 0.0
+   },
+   "phrase_f1": {
+    "ci_high": 0.00420658,
+    "ci_low": -0.01048635,
+    "mean": -0.00310178,
+    "observed": -0.00306929,
+    "p_two_sided": 0.422,
+    "positive_fraction": 0.211
+   },
+   "rare6_macro_f1": {
+    "ci_high": 0.10706261,
+    "ci_low": -0.0269463,
+    "mean": 0.03937345,
+    "observed": 0.03660142,
+    "p_two_sided": 0.23,
+    "positive_fraction": 0.885
+   },
+   "risk_wf1": {
+    "ci_high": -0.00486508,
+    "ci_low": -0.02471598,
+    "mean": -0.01468978,
+    "observed": -0.01463668,
+    "p_two_sided": 0.004,
+    "positive_fraction": 0.002
+   }
+  },
+  "sonnet_vs_real_only": {
+   "composite": {
+    "ci_high": -0.00623147,
+    "ci_low": -0.02025649,
+    "mean": -0.01328115,
+    "observed": -0.01334973,
+    "p_two_sided": 0.0,
+    "positive_fraction": 0.0
+   },
+   "composite_no_evidence": {
+    "ci_high": -0.00911147,
+    "ci_low": -0.02792496,
+    "mean": -0.0184641,
+    "observed": -0.01858966,
+    "p_two_sided": 0.0,
+    "positive_fraction": 0.0
+   },
+   "factor_macro_f1": {
+    "ci_high": -0.00263511,
+    "ci_low": -0.03786421,
+    "mean": -0.01987894,
+    "observed": -0.02043026,
+    "p_two_sided": 0.024,
+    "positive_fraction": 0.012
+   },
+   "other18_macro_f1": {
+    "ci_high": -0.01600047,
+    "ci_low": -0.0378531,
+    "mean": -0.02719251,
+    "observed": -0.02723846,
+    "p_two_sided": 0.0,
+    "positive_fraction": 0.0
+   },
+   "phrase_f1": {
+    "ci_high": 0.005155,
+    "ci_low": -0.00708511,
+    "mean": -0.00118761,
+    "observed": -0.0011232,
+    "p_two_sided": 0.686,
+    "positive_fraction": 0.343
+   },
+   "rare6_macro_f1": {
+    "ci_high": 0.06071759,
+    "ci_low": -0.06355872,
+    "mean": 0.00206176,
+    "observed": -5.67e-06,
+    "p_two_sided": 0.943,
+    "positive_fraction": 0.5285
+   },
+   "risk_wf1": {
+    "ci_high": -0.00915098,
+    "ci_low": -0.02576015,
+    "mean": -0.01740297,
+    "observed": -0.01720922,
+    "p_two_sided": 0.0,
+    "positive_fraction": 0.0
+   }
+  },
+  "sonnet_vs_repeated_real": {
+   "composite": {
+    "ci_high": -0.0045087,
+    "ci_low": -0.01846788,
+    "mean": -0.01168035,
+    "observed": -0.01162655,
+    "p_two_sided": 0.004,
+    "positive_fraction": 0.002
+   },
+   "composite_no_evidence": {
+    "ci_high": -0.0084271,
+    "ci_low": -0.0269489,
+    "mean": -0.01776115,
+    "observed": -0.01770893,
+    "p_two_sided": 0.001,
+    "positive_fraction": 0.0005
+   },
+   "factor_macro_f1": {
+    "ci_high": -0.00449733,
+    "ci_low": -0.03695894,
+    "mean": -0.0204764,
+    "observed": -0.02071394,
+    "p_two_sided": 0.01,
+    "positive_fraction": 0.005
+   },
+   "other18_macro_f1": {
+    "ci_high": -0.01234676,
+    "ci_low": -0.03206405,
+    "mean": -0.02268285,
+    "observed": -0.02261279,
+    "p_two_sided": 0.0,
+    "positive_fraction": 0.0
+   },
+   "phrase_f1": {
+    "ci_high": 0.00878146,
+    "ci_low": -0.00389116,
+    "mean": 0.00250818,
+    "observed": 0.00256569,
+    "p_two_sided": 0.436,
+    "positive_fraction": 0.782
+   },
+   "rare6_macro_f1": {
+    "ci_high": 0.04411429,
+    "ci_low": -0.07445656,
+    "mean": -0.01385704,
+    "observed": -0.01501737,
+    "p_two_sided": 0.627,
+    "positive_fraction": 0.3135
+   },
+   "risk_wf1": {
+    "ci_high": -0.00542802,
+    "ci_low": -0.02642712,
+    "mean": -0.01572471,
+    "observed": -0.01545518,
+    "p_two_sided": 0.003,
+    "positive_fraction": 0.0015
+   }
+  }
+ },
+ "pilot_survey": {
+  "v1": {
+   "haiku": {
+    "cases": 300,
+    "factor_micro_f1": 0.6731,
+    "passed_checks": 112,
+    "realism_auc": 0.9992,
+    "rejects": {
+     "plan_disclaimer": 13,
+     "real_overlap": 3,
+     "reference_copy": 2,
+     "soft_refusal": 169,
+     "status:batch_errored": 1
+    },
+    "risk_agreement": 0.7321,
+    "target_recall": 0.6964,
+    "taxonomy_vocabulary": 0.1875,
+    "words_mean": 133.25
+   },
+   "hemmingway": {
+    "cases": 300,
+    "factor_micro_f1": 0.8127,
+    "passed_checks": 281,
+    "realism_auc": 0.9996,
+    "rejects": {
+     "plan_disclaimer": 16,
+     "reference_copy": 1,
+     "soft_refusal": 2
+    },
+    "risk_agreement": 0.8078,
+    "target_recall": 0.7367,
+    "taxonomy_vocabulary": 0.548,
+    "words_mean": 145.09
+   },
+   "qwen": {
+    "cases": 300,
+    "factor_micro_f1": 0.8033,
+    "passed_checks": 274,
+    "realism_auc": 0.9948,
+    "rejects": {
+     "plan_disclaimer": 19,
+     "real_overlap": 4,
+     "soft_refusal": 3
+    },
+    "risk_agreement": 0.7518,
+    "target_recall": 0.7044,
+    "taxonomy_vocabulary": 0.7628,
+    "words_mean": 145.3
+   },
+   "sonnet": {
+    "cases": 300,
+    "factor_micro_f1": 0.7768,
+    "passed_checks": 261,
+    "realism_auc": 1.0,
+    "rejects": {
+     "plan_disclaimer": 37,
+     "real_overlap": 1,
+     "soft_refusal": 1
+    },
+    "risk_agreement": 0.9272,
+    "target_recall": 0.6705,
+    "taxonomy_vocabulary": 0.2912,
+    "words_mean": 139.29
+   }
+  },
+  "v1_real_reference": {
+   "taxonomy_vocabulary": 0.0882,
+   "words_mean": 70.04
+  },
+  "v2": {
+   "gemma12": {
+    "cases": 300,
+    "factor_micro_f1": 0.7475,
+    "passed_checks": 291,
+    "realism_auc": 0.9992,
+    "rejects": {
+     "real_overlap": 9
+    },
+    "risk_agreement": 0.8144,
+    "target_recall": 0.6357,
+    "taxonomy_vocabulary": 0.5739,
+    "words_mean": 129.88
+   },
+   "gemma31": {
+    "cases": 300,
+    "factor_micro_f1": 0.7827,
+    "passed_checks": 293,
+    "realism_auc": 0.9977,
+    "rejects": {
+     "plan_disclaimer": 2,
+     "real_overlap": 5
+    },
+    "risk_agreement": 0.8396,
+    "target_recall": 0.6587,
+    "taxonomy_vocabulary": 0.4778,
+    "words_mean": 132.44
+   },
+   "hemmingway": {
+    "cases": 300,
+    "factor_micro_f1": 0.8051,
+    "passed_checks": 298,
+    "realism_auc": 0.9971,
+    "rejects": {
+     "plan_disclaimer": 1,
+     "soft_refusal": 1
+    },
+    "risk_agreement": 0.7852,
+    "target_recall": 0.7181,
+    "taxonomy_vocabulary": 0.4027,
+    "words_mean": 150.42
+   },
+   "qwen": {
+    "cases": 300,
+    "factor_micro_f1": 0.8124,
+    "passed_checks": 296,
+    "realism_auc": 0.9959,
+    "rejects": {
+     "real_overlap": 4
+    },
+    "risk_agreement": 0.777,
+    "target_recall": 0.7703,
+    "taxonomy_vocabulary": 0.7264,
+    "words_mean": 155.1
+   },
+   "sonnet": {
+    "cases": 300,
+    "factor_micro_f1": 0.7831,
+    "passed_checks": 292,
+    "realism_auc": 0.9992,
+    "rejects": {
+     "plan_disclaimer": 7,
+     "real_overlap": 1
+    },
+    "risk_agreement": 0.9075,
+    "target_recall": 0.726,
+    "taxonomy_vocabulary": 0.1096,
+    "words_mean": 147.82
+   }
+  },
+  "v2_real_reference": {
+   "taxonomy_vocabulary": 0.0882,
+   "words_mean": 70.04
+  }
+ },
+ "prevalence_vs_f1": {
+  "gemma": {
+   "p": 0.84013298,
+   "spearman_rho": -0.04347826
+  },
+  "sonnet": {
+   "p": 0.59611405,
+   "spearman_rho": 0.11391304
+  }
+ },
+ "prompts": {
+  "overrides_v2": {
+   "cognitive deficits": "Difficulty with cognitive abilities",
+   "meaning in life": "Having reasons to live or a sense of purpose",
+   "psychological capital": "A positive inner state the person can draw on"
+  },
+  "oversample": 1.1,
+  "reference_chars": 1200,
+  "system_v1": "You write one Reddit post for a research dataset that trains a suicide-risk classifier. You are shown real posts by one r/SuicideWatch user, in order, with a marked gap. Write the post that fills the gap: the same person at a new moment, not a rewrite of their other posts.\n\nA careful annotator must be able to read the assigned annotation off your post. Risk levels:\n- Indicator: no explicit mention of suicide or of wanting to die.\n- Ideation: explicit suicidal thoughts or a wish to die, with no plan, method, or self-harm.\n- Behavior: suicidal thoughts with a plan, a method, preparation, or self-harm. Self-harm without a suicide attempt is Behavior.\n- Attempt: the author describes their own actual suicide attempt, recent or past, including one they stopped partway.\n\nShow the risk level and every assigned factor through what the person says and what happened; never name the labels. Return only the text of the post.",
+  "system_v2": "You write one Reddit post for a research dataset that trains a suicide-risk classifier. You are shown real posts by one r/SuicideWatch user, in order, with a marked gap. Write the post that fills the gap: the same person at a new moment, not a rewrite of their other posts.\n\nA careful annotator must be able to read the assigned annotation off your post. What each risk level shows:\n- Indicator: distress, without any explicit mention of suicide or of wanting to die.\n- Ideation: explicit thoughts of suicide or of wanting to die. A plan, a method, or self-harm would make it Behavior.\n- Behavior: explicit suicidal thoughts together with a plan, a method, preparation, or self-harm, including self-harm without a suicide attempt.\n- Attempt: the author's own actual suicide attempt, recent or past, including one they stopped partway.\n\nWrite only what this person would actually say. Show the risk level and every assigned factor through what they say and what happened. Never name the labels, explain them, or state what is not happening. Return only the text of the post.",
+  "user_layout": "Posts by this user, oldest first:\n\n[1] <earlier post>\n\n[2] <earlier post>\n\n[NEW POST GOES HERE]\n\n[3] <later post>\n\nAnnotation of the new post:\nRisk: <risk level>\nFactors present:\n- <factor>: <definition> (one line per factor)\nLength: about <n> words."
+ },
+ "public_leaderboard_real_only_ensemble": {
+  "composite": 0.7644,
+  "subtask1": 0.7991,
+  "subtask2": 0.6834
+ },
+ "registered": {
+  "adoption": {
+   "gemma": {
+    "adopt": false,
+    "delta_vs_real_only": -0.01317765,
+    "delta_vs_repeated_real": -0.01157685,
+    "ship_bar": 0.01
+   },
+   "sonnet": {
+    "adopt": false,
+    "delta_vs_real_only": -0.01328115,
+    "delta_vs_repeated_real": -0.01168035,
+    "ship_bar": 0.01
+   }
+  },
+  "holm": {
+   "P1": {
+    "holm_threshold": 0.025,
+    "p": 0.0,
+    "reject_null": true
+   },
+   "P2": {
+    "holm_threshold": 0.05,
+    "p": 0.0,
+    "reject_null": true
+   }
+  },
+  "ship_bar": 0.01
+ },
+ "reproduction_gate": {
+  "original": 0.7933,
+  "rerun": 0.7853,
+  "tolerance": 0.01
+ },
+ "robustness": {
+  "fixed160": {
+   "mean_seed": {
+    "gemma": {
+     "composite": 0.7625851,
+     "composite_no_evidence": 0.75603259,
+     "factor_macro_f1": 0.68743106,
+     "other18_macro_f1": 0.7030674,
+     "phrase_f1": 0.77787429,
+     "rare6_macro_f1": 0.64052207,
+     "risk_wf1": 0.80748373
+    },
+    "rare_weighted": {
+     "composite": 0.77130743,
+     "composite_no_evidence": 0.76563263,
+     "factor_macro_f1": 0.69124044,
+     "other18_macro_f1": 0.7204729,
+     "phrase_f1": 0.78454862,
+     "rare6_macro_f1": 0.60354306,
+     "risk_wf1": 0.82142677
+    },
+    "real_only": {
+     "composite": 0.77527184,
+     "composite_no_evidence": 0.77156384,
+     "factor_macro_f1": 0.69743048,
+     "other18_macro_f1": 0.71933555,
+     "phrase_f1": 0.78392385,
+     "rare6_macro_f1": 0.63171525,
+     "risk_wf1": 0.82716386
+    },
+    "repeated_real": {
+     "composite": 0.7748828,
+     "composite_no_evidence": 0.77162409,
+     "factor_macro_f1": 0.70157702,
+     "other18_macro_f1": 0.72416903,
+     "phrase_f1": 0.78248647,
+     "rare6_macro_f1": 0.63380101,
+     "risk_wf1": 0.82415939
+    },
+    "sonnet": {
+     "composite": 0.76380208,
+     "composite_no_evidence": 0.75577473,
+     "factor_macro_f1": 0.68529015,
+     "other18_macro_f1": 0.69560195,
+     "phrase_f1": 0.78253255,
+     "rare6_macro_f1": 0.65435475,
+     "risk_wf1": 0.80863817
+    }
+   },
+   "paired": {
+    "gemma_vs_rare_weighted": {
+     "composite": {
+      "ci_high": -0.0006523,
+      "ci_low": -0.01787169,
+      "mean": -0.0088551,
+      "observed": -0.00872233,
+      "p_two_sided": 0.038,
+      "positive_fraction": 0.019
+     },
+     "composite_no_evidence": {
+      "ci_high": 0.00064026,
+      "ci_low": -0.02158651,
+      "mean": -0.00973166,
+      "observed": -0.00960004,
+      "p_two_sided": 0.079,
+      "positive_fraction": 0.0395
+     },
+     "factor_macro_f1": {
+      "ci_high": 0.01580306,
+      "ci_low": -0.02351423,
+      "mean": -0.00389849,
+      "observed": -0.00380938,
+      "p_two_sided": 0.686,
+      "positive_fraction": 0.343
+     },
+     "other18_macro_f1": {
+      "ci_high": -0.00643667,
+      "ci_low": -0.02745955,
+      "mean": -0.01717283,
+      "observed": -0.0174055,
+      "p_two_sided": 0.001,
+      "positive_fraction": 0.0005
+     },
+     "phrase_f1": {
+      "ci_high": -0.00066445,
+      "ci_low": -0.01266669,
+      "mean": -0.00680981,
+      "observed": -0.00667433,
+      "p_two_sided": 0.025,
+      "positive_fraction": 0.0125
+     },
+     "rare6_macro_f1": {
+      "ci_high": 0.11243081,
+      "ci_low": -0.03955986,
+      "mean": 0.03592454,
+      "observed": 0.03697901,
+      "p_two_sided": 0.343,
+      "positive_fraction": 0.8285
+     },
+     "risk_wf1": {
+      "ci_high": -0.00112459,
+      "ci_low": -0.02718,
+      "mean": -0.01410653,
+      "observed": -0.01394304,
+      "p_two_sided": 0.032,
+      "positive_fraction": 0.016
+     }
+    },
+    "gemma_vs_real_only": {
+     "composite": {
+      "ci_high": -0.004782,
+      "ci_low": -0.02173387,
+      "mean": -0.01274101,
+      "observed": -0.01268675,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     },
+     "composite_no_evidence": {
+      "ci_high": -0.0049845,
+      "ci_low": -0.02779041,
+      "mean": -0.01553687,
+      "observed": -0.01553125,
+      "p_two_sided": 0.003,
+      "positive_fraction": 0.0015
+     },
+     "factor_macro_f1": {
+      "ci_high": 0.00678561,
+      "ci_low": -0.02669515,
+      "mean": -0.00970178,
+      "observed": -0.00999941,
+      "p_two_sided": 0.245,
+      "positive_fraction": 0.1225
+     },
+     "other18_macro_f1": {
+      "ci_high": -0.00518976,
+      "ci_low": -0.02661414,
+      "mean": -0.015934,
+      "observed": -0.01626816,
+      "p_two_sided": 0.004,
+      "positive_fraction": 0.002
+     },
+     "phrase_f1": {
+      "ci_high": -0.00046947,
+      "ci_low": -0.01193074,
+      "mean": -0.00621735,
+      "observed": -0.00604956,
+      "p_two_sided": 0.037,
+      "positive_fraction": 0.0185
+     },
+     "rare6_macro_f1": {
+      "ci_high": 0.0686726,
+      "ci_low": -0.05316366,
+      "mean": 0.00899487,
+      "observed": 0.00880682,
+      "p_two_sided": 0.749,
+      "positive_fraction": 0.6255
+     },
+     "risk_wf1": {
+      "ci_high": -0.00593437,
+      "ci_low": -0.03374153,
+      "mean": -0.01991318,
+      "observed": -0.01968013,
+      "p_two_sided": 0.004,
+      "positive_fraction": 0.002
+     }
+    },
+    "gemma_vs_repeated_real": {
+     "composite": {
+      "ci_high": -0.00542343,
+      "ci_low": -0.01946347,
+      "mean": -0.01243195,
+      "observed": -0.01229771,
+      "p_two_sided": 0.001,
+      "positive_fraction": 0.0005
+     },
+     "composite_no_evidence": {
+      "ci_high": -0.00671601,
+      "ci_low": -0.02486834,
+      "mean": -0.01572023,
+      "observed": -0.0155915,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     },
+     "factor_macro_f1": {
+      "ci_high": -0.00049703,
+      "ci_low": -0.02848812,
+      "mean": -0.014082,
+      "observed": -0.01414596,
+      "p_two_sided": 0.042,
+      "positive_fraction": 0.021
+     },
+     "other18_macro_f1": {
+      "ci_high": -0.01063486,
+      "ci_low": -0.03055781,
+      "mean": -0.02089891,
+      "observed": -0.02110163,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     },
+     "phrase_f1": {
+      "ci_high": 0.00153022,
+      "ci_low": -0.01127216,
+      "mean": -0.0047593,
+      "observed": -0.00461219,
+      "p_two_sided": 0.143,
+      "positive_fraction": 0.0715
+     },
+     "rare6_macro_f1": {
+      "ci_high": 0.05329805,
+      "ci_low": -0.0417909,
+      "mean": 0.00636871,
+      "observed": 0.00672106,
+      "p_two_sided": 0.783,
+      "positive_fraction": 0.6085
+     },
+     "risk_wf1": {
+      "ci_high": -0.00511822,
+      "ci_low": -0.02963849,
+      "mean": -0.0169489,
+      "observed": -0.01667566,
+      "p_two_sided": 0.003,
+      "positive_fraction": 0.0015
+     }
+    },
+    "rare_weighted_vs_real_only": {
+     "composite": {
+      "ci_high": 0.0014126,
+      "ci_low": -0.00901858,
+      "mean": -0.00388591,
+      "observed": -0.00396442,
+      "p_two_sided": 0.129,
+      "positive_fraction": 0.0645
+     },
+     "composite_no_evidence": {
+      "ci_high": 0.00057105,
+      "ci_low": -0.01165339,
+      "mean": -0.00580521,
+      "observed": -0.00593121,
+      "p_two_sided": 0.071,
+      "positive_fraction": 0.0355
+     },
+     "factor_macro_f1": {
+      "ci_high": 0.00787023,
+      "ci_low": -0.0166768,
+      "mean": -0.0058033,
+      "observed": -0.00619004,
+      "p_two_sided": 0.325,
+      "positive_fraction": 0.1625
+     },
+     "other18_macro_f1": {
+      "ci_high": 0.00807738,
+      "ci_low": -0.00552993,
+      "mean": 0.00123883,
+      "observed": 0.00113735,
+      "p_two_sided": 0.722,
+      "positive_fraction": 0.639
+     },
+     "phrase_f1": {
+      "ci_high": 0.00655231,
+      "ci_low": -0.00543681,
+      "mean": 0.00059246,
+      "observed": 0.00062477,
+      "p_two_sided": 0.836,
+      "positive_fraction": 0.582
+     },
+     "rare6_macro_f1": {
+      "ci_high": 0.02397816,
+      "ci_low": -0.06724775,
+      "mean": -0.02692967,
+      "observed": -0.02817219,
+      "p_two_sided": 0.246,
+      "positive_fraction": 0.123
+     },
+     "risk_wf1": {
+      "ci_high": 0.00133712,
+      "ci_low": -0.01322247,
+      "mean": -0.00580665,
+      "observed": -0.00573709,
+      "p_two_sided": 0.117,
+      "positive_fraction": 0.0585
+     }
+    },
+    "repeated_real_vs_real_only": {
+     "composite": {
+      "ci_high": 0.00530725,
+      "ci_low": -0.00585978,
+      "mean": -0.00030906,
+      "observed": -0.00038904,
+      "p_two_sided": 0.908,
+      "positive_fraction": 0.454
+     },
+     "composite_no_evidence": {
+      "ci_high": 0.00684786,
+      "ci_low": -0.00654692,
+      "mean": 0.00018336,
+      "observed": 6.025e-05,
+      "p_two_sided": 0.955,
+      "positive_fraction": 0.5225
+     },
+     "factor_macro_f1": {
+      "ci_high": 0.01774914,
+      "ci_low": -0.00875642,
+      "mean": 0.00438022,
+      "observed": 0.00414655,
+      "p_two_sided": 0.5,
+      "positive_fraction": 0.75
+     },
+     "other18_macro_f1": {
+      "ci_high": 0.01325682,
+      "ci_low": -0.0036975,
+      "mean": 0.00496491,
+      "observed": 0.00483347,
+      "p_two_sided": 0.243,
+      "positive_fraction": 0.8785
+     },
+     "phrase_f1": {
+      "ci_high": 0.00579698,
+      "ci_low": -0.00819805,
+      "mean": -0.00145805,
+      "observed": -0.00143738,
+      "p_two_sided": 0.678,
+      "positive_fraction": 0.339
+     },
+     "rare6_macro_f1": {
+      "ci_high": 0.05244388,
+      "ci_low": -0.04665264,
+      "mean": 0.00262616,
+      "observed": 0.00208576,
+      "p_two_sided": 0.917,
+      "positive_fraction": 0.5415
+     },
+     "risk_wf1": {
+      "ci_high": 0.00501341,
+      "ci_low": -0.01102247,
+      "mean": -0.00296428,
+      "observed": -0.00300448,
+      "p_two_sided": 0.468,
+      "positive_fraction": 0.234
+     }
+    },
+    "sonnet_vs_gemma": {
+     "composite": {
+      "ci_high": 0.00767013,
+      "ci_low": -0.00483113,
+      "mean": 0.00143129,
+      "observed": 0.00121698,
+      "p_two_sided": 0.666,
+      "positive_fraction": 0.667
+     },
+     "composite_no_evidence": {
+      "ci_high": 0.00841761,
+      "ci_low": -0.00803692,
+      "mean": 2.058e-05,
+      "observed": -0.00025785,
+      "p_two_sided": 0.99,
+      "positive_fraction": 0.505
+     },
+     "factor_macro_f1": {
+      "ci_high": 0.00937088,
+      "ci_low": -0.01245934,
+      "mean": -0.0016741,
+      "observed": -0.00214091,
+      "p_two_sided": 0.767,
+      "positive_fraction": 0.3835
+     },
+     "other18_macro_f1": {
+      "ci_high": 0.00064725,
+      "ci_low": -0.01642217,
+      "mean": -0.00764625,
+      "observed": -0.00746545,
+      "p_two_sided": 0.077,
+      "positive_fraction": 0.0385
+     },
+     "phrase_f1": {
+      "ci_high": 0.01081656,
+      "ci_low": -0.00103218,
+      "mean": 0.00472293,
+      "observed": 0.00465826,
+      "p_two_sided": 0.098,
+      "positive_fraction": 0.951
+     },
+     "rare6_macro_f1": {
+      "ci_high": 0.05965955,
+      "ci_low": -0.02597667,
+      "mean": 0.01624233,
+      "observed": 0.01383269,
+      "p_two_sided": 0.441,
+      "positive_fraction": 0.7795
+     },
+     "risk_wf1": {
+      "ci_high": 0.01249146,
+      "ci_low": -0.01118318,
+      "mean": 0.0012916,
+      "observed": 0.00115444,
+      "p_two_sided": 0.814,
+      "positive_fraction": 0.593
+     }
+    },
+    "sonnet_vs_rare_weighted": {
+     "composite": {
+      "ci_high": -0.00078419,
+      "ci_low": -0.01506288,
+      "mean": -0.00742381,
+      "observed": -0.00750535,
+      "p_two_sided": 0.026,
+      "positive_fraction": 0.013
+     },
+     "composite_no_evidence": {
+      "ci_high": -0.00074958,
+      "ci_low": -0.01971202,
+      "mean": -0.00971107,
+      "observed": -0.0098579,
+      "p_two_sided": 0.024,
+      "positive_fraction": 0.012
+     },
+     "factor_macro_f1": {
+      "ci_high": 0.01051067,
+      "ci_low": -0.02198187,
+      "mean": -0.00557259,
+      "observed": -0.00595029,
+      "p_two_sided": 0.489,
+      "positive_fraction": 0.2445
+     },
+     "other18_macro_f1": {
+      "ci_high": -0.01574008,
+      "ci_low": -0.03372771,
+      "mean": -0.02481908,
+      "observed": -0.02487095,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     },
+     "phrase_f1": {
+      "ci_high": 0.00448739,
+      "ci_low": -0.00871742,
+      "mean": -0.00208688,
+      "observed": -0.00201608,
+      "p_two_sided": 0.528,
+      "positive_fraction": 0.264
+     },
+     "rare6_macro_f1": {
+      "ci_high": 0.11691136,
+      "ci_low": -0.01268547,
+      "mean": 0.05216687,
+      "observed": 0.05081169,
+      "p_two_sided": 0.108,
+      "positive_fraction": 0.946
+     },
+     "risk_wf1": {
+      "ci_high": -0.00232343,
+      "ci_low": -0.0247624,
+      "mean": -0.01281493,
+      "observed": -0.0127886,
+      "p_two_sided": 0.015,
+      "positive_fraction": 0.0075
+     }
+    },
+    "sonnet_vs_real_only": {
+     "composite": {
+      "ci_high": -0.00445404,
+      "ci_low": -0.01884888,
+      "mean": -0.01130972,
+      "observed": -0.01146977,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     },
+     "composite_no_evidence": {
+      "ci_high": -0.00606575,
+      "ci_low": -0.02572666,
+      "mean": -0.01551628,
+      "observed": -0.01578911,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     },
+     "factor_macro_f1": {
+      "ci_high": 0.00329294,
+      "ci_low": -0.02589237,
+      "mean": -0.01137589,
+      "observed": -0.01214033,
+      "p_two_sided": 0.126,
+      "positive_fraction": 0.063
+     },
+     "other18_macro_f1": {
+      "ci_high": -0.01433884,
+      "ci_low": -0.03317267,
+      "mean": -0.02358025,
+      "observed": -0.0237336,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     },
+     "phrase_f1": {
+      "ci_high": 0.00446853,
+      "ci_low": -0.00728328,
+      "mean": -0.00149442,
+      "observed": -0.0013913,
+      "p_two_sided": 0.635,
+      "positive_fraction": 0.3175
+     },
+     "rare6_macro_f1": {
+      "ci_high": 0.07960087,
+      "ci_low": -0.03348605,
+      "mean": 0.0252372,
+      "observed": 0.0226395,
+      "p_two_sided": 0.299,
+      "positive_fraction": 0.8505
+     },
+     "risk_wf1": {
+      "ci_high": -0.00738693,
+      "ci_low": -0.03089063,
+      "mean": -0.01862158,
+      "observed": -0.01852569,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     }
+    },
+    "sonnet_vs_repeated_real": {
+     "composite": {
+      "ci_high": -0.00425544,
+      "ci_low": -0.0175432,
+      "mean": -0.01100066,
+      "observed": -0.01108073,
+      "p_two_sided": 0.001,
+      "positive_fraction": 0.0005
+     },
+     "composite_no_evidence": {
+      "ci_high": -0.0066697,
+      "ci_low": -0.02403576,
+      "mean": -0.01569964,
+      "observed": -0.01584935,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     },
+     "factor_macro_f1": {
+      "ci_high": -0.00148526,
+      "ci_low": -0.02952056,
+      "mean": -0.01575611,
+      "observed": -0.01628687,
+      "p_two_sided": 0.034,
+      "positive_fraction": 0.017
+     },
+     "other18_macro_f1": {
+      "ci_high": -0.01861869,
+      "ci_low": -0.03811283,
+      "mean": -0.02854516,
+      "observed": -0.02856708,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     },
+     "phrase_f1": {
+      "ci_high": 0.00664182,
+      "ci_low": -0.00690547,
+      "mean": -3.637e-05,
+      "observed": 4.607e-05,
+      "p_two_sided": 0.998,
+      "positive_fraction": 0.501
+     },
+     "rare6_macro_f1": {
+      "ci_high": 0.07899223,
+      "ci_low": -0.03206578,
+      "mean": 0.02261104,
+      "observed": 0.02055374,
+      "p_two_sided": 0.395,
+      "positive_fraction": 0.8025
+     },
+     "risk_wf1": {
+      "ci_high": -0.00542239,
+      "ci_low": -0.02708125,
+      "mean": -0.0156573,
+      "observed": -0.01552122,
+      "p_two_sided": 0.002,
+      "positive_fraction": 0.001
+     }
+    }
+   }
+  },
+  "nested": {
+   "mean_seed": {
+    "gemma": {
+     "composite": 0.7546212,
+     "composite_no_evidence": 0.74631276,
+     "factor_macro_f1": 0.67832781,
+     "other18_macro_f1": 0.69313913,
+     "phrase_f1": 0.77400755,
+     "rare6_macro_f1": 0.63389385,
+     "risk_wf1": 0.79730147
+    },
+    "real_only": {
+     "composite": 0.77454447,
+     "composite_no_evidence": 0.77148377,
+     "factor_macro_f1": 0.69850427,
+     "other18_macro_f1": 0.717832,
+     "phrase_f1": 0.78168609,
+     "rare6_macro_f1": 0.64052109,
+     "risk_wf1": 0.82621839
+    },
+    "repeated_real": {
+     "composite": 0.7748828,
+     "composite_no_evidence": 0.77162409,
+     "factor_macro_f1": 0.70157702,
+     "other18_macro_f1": 0.72416903,
+     "phrase_f1": 0.78248647,
+     "rare6_macro_f1": 0.63380101,
+     "risk_wf1": 0.82415939
+    },
+    "sonnet": {
+     "composite": 0.76380208,
+     "composite_no_evidence": 0.75577473,
+     "factor_macro_f1": 0.68529015,
+     "other18_macro_f1": 0.69560195,
+     "phrase_f1": 0.78253255,
+     "rare6_macro_f1": 0.65435475,
+     "risk_wf1": 0.80863817
+    }
+   },
+   "paired": {
+    "gemma_vs_real_only": {
+     "composite": {
+      "ci_high": -0.01175935,
+      "ci_low": -0.02817598,
+      "mean": -0.0199178,
+      "observed": -0.01992327,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     },
+     "composite_no_evidence": {
+      "ci_high": -0.0148575,
+      "ci_low": -0.0358833,
+      "mean": -0.02509091,
+      "observed": -0.02517101,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     },
+     "factor_macro_f1": {
+      "ci_high": -0.00461335,
+      "ci_low": -0.03292743,
+      "mean": -0.01974756,
+      "observed": -0.02017646,
+      "p_two_sided": 0.011,
+      "positive_fraction": 0.0055
+     },
+     "other18_macro_f1": {
+      "ci_high": -0.01235849,
+      "ci_low": -0.03633107,
+      "mean": -0.02438116,
+      "observed": -0.02469287,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     },
+     "phrase_f1": {
+      "ci_high": -0.00095483,
+      "ci_low": -0.01471063,
+      "mean": -0.0078472,
+      "observed": -0.00767854,
+      "p_two_sided": 0.027,
+      "positive_fraction": 0.0135
+     },
+     "rare6_macro_f1": {
+      "ci_high": 0.04277907,
+      "ci_low": -0.0481501,
+      "mean": -0.00584675,
+      "observed": -0.00662724,
+      "p_two_sided": 0.75,
+      "positive_fraction": 0.375
+     },
+     "risk_wf1": {
+      "ci_high": -0.01453553,
+      "ci_low": -0.04502613,
+      "mean": -0.02909842,
+      "observed": -0.02891693,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     }
+    },
+    "gemma_vs_repeated_real": {
+     "composite": {
+      "ci_high": -0.01288633,
+      "ci_low": -0.02756094,
+      "mean": -0.02021739,
+      "observed": -0.02026161,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     },
+     "composite_no_evidence": {
+      "ci_high": -0.01609184,
+      "ci_low": -0.03444256,
+      "mean": -0.02516914,
+      "observed": -0.02531133,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     },
+     "factor_macro_f1": {
+      "ci_high": -0.00856715,
+      "ci_low": -0.03512403,
+      "mean": -0.02259542,
+      "observed": -0.02324921,
+      "p_two_sided": 0.002,
+      "positive_fraction": 0.001
+     },
+     "other18_macro_f1": {
+      "ci_high": -0.01981014,
+      "ci_low": -0.04117655,
+      "mean": -0.03077193,
+      "observed": -0.03102989,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     },
+     "phrase_f1": {
+      "ci_high": -0.00156635,
+      "ci_low": -0.01609788,
+      "mean": -0.00866328,
+      "observed": -0.00847892,
+      "p_two_sided": 0.009,
+      "positive_fraction": 0.0045
+     },
+     "rare6_macro_f1": {
+      "ci_high": 0.04886547,
+      "ci_low": -0.04167378,
+      "mean": 0.00193412,
+      "observed": 9.284e-05,
+      "p_two_sided": 0.964,
+      "positive_fraction": 0.518
+     },
+     "risk_wf1": {
+      "ci_high": -0.0144104,
+      "ci_low": -0.04123999,
+      "mean": -0.02709943,
+      "observed": -0.02685792,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     }
+    },
+    "repeated_real_vs_real_only": {
+     "composite": {
+      "ci_high": 0.00609287,
+      "ci_low": -0.00554116,
+      "mean": 0.00029959,
+      "observed": 0.00033833,
+      "p_two_sided": 0.932,
+      "positive_fraction": 0.534
+     },
+     "composite_no_evidence": {
+      "ci_high": 0.00697589,
+      "ci_low": -0.00681919,
+      "mean": 7.823e-05,
+      "observed": 0.00014031,
+      "p_two_sided": 0.98,
+      "positive_fraction": 0.51
+     },
+     "factor_macro_f1": {
+      "ci_high": 0.01726226,
+      "ci_low": -0.01062897,
+      "mean": 0.00284786,
+      "observed": 0.00307275,
+      "p_two_sided": 0.66,
+      "positive_fraction": 0.67
+     },
+     "other18_macro_f1": {
+      "ci_high": 0.01521078,
+      "ci_low": -0.00261165,
+      "mean": 0.00639077,
+      "observed": 0.00633702,
+      "p_two_sided": 0.169,
+      "positive_fraction": 0.9155
+     },
+     "phrase_f1": {
+      "ci_high": 0.008428,
+      "ci_low": -0.00642092,
+      "mean": 0.00081609,
+      "observed": 0.00080038,
+      "p_two_sided": 0.828,
+      "positive_fraction": 0.586
+     },
+     "rare6_macro_f1": {
+      "ci_high": 0.04446164,
+      "ci_low": -0.05690575,
+      "mean": -0.00778087,
+      "observed": -0.00672008,
+      "p_two_sided": 0.71,
+      "positive_fraction": 0.355
+     },
+     "risk_wf1": {
+      "ci_high": 0.0061491,
+      "ci_low": -0.01007285,
+      "mean": -0.00199899,
+      "observed": -0.00205901,
+      "p_two_sided": 0.62,
+      "positive_fraction": 0.31
+     }
+    },
+    "sonnet_vs_gemma": {
+     "composite": {
+      "ci_high": 0.01539365,
+      "ci_low": 0.00269966,
+      "mean": 0.00921672,
+      "observed": 0.00918088,
+      "p_two_sided": 0.008,
+      "positive_fraction": 0.996
+     },
+     "composite_no_evidence": {
+      "ci_high": 0.01707321,
+      "ci_low": 0.00146442,
+      "mean": 0.0094695,
+      "observed": 0.00946197,
+      "p_two_sided": 0.02,
+      "positive_fraction": 0.99
+     },
+     "factor_macro_f1": {
+      "ci_high": 0.01844664,
+      "ci_low": -0.00640637,
+      "mean": 0.00683931,
+      "observed": 0.00696234,
+      "p_two_sided": 0.268,
+      "positive_fraction": 0.866
+     },
+     "other18_macro_f1": {
+      "ci_high": 0.01024675,
+      "ci_low": -0.0065365,
+      "mean": 0.00222678,
+      "observed": 0.00246281,
+      "p_two_sided": 0.593,
+      "positive_fraction": 0.7035
+     },
+     "phrase_f1": {
+      "ci_high": 0.0157023,
+      "ci_low": 0.00147311,
+      "mean": 0.00862691,
+      "observed": 0.008525,
+      "p_two_sided": 0.017,
+      "positive_fraction": 0.9915
+     },
+     "rare6_macro_f1": {
+      "ci_high": 0.0631336,
+      "ci_low": -0.02904913,
+      "mean": 0.02067692,
+      "observed": 0.02046091,
+      "p_two_sided": 0.336,
+      "positive_fraction": 0.832
+     },
+     "risk_wf1": {
+      "ci_high": 0.02260177,
+      "ci_low": 0.00021063,
+      "mean": 0.01144214,
+      "observed": 0.0113367,
+      "p_two_sided": 0.045,
+      "positive_fraction": 0.9775
+     }
+    },
+    "sonnet_vs_real_only": {
+     "composite": {
+      "ci_high": -0.00377926,
+      "ci_low": -0.01835768,
+      "mean": -0.01070107,
+      "observed": -0.01074239,
+      "p_two_sided": 0.001,
+      "positive_fraction": 0.0005
+     },
+     "composite_no_evidence": {
+      "ci_high": -0.00633771,
+      "ci_low": -0.02560231,
+      "mean": -0.01562141,
+      "observed": -0.01570904,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     },
+     "factor_macro_f1": {
+      "ci_high": 0.00203046,
+      "ci_low": -0.0274665,
+      "mean": -0.01290825,
+      "observed": -0.01321413,
+      "p_two_sided": 0.09,
+      "positive_fraction": 0.045
+     },
+     "other18_macro_f1": {
+      "ci_high": -0.01202322,
+      "ci_low": -0.03240155,
+      "mean": -0.02215438,
+      "observed": -0.02223006,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     },
+     "phrase_f1": {
+      "ci_high": 0.00706068,
+      "ci_low": -0.00515467,
+      "mean": 0.00077972,
+      "observed": 0.00084645,
+      "p_two_sided": 0.796,
+      "positive_fraction": 0.602
+     },
+     "rare6_macro_f1": {
+      "ci_high": 0.07039125,
+      "ci_low": -0.04323172,
+      "mean": 0.01483017,
+      "observed": 0.01383366,
+      "p_two_sided": 0.53,
+      "positive_fraction": 0.735
+     },
+     "risk_wf1": {
+      "ci_high": -0.00661767,
+      "ci_low": -0.02984723,
+      "mean": -0.01765628,
+      "observed": -0.01758023,
+      "p_two_sided": 0.001,
+      "positive_fraction": 0.0005
+     }
+    },
+    "sonnet_vs_repeated_real": {
+     "composite": {
+      "ci_high": -0.00425544,
+      "ci_low": -0.0175432,
+      "mean": -0.01100066,
+      "observed": -0.01108073,
+      "p_two_sided": 0.001,
+      "positive_fraction": 0.0005
+     },
+     "composite_no_evidence": {
+      "ci_high": -0.0066697,
+      "ci_low": -0.02403576,
+      "mean": -0.01569964,
+      "observed": -0.01584935,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     },
+     "factor_macro_f1": {
+      "ci_high": -0.00148526,
+      "ci_low": -0.02952056,
+      "mean": -0.01575611,
+      "observed": -0.01628687,
+      "p_two_sided": 0.034,
+      "positive_fraction": 0.017
+     },
+     "other18_macro_f1": {
+      "ci_high": -0.01861869,
+      "ci_low": -0.03811283,
+      "mean": -0.02854516,
+      "observed": -0.02856708,
+      "p_two_sided": 0.0,
+      "positive_fraction": 0.0
+     },
+     "phrase_f1": {
+      "ci_high": 0.00664182,
+      "ci_low": -0.00690547,
+      "mean": -3.637e-05,
+      "observed": 4.607e-05,
+      "p_two_sided": 0.998,
+      "positive_fraction": 0.501
+     },
+     "rare6_macro_f1": {
+      "ci_high": 0.07899223,
+      "ci_low": -0.03206578,
+      "mean": 0.02261104,
+      "observed": 0.02055374,
+      "p_two_sided": 0.395,
+      "positive_fraction": 0.8025
+     },
+     "risk_wf1": {
+      "ci_high": -0.00542239,
+      "ci_low": -0.02708125,
+      "mean": -0.0156573,
+      "observed": -0.01552122,
+      "p_two_sided": 0.002,
+      "positive_fraction": 0.001
+     }
+    }
+   }
+  }
+ },
+ "submitted_system": {
+  "confusion_matrix": [
+   [
+    530,
+    62,
+    15,
+    4
+   ],
+   [
+    34,
+    419,
+    62,
+    4
+   ],
+   [
+    14,
+    45,
+    319,
+    13
+   ],
+   [
+    3,
+    4,
+    19,
+    88
+   ]
+  ],
+  "factor_profile": {
+   "cognitive deficits": {
+    "f1": 0.5862069,
+    "precision": 0.68,
+    "recall": 0.51515152,
+    "support": 33
+   },
+   "coping strategy": {
+    "f1": 0.82608696,
+    "precision": 0.7966457,
+    "recall": 0.85778781,
+    "support": 443
+   },
+   "dysfunctional family": {
+    "f1": 0.88607595,
+    "precision": 0.88235294,
+    "recall": 0.88983051,
+    "support": 118
+   },
+   "emotion dysregulation": {
+    "f1": 0.74198988,
+    "precision": 0.68322981,
+    "recall": 0.81180812,
+    "support": 542
+   },
+   "exposure to others' suicide": {
+    "f1": 0.85714286,
+    "precision": 0.85714286,
+    "recall": 0.85714286,
+    "support": 14
+   },
+   "hopelessness": {
+    "f1": 0.84840599,
+    "precision": 0.82323232,
+    "recall": 0.87516779,
+    "support": 745
+   },
+   "interpersonal difficulty": {
+    "f1": 0.65994962,
+    "precision": 0.64851485,
+    "recall": 0.67179487,
+    "support": 195
+   },
+   "interpersonal violence": {
+    "f1": 0.62944162,
+    "precision": 0.54385965,
+    "recall": 0.74698795,
+    "support": 83
+   },
+   "low self-esteem": {
+    "f1": 0.8532207,
+    "precision": 0.8559322,
+    "recall": 0.85052632,
+    "support": 475
+   },
+   "low socio-economic status": {
+    "f1": 0.82882883,
+    "precision": 0.80701754,
+    "recall": 0.85185185,
+    "support": 54
+   },
+   "meaning in life": {
+    "f1": 0.25925926,
+    "precision": 0.22222222,
+    "recall": 0.31111111,
+    "support": 45
+   },
+   "mental health issues": {
+    "f1": 0.7926078,
+    "precision": 0.74517375,
+    "recall": 0.84649123,
+    "support": 228
+   },
+   "physical health/characteristic": {
+    "f1": 0.62962963,
+    "precision": 0.60714286,
+    "recall": 0.65384615,
+    "support": 78
+   },
+   "poor school performance": {
+    "f1": 0.78571429,
+    "precision": 0.91666667,
+    "recall": 0.6875,
+    "support": 16
+   },
+   "poor social support": {
+    "f1": 0.84554455,
+    "precision": 0.8388998,
+    "recall": 0.85229541,
+    "support": 501
+   },
+   "prior self-harm or suicidal thought/attempt": {
+    "f1": 0.7826087,
+    "precision": 0.81407035,
+    "recall": 0.75348837,
+    "support": 215
+   },
+   "psychological capital": {
+    "f1": 0.6622807,
+    "precision": 0.69266055,
+    "recall": 0.63445378,
+    "support": 238
+   },
+   "sense of responsibility": {
+    "f1": 0.56140351,
+    "precision": 0.57142857,
+    "recall": 0.55172414,
+    "support": 58
+   },
+   "sexual orientation related issues": {
+    "f1": 0.75,
+    "precision": 0.75,
+    "recall": 0.75,
+    "support": 8
+   },
+   "social support": {
+    "f1": 0.58474576,
+    "precision": 0.55645161,
+    "recall": 0.61607143,
+    "support": 112
+   },
+   "stressful life event": {
+    "f1": 0.64942529,
+    "precision": 0.68072289,
+    "recall": 0.62087912,
+    "support": 182
+   },
+   "substance use": {
+    "f1": 0.73529412,
+    "precision": 0.71428571,
+    "recall": 0.75757576,
+    "support": 33
+   },
+   "suicide means (with access)": {
+    "f1": 0.82142857,
+    "precision": 0.7808642,
+    "recall": 0.86643836,
+    "support": 292
+   },
+   "traumatic experience": {
+    "f1": 0.59459459,
+    "precision": 0.70212766,
+    "recall": 0.515625,
+    "support": 64
+   }
+  },
+  "order": [
+   "Indicator",
+   "Ideation",
+   "Behavior",
+   "Attempt"
+  ]
+ },
+ "training_files": {
+  "generated_rows_per_fold": [
+   1211,
+   1309,
+   1309,
+   1234,
+   1321
+  ],
+  "generated_share_mean": 0.50411131,
+  "passes_over_real_at_160": {
+   "augmented": 1.01131205,
+   "real_only": 2.03959684
+  },
+  "real_rows_per_fold": [
+   1264,
+   1249,
+   1243,
+   1261,
+   1259
+  ],
+  "writers": {
+   "gemma": {
+    "generated_rows": {
+     "factors_per_row": 6.5289787,
+     "n": 6384,
+     "risk_share": {
+      "Attempt": 0.11685464,
+      "Behavior": 0.23919173,
+      "Ideation": 0.30466792,
+      "Indicator": 0.33928571
+     },
+     "spans_per_evidence_row": 1.9122807,
+     "tokens_per_span_mean": 5.76283164,
+     "words_mean": 133.08677945
+    },
+    "generated_rows_per_fold": [
+     1211,
+     1309,
+     1309,
+     1234,
+     1321
+    ],
+    "positive_multiple_range": [
+     7.56410256,
+     55.5
+    ],
+    "rare_positives": {
+     "cognitive deficits": 1346,
+     "exposure to others' suicide": 1212,
+     "meaning in life": 1453,
+     "poor school performance": 1134,
+     "sexual orientation related issues": 1216,
+     "substance use": 1298
+    },
+    "real_rows": {
+     "factors_per_row": 2.91395793,
+     "n": 6276,
+     "risk_share": {
+      "Attempt": 0.06755895,
+      "Behavior": 0.24346718,
+      "Ideation": 0.31485022,
+      "Indicator": 0.37412365
+     },
+     "spans_per_evidence_row": 1.72505092,
+     "tokens_per_span_mean": 4.51121606,
+     "words_mean": 67.88718929
+    },
+    "real_rows_per_fold": [
+     1264,
+     1249,
+     1243,
+     1261,
+     1259
+    ]
+   },
+   "sonnet": {
+    "generated_rows": {
+     "factors_per_row": 6.47368421,
+     "n": 6384,
+     "risk_share": {
+      "Attempt": 0.11403509,
+      "Behavior": 0.24326441,
+      "Ideation": 0.30278822,
+      "Indicator": 0.33991228
+     },
+     "spans_per_evidence_row": 2.3481253,
+     "tokens_per_span_mean": 5.99434058,
+     "words_mean": 148.85745614
+    },
+    "generated_rows_per_fold": [
+     1211,
+     1309,
+     1309,
+     1234,
+     1321
+    ],
+    "positive_multiple_range": [
+     7.56410256,
+     55.25
+    ],
+    "rare_positives": {
+     "cognitive deficits": 1353,
+     "exposure to others' suicide": 1214,
+     "meaning in life": 1449,
+     "poor school performance": 1123,
+     "sexual orientation related issues": 1207,
+     "substance use": 1299
+    },
+    "real_rows": {
+     "factors_per_row": 2.91395793,
+     "n": 6276,
+     "risk_share": {
+      "Attempt": 0.06755895,
+      "Behavior": 0.24346718,
+      "Ideation": 0.31485022,
+      "Indicator": 0.37412365
+     },
+     "spans_per_evidence_row": 1.72505092,
+     "tokens_per_span_mean": 4.51121606,
+     "words_mean": 67.88718929
+    },
+    "real_rows_per_fold": [
+     1264,
+     1249,
+     1243,
+     1261,
+     1259
+    ]
+   }
+  }
+ }
+}

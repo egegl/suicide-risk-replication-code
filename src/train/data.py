@@ -7,7 +7,7 @@ from . import constants as C
 def load_arm_records(repo_root: Path, spec: dict) -> list[dict]:
     path = Path(repo_root) / spec['train_file']
     if spec['train_file_sha'] == 'pending' or not path.exists():
-        raise SystemExit(f"{spec['run_id']}: train file {spec['train_file']!r} is not available (sha={spec['train_file_sha']!r}, exists={path.exists()}). Run `generate_synthetic.py assemble` (realism-gated) to build data/synthetic/arms/, then rebuild specs.")
+        raise SystemExit(f"{spec['run_id']}: train file {spec['train_file']!r} is not available (sha={spec['train_file_sha']!r}, exists={path.exists()}). Run `legacy/generate_synthetic.py assemble` (realism-gated) to build data/synthetic/arms/, then rebuild specs.")
     return state.read_jsonl(path)
 
 def assert_fold_safe(records: list[dict], fold, folds_parquet_path: Path) -> None:

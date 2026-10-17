@@ -3,9 +3,13 @@
 __pycache__/
 *.pyc
 .pytest_cache/
-data/raw/
+data/raw
 data/processed/
 data/synthetic/
 runs/
 adapters/*
 !adapters/README.md
+data/synthetic_pkgc/
+runs31*/
+models/
+paper/figures/out/
