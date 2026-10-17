@@ -2,11 +2,11 @@
 
 Run from the repo root (needs pandas + pyarrow for the processed data):
 
-    PYTHONDONTWRITEBYTECODE=1 python paper/figures/freeze.py [--rebuilt]
+    PYTHONDONTWRITEBYTECODE=1 python scripts/freeze.py [--rebuilt]
 
 Reads the saved grouped out-of-fold predictions of the five training conditions, the generated
-training files, the writer and labeler outputs, and the human audit, and writes frozen.json next
-to this file. Nothing is retrained and no API is called. Before writing, it reproduces the
+training files, the writer and labeler outputs, and the human audit, and writes results/frozen.json.
+Nothing is retrained and no API is called. Before writing, it reproduces the
 registered E2 readout (runs31-pkgc/reanalysis/e2_confirm.json, from scripts/e2_confirm.py) and
 the paper's control composites, and stops on any mismatch. --rebuilt (for retrained runs, which
 are not bit-identical) reports mismatches instead of stopping. Output holds aggregates only: no
@@ -25,7 +25,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 import scorer  # noqa: E402
 from prep.constants import FACTOR_INDEX, FACTORS_24, RISK_CLASSES  # noqa: E402
@@ -33,7 +33,7 @@ from synth.constants import RARE_FACTORS  # noqa: E402
 from train import ensemble, oof, reanalysis, thresholds  # noqa: E402
 from train.constants import BOOTSTRAP_B, BOOTSTRAP_SEED, CHECKPOINT_STEPS, GRAD_ACCUM  # noqa: E402
 
-OUT = Path(__file__).resolve().parent / "frozen.json"
+OUT = ROOT / "results" / "frozen.json"
 P = ROOT / "data" / "processed"
 ARMS = {  # paper name -> (runs dir, arm id)
     "real_only": ("runs31", "baseline"),

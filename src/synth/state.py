@@ -1,4 +1,3 @@
-import gzip
 import hashlib
 import json
 from pathlib import Path
@@ -17,9 +16,6 @@ def read_jsonl(path: Path) -> list[dict]:
     with open(path, encoding='utf-8') as f:
         return [json.loads(line) for line in f if line.strip()]
 
-def read_jsonl_gz(path: Path) -> list[dict]:
-    with gzip.open(path, 'rt', encoding='utf-8') as f:
-        return [json.loads(line) for line in f if line.strip()]
 
 def _atomic(path: Path, write_fn) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -41,13 +37,6 @@ def atomic_write_text(path: Path, text: str) -> None:
 def atomic_write_json(path: Path, obj) -> None:
     atomic_write_text(path, json.dumps(obj, indent=2, ensure_ascii=False) + '\n')
 
-def atomic_write_jsonl_gz(path: Path, lines: list[str]) -> None:
-
-    def _w(tmp: Path):
-        with open(tmp, 'wb') as raw, gzip.GzipFile(filename='', mode='wb', fileobj=raw, mtime=0) as g:
-            for line in lines:
-                g.write((line.rstrip('\n') + '\n').encode('utf-8'))
-    _atomic(path, _w)
 
 class Manifest:
 

@@ -24,25 +24,3 @@ class RealIndex:
 def load_real_posts(processed) -> list[str]:
     posts = pd.read_parquet(processed / 'posts.parquet')
     return posts['post_raw'].tolist()
-
-def filter_all(candidates: list[dict], index: RealIndex) -> tuple[list[dict], list[dict]]:
-    accepted, rejects = ([], [])
-    seen_synth: set = set()
-    for c in sorted(candidates, key=lambda c: c['bundle_id']):
-        reason, bad_pos = (None, None)
-        for p in c['posts']:
-            hit = index.hits(p['post_text'])
-            if hit:
-                reason, bad_pos = (hit, p['pos'])
-                break
-            key = dedup.near_dup_key(p['post_text'])
-            if key in seen_synth:
-                reason, bad_pos = ('synth_near_dup', p['pos'])
-                break
-        if reason:
-            rejects.append({'bundle_id': c['bundle_id'], 'pool': c['pool'], 'reason': reason, 'pos': bad_pos})
-            continue
-        for p in c['posts']:
-            seen_synth.add(dedup.near_dup_key(p['post_text']))
-        accepted.append(c)
-    return (accepted, rejects)
