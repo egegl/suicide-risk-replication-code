@@ -1,4 +1,4 @@
-"""Generated training data for the ICHI 2027 paper (experiment E2), plus its writer pilot.
+"""Generated training data for the paper (experiment E2), plus its writer pilot.
 
 One case per generated post, built only from the folds other than the held-out one:
 

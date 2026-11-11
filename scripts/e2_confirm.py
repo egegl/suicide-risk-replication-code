@@ -6,7 +6,7 @@ Inputs: pooled, nested-thresholded OOF predictions per arm and seed
 `run_experiment.py thresholds` with the default argmax estimator, as for runs31).
 
 Reproduction guard: the three reused controls must reproduce, per seed, the
-composites frozen for the ICHI paper (results/frozen.json, stored to 8
+composites frozen for the paper (results/frozen.json, stored to 8
 decimals) or the script aborts.
 
 Registered readout:

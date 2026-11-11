@@ -1,4 +1,4 @@
-"""Freeze every number the ICHI 2027 manuscript, its supplement, and its figures report (E2).
+"""Freeze every number the manuscript, its supplement, and its figures report (E2).
 
 Run from the repo root (needs pandas + pyarrow for the processed data):
 

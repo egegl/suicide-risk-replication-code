@@ -1,6 +1,6 @@
 # Evaluating LLM-Generated Training Data for Rare Psychosocial Factors in Suicide-Risk Detection
 
-Replication code for the ICHI 2027 paper of this title. Within each split of five-fold user-grouped cross-validation, Claude Sonnet 5.5 and Gemma-4-31B-IT each wrote 6,384 training posts for six rare factors of the IEEE BigData 2026 Cup suicide-risk task. Adding them to a fine-tuned Gemma-4-31B-IT model lowered the composite score by about 0.013 for both writers, although the posts passed model and blinded human label checks.
+Replication code for the paper of this title. Within each split of five-fold user-grouped cross-validation, Claude Sonnet 5.5 and Gemma-4-31B-IT each wrote 6,384 training posts for six rare factors of the IEEE BigData 2026 Cup suicide-risk task. Adding them to a fine-tuned Gemma-4-31B-IT model lowered the composite score by about 0.013 for both writers, although the posts passed model and blinded human label checks.
 
 `results/frozen.json` holds every number the paper and its supplement report. Competition posts come from the organizers under their data agreement. Generated posts, run predictions, and adapters are not released.
 
